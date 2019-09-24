@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 import { TimelineLite, Power3 } from "gsap/TweenMax";
 import styled, { createGlobalStyle } from "styled-components";
+import "./boot.css";
 // Components
 import {
   CardContainer,
@@ -44,11 +45,12 @@ const App = () => {
 
   async function toggleTimeline() {
     if (toggle) {
-      tl.to(imgRef, .1, {height: 2500})
-        .to(imgRef, .7, {x: 1920 })
-        .to(imgRef, .5, {x: 4000, ease: Power3.easeIn }).to(imgRef, .1, {height: 0})
+      tl.to(imgRef, 0.1, { height: 2500 })
+        .to(imgRef, 0.7, { x: 1920 })
+        .to(imgRef, 0.5, { x: 4000, ease: Power3.easeIn })
+        .to(imgRef, 0.1, { height: 0 })
         .play();
-        setToggle(false);
+      setToggle(false);
     }
     tl.pause();
     tl.restart();
@@ -56,9 +58,9 @@ const App = () => {
 
   return (
     <>
+      <GlobalStyles />
       <AppContainer>
         <LanguageContext.Provider value={{ English, setEnglish }}>
-          <GlobalStyles />
           <Sidebar mahAnimation={toggleTimeline} Position={`left`} />
           <Sidebar Position={`right`} />
           <Animate
@@ -96,7 +98,11 @@ const BigScreen = styled.div`
   top: 0;
   left: -2000px;
   z-index: 50 !important;
-  background: linear-gradient(to right, rgba(55,55,55,1) -30%, rgba(75,75,75,1) 130%);
+  background: linear-gradient(
+    to right,
+    rgba(55, 55, 55, 1) -30%,
+    rgba(75, 75, 75, 1) 130%
+  );
 `;
 
 const AppContainer = styled.div`

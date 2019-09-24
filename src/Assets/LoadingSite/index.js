@@ -1,7 +1,7 @@
 import CottagesImage from "../Cottages/SVG/img_0021_middle.jpg";
 import GolfImage from "../Golf/img_4335_small.jpg";
 import HorseRentalImage from "../HorseRental/k3_9089_small.jpg";
-import CampingImage from "../Camping/orginal.jpg";
+import CampingImage from "../Camping/orginal_front.jpg";
 import RestaurantImage from "../Restaurant/img_2546_small.jpg";
 
 const RowInformation = [
