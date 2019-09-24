@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>http://www.Uthlid.is/</loc>
+
+      <lastmod>2019-24-09</lastmod>
+
+      <changefreq>yearly</changefreq>
+
+      <priority>0.6</priority>
+
+   </url>
+
+   <url>
+
+      <loc>http://uthlid.biggaferdir.is/Cottages</loc>
+
+      <changefreq>weekly</changefreq>
+      <priority>0.3</priority>
+
+   </url>
+
+   <url>
+
+      <loc>http://uthlid.biggaferdir.is/Horserental</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>http://uthlid.biggaferdir.is/Golf</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>http://uthlid.biggaferdir.is/Restaurant</loc>
+
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
+
+   </url>
+
+</urlset>
