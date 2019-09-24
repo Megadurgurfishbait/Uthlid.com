@@ -1,7 +1,7 @@
 //server.js
 const express = require("express");
 const path = require("path");
-const port = process.env.PORT || 3006;
+const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 var compression = require("compression");
 
@@ -23,6 +23,41 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "../build", "index.html"), {
     maxAge: "360d"
   });
+});
+
+app.get('/Cottages', (req, res) => {
+    res.sendFile(path.join(__dirname, "../build", "index.html"), {
+    maxAge: "360d"
+  });
+});
+
+app.get('/Horserental', (req, res) => {
+    res.sendFile(path.join(__dirname, "../build", "index.html"), {
+    maxAge: "360d"
+  });
+});
+
+app.get('/Golf', (req, res) => {
+    res.sendFile(path.join(__dirname, "../build", "index.html"), {
+    maxAge: "360d"
+  });
+});
+
+app.get('/Camping', (req, res) => {
+    res.sendFile(path.join(__dirname, "../build", "index.html"), {
+    maxAge: "360d"
+  });
+});
+
+app.get('/Restaurant', (req, res) => {
+    res.sendFile(path.join(__dirname, "../build", "index.html"), {
+    maxAge: "360d"
+  });
+});
+
+
+app.get('/*', (req, res) => {
+  res.redirect('/');
 });
 
 app.listen(port);

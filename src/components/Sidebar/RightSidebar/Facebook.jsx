@@ -10,8 +10,6 @@ const Facebook = () => (
     <a href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/">
       Find us on Facebook
     </a>
-
-    <FacebookPage />
   </Container>
 );
 

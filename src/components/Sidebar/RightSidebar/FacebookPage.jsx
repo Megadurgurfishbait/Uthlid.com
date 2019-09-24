@@ -5,23 +5,24 @@ import styled from "styled-components";
 import { Media, MediaHeight } from "../../../Assets/Variables/";
 
 const FacebookPage = () => (
-  <Container
-    class="fb-page"
-    data-href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"
-    data-small-header="false"
-    data-adapt-container-width="true"
-    data-hide-cover="false"
-    data-show-facepile="false"
-  >
-    <blockquote
-      cite="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"
-      class="fb-xfbml-parse-ignore"
+
+    <div
+      class="fb-page"
+      data-href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"
+      data-small-header="false"
+      data-adapt-container-width="true"
+      data-hide-cover="false"
+      data-show-facepile="false"
     >
-      <a href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/">
-        Uthlid Iceland Cottages
-      </a>
-    </blockquote>
-  </Container>
+      <blockquote
+        cite="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"
+        class="fb-xfbml-parse-ignore"
+      >
+        <a href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/">
+          Uthlid Iceland Cottages
+        </a>
+      </blockquote>
+    </div>
 );
 
 export default FacebookPage;
