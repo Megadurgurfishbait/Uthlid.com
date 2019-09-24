@@ -6,6 +6,7 @@ import {Colors, Media} from "../../Assets/Variables/";
 
 const LargeIcons = ({ IconArray }) => (
   <Container>
+    {console.log(IconArray)}
     {IconArray.map(values => {
       return (
         <IconRow>

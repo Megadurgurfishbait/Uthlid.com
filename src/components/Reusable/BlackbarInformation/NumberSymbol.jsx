@@ -1,25 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 
+
 /* Ef að Price er Array, sem er tilvikið fyrir HorseRental þá loopum við yfir það. */
 /* Ef að Price er stök tala setjum við það beint inn. Sem er tilvikið fyrir Cottages*/
-const NumberSymbol = ({ Price, golf }) => (
+const NumberSymbol = ({ Price, Verd, golf, English }) => (
   <Container>
     <TextContainer>
-      {Array.isArray(Price) ? (
-        Price.map(values => {
-          return (
+      {English ? (
+        Array.isArray(Price) ? (
+          Price.map(values => (
             <Row>
               <h5> {values.Title} </h5>
               <Number small>
-                {values.Price} {golf ? "" : "€"}{" "}
+                {values.Price} {golf ? "" : "€"}
               </Number>
             </Row>
-          );
-        })
+          ))
+        ) : (
+          <Row center>
+            <Number> {Price} </Number>
+            <Symbol>€</Symbol>
+          </Row>
+        )
+      ) : Array.isArray(Verd) ? (
+        Verd.map(values => (
+          <Row>
+            <h5> {values.Title} </h5>
+            <Number small>
+              {values.Price} {golf ? "" : "€"}
+            </Number>
+          </Row>
+        ))
       ) : (
         <Row center>
-          <Number> {Price} </Number>
+          <Number> {Verd} </Number>
           <Symbol>€</Symbol>
         </Row>
       )}

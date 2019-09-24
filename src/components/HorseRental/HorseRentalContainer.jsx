@@ -2,36 +2,49 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-import HorseRentalCard from "./HorseRentalCard"
-import {Layout, Header, BlackbarInformation} from '../Reusable';
+import HorseRentalCard from "./HorseRentalCard";
+import { Layout, Header, BlackbarInformation } from "../Reusable";
 
 // Assets
-import {Colors, Media} from "../../Assets/Variables/";
-import {Price, HorseBackground, HorseRentInformation} from '../../Assets/HorseRental';
+import { Colors, Media } from "../../Assets/Variables/";
+import {
+  Price,
+  Verd,
+  HorseBackground,
+  HorseRentInformation,
+  HestaleigaInformation
+} from "../../Assets/HorseRental";
 
-
+import LanguageContext from "../../Context/Language";
 /*
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
 */
 
-const HorseRentalContainer = () => (
+const HorseRentalContainer = () => {
+  const {English} = React.useContext(LanguageContext);
+
+return (
   <Layout>
     <Header CoverPhoto={HorseBackground} />
-    <BlackbarInformation horseInformation={true} Price={Price} />
+    <BlackbarInformation horseInformation={true} Price={Price} Verd={Verd} />
     <CardContainer>
       <Row>
-        <H1> Trips </H1>
+        <H1> {English ? "Trips" : "Hestaleiga" } </H1>
         <HorseInformation>
           {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
-          {HorseRentInformation.map(values => {
-            return <HorseRentalCard {...values} />;
-          })}
+          {English
+            ? HorseRentInformation.map(values => (
+                <HorseRentalCard {...values} />
+              ))
+            : HestaleigaInformation.map(values => (
+                <HorseRentalCard {...values} />
+              ))}
         </HorseInformation>
       </Row>
       <FakeContainer />
     </CardContainer>
   </Layout>
-);
+)};
 
 export default HorseRentalContainer;
 

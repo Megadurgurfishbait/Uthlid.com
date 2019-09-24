@@ -5,21 +5,28 @@ import { Link } from "react-router-dom";
 // Components
 import Boxes from "./boxes";
 import RightSidebar from "./RightSidebar/RightSidebar";
+import ChangeLanguage from './changeLanguage';
 
 // Asset
 import { Colors, Media, MediaHeight } from "../../Assets/Variables/";
+
 import {
   SidebarInfo,
+  SidebarInfo_IS,
   SVG,
   RightSidebarInfo
 } from "../../Assets/MainSite/index";
+import LanguageContext from "../../Context/Language";
 
-function Sidebar({ Position }) {
+function Sidebar({ Position, mahAnimation }) {
   /* State sem sér um hægri Sidebar */
   const [ShowRightBar, setRightBar] = useState(false);
   const ShowMyRightMenuBar = () => {
     return setRightBar(ShowRightBar => !ShowRightBar);
   };
+
+
+  const {English} = React.useContext(LanguageContext);
 
   return (
     <Try>
@@ -29,16 +36,22 @@ function Sidebar({ Position }) {
           <HalfHeight>
             <Boxes Path="/" Icon={SVG.LeftIcon} />
             <MainIcons>
-              {SidebarInfo.map(value => {
-                return (
-                  <Row>
-                    <TextTitle to={value.Path}> {value.Title} </TextTitle>
-                    <Boxes Icon={value.Icon} Path={value.Path} />
-                  </Row>
-                );
-              })}
+              {English
+                ? SidebarInfo.map(value => (
+                    <Row>
+                      <TextTitle to={value.Path}> {value.Title} </TextTitle>
+                      <Boxes Icon={value.Icon} Path={value.Path} />
+                    </Row>
+                  ))
+                : SidebarInfo_IS.map(value => (
+                    <Row>
+                      <TextTitle to={value.Path}> {value.Title} </TextTitle>
+                      <Boxes Icon={value.Icon} Path={value.Path} />
+                    </Row>
+                  ))}
             </MainIcons>
           </HalfHeight>
+          <ChangeLanguage mahAnimation={mahAnimation}/>
         </Container>
       ) : (
         /* HÆGRI SIDEBAR */

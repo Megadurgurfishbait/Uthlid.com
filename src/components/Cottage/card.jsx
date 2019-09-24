@@ -8,8 +8,13 @@ import { Button } from "../Reusable/";
 
 // Assets
 import { Colors, Media } from "../../Assets/Variables/";
+import LanguageContext from '../../Context/Language';
 
-const Card = ({ CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => (
+
+const Card = ( { CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => {
+  const {English} = React.useContext(LanguageContext);
+
+  return (
   <Container>
     <Image src={CoverPhoto_small} />
     <TitleText>{Title}</TitleText>
@@ -21,10 +26,10 @@ const Card = ({ CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => (
       background={true}
       BackgroundColor={`${Colors.BLACK}`}
     >
-      {`See More `}
+      {English ? `See More ` : `Skoða nánar`}
     </Button>
-  </Container>
-);
+  </Container>)
+};
 
 export default Card;
 

@@ -5,24 +5,29 @@ import styled from "styled-components";
 import ContactInfo from "./ContactInfo";
 import Map from "./Map";
 import Facebook from "./Facebook";
-
+import LanguageContext from "../../../Context/Language";
 // Assets
 import { Colors, Media, MediaHeight } from "../../../Assets/Variables/";
-const RightSidebar = ({ ShowRightBar }) => (
-  <Container ShowRightBar={ShowRightBar}>
+const RightSidebar = ({ ShowRightBar }) => {
+  
+  const {English} = React.useContext(LanguageContext);
+  
+  return (
+    <Container ShowRightBar={ShowRightBar}>
     <Row smaller>
-      <Facebook />
+      <Facebook English={English} />
     </Row>
     <Break />
     <Row smaller>
-      <ContactInfo />
+      <ContactInfo English={English} />
     </Row>
     <Break />
     <Row>
       <Map />
     </Row>
   </Container>
-);
+  )
+};
 
 export default RightSidebar;
 

@@ -2,32 +2,46 @@ import React from "react";
 import styled from "styled-components";
 
 // Assets
-import {Colors, Media} from "../../../Assets/Variables/";
+import { Colors, Media } from "../../../Assets/Variables/";
+
 /*
   Fáum Info frá BlackbarInformation í gegnum props. Í Info eru Iconin og tölurnar sem að við þurfum að sýna fyrir sumarbústaðina.
   Ferðin sem að Info fer: Assets -> SinglePageCottage -> BlackbarInfo -> Blackbar.jsx.
 */
 
-const Blackbar = ({ BlackbarInfo , horseInformation}) => (
+const Blackbar = ({
+  BlackbarInfo,
+  Svartastika,
+  horseInformation,
+  Cottages,
+  English
+}) => (
   <Container horseInformation={horseInformation}>
-    {!horseInformation ? BlackbarInfo.map(values => {
-      return (
-        <Row>
-          <Icon src={values.Icon} />
-          <Text>{values.Text}</Text>
-        </Row>
-      );
-    }): null}
+    {!horseInformation
+      ? English || Cottages
+        ? BlackbarInfo.map(values => (
+            <Row>
+              <Icon src={values.Icon} />
+              <Text>{values.Text}</Text>
+            </Row>
+          ))
+        : Svartastika.map(values => (
+            <Row>
+              <Icon src={values.Icon} />
+              <Text>{values.Text}</Text>
+            </Row>
+          ))
+      : null}
   </Container>
 );
-
 export default Blackbar;
 
 const Container = styled.div`
   display: flex;
   height: 80px;
   width: 100%;
-  background-color: ${props => props.horseInformation ? "transparent" : `${Colors.BLACK}`};
+  background-color: ${props =>
+    props.horseInformation ? "transparent" : `${Colors.BLACK}`};
   justify-content: space-evenly;
   ${Media.phone`display: none;`};
 `;

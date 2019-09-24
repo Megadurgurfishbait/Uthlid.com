@@ -6,19 +6,25 @@ import {Button} from "../Reusable/";
 
 //Assets
 import {Colors, Media} from "../../Assets/Variables/";
+import LanguageContext from "../../Context/Language";
 
-const Card = ({ Backgroundcolor, Title, Paragraph, Image, Path }) => (
-  <Container background={Backgroundcolor}>
+
+const Card = ({ Backgroundcolor, Title, Title_IS, Paragraph, Paragraph_IS, Image, Path }) => {
+  const {English} = React.useContext(LanguageContext);
+  
+  
+  return (<Container background={Backgroundcolor}>
     <TextSide background={Backgroundcolor}>
-      <TitleText>{Title}</TitleText>
-      <Description>{Paragraph}</Description>
+      <TitleText>{English ? Title : Title_IS}</TitleText>
+      <Description>{English ? Paragraph : Paragraph_IS }</Description>
       <Button background={Backgroundcolor} toPath={`${Path}`}>
-        Read More
+        {English ? `Read More` : `Skoða nánar` }
       </Button>
     </TextSide>
     <ImageSide src={Image} />
   </Container>
-);
+  )
+  };
 
 export default Card;
 

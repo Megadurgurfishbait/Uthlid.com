@@ -31,7 +31,7 @@ const Container = styled.div`
   margin: 0px auto;
   background-color: ${props =>
     props.myColor ? props.myColor : "white!important"};
-  ${Media.large`width: calc(100vw - 136px)}`};
+  ${Media.large`width: calc(100vw - 148px)}`};
   ${Media.phone`
     width: 100vw;
     margin-bottom: 50px;

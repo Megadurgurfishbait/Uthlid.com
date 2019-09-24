@@ -7,9 +7,12 @@ import { Button } from "../Reusable/";
 // Assets
 import { Regular, Small, Smaller } from "../../Assets/MainSite/";
 import { Colors, Media } from "../../Assets/Variables/";
+import LanguageContext from "../../Context/Language";
+
 // Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha í hvert skipti sem að þú prufar eh.
 
 function Bakgrunnur() {
+  const { English } = React.useContext(LanguageContext);
   return (
     <Container>
       <BackgroundImage />
@@ -19,11 +22,15 @@ function Bakgrunnur() {
         </Column>
         <Row>
           <Paragraph>
-            {`
+            {English
+              ? `
              In unspoiled Icelandic landscape. Centrally in the 
              Golden Circle, close to Geysir, Gullfoss and Thingvellir.  
              One hour from Reykjavík.
-             `}
+             `
+              : `Ferðaþjónusta við hálendislínuna –Þingvellir, 
+              Skálholt, Geysir og Gullfoss í næsta nágrenni – 
+              klukkustundar akstur frá Reykjavík`}
           </Paragraph>
         </Row>
         <Column>
@@ -33,7 +40,7 @@ function Bakgrunnur() {
             BackgroundColor={Colors.BLACK}
             background={true}
           >
-            Book Now
+            {English ? `Book Now` : "Bóka núna" }
           </Button>
         </Column>
       </TextContainer>

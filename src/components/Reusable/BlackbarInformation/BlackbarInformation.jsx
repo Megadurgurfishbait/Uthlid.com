@@ -7,6 +7,7 @@ import Information from "./Information";
 
 // Assets
 import { Media } from "../../../Assets/Variables/";
+import LanguageContext from "../../../Context/Language";
 /*
 
     Þetta er undir Reusable því að við ætlum að nota þetta líka fyrir golfið, í stað þess að copy/paste'a þetta 
@@ -18,12 +19,15 @@ import { Media } from "../../../Assets/Variables/";
 
 */
 
-const BlackbarInformation = Data => (
+const BlackbarInformation = Data => {
+  const {English} = React.useContext(LanguageContext);
+  
+  return (
   <Container>
-    <Blackbar {...Data} />
-    <Information {...Data} />
+    <Blackbar {...Data} English={English} />
+    <Information {...Data} English={English} />
   </Container>
-);
+)};
 
 export default BlackbarInformation;
 

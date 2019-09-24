@@ -3,22 +3,27 @@ import styled from "styled-components";
 
 // Components
 import Card from "./card";
-import {Layout} from "../Reusable/";
+import { Layout } from "../Reusable/";
 
 // Assets
-import {Media} from "../../Assets/Variables/";
+import { Media } from "../../Assets/Variables/";
 import { CottageInfoArray } from "../../Assets/Cottages/";
+import LanguageContext from "../../Context/Language";
 
-const CardContainer = () => (
-  <Layout>
-    <H1> Cottages </H1>
-    <MapCardContainer>
-      {CottageInfoArray.map(values => {
-        return <Card {...values} />;
-      })}
-    </MapCardContainer>
-  </Layout>
-);
+const CardContainer = () => {
+  const { English } = React.useContext(LanguageContext);
+
+  return (
+    <Layout>
+      <H1> Cottages </H1>
+      <MapCardContainer>
+        {English
+          ? CottageInfoArray[0].map(values => <Card {...values} />)
+          : CottageInfoArray[1].map(values => <Card {...values} />)}
+      </MapCardContainer>
+    </Layout>
+  );
+};
 
 export default CardContainer;
 

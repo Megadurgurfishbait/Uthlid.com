@@ -5,9 +5,10 @@ import styled from "styled-components";
 import NumberSymbol from "./NumberSymbol";
 import ContactInfo from "./contactInfo";
 import Button from "../Button";
-
 // Assets
 import { Colors, Media } from "../../../Assets/Variables/";
+
+
 /*
   Information er ljósbrúni kassinn.
   Þarf að breyta honum aðeins svo að hægt sé að nota hann fyrir Golf og hestaferðir. 
@@ -19,28 +20,37 @@ const Information = ({
   Title,
   horseInformation,
   InformationBoxPrice,
-  golf
-}) => (
+  golf,
+  Verd,
+  English
+}) => {
+
+
+  return (
   <Container>
-    <H1>{Title || `Bookings`}</H1>
+    <H1>{Title || English ? `Bookings` : "Bókanir"}</H1>
     {InformationBoxPrice ? (
-      <Text>{InformationBoxPrice}</Text>
+      <Text>{English ? InformationBoxPrice : "Daggjöld"}</Text>
     ) : (
-      <Text>Pricelist</Text>
+      <Text>{English ? "Pricelist" : "Verð"}</Text>
     )}
-    <NumberSymbol Price={Price} golf={golf} />
+    <NumberSymbol Price={Price} golf={golf} Verd={Verd} English={English}/>
     {horseInformation ? (
       <AboutText>
-        All trips are great riding tours around the unspoiled and beautiful
-        landscape of Úthlíð.{" "}
+        {English
+          ? `All trips are great riding tours around the unspoiled and beautiful
+        landscape of Úthlíð.`
+          : `Riðið er um næsta rágrenni Úthlíðar og gefst vel kostur á að skoða fallega náttúru á hestbaki.`}
       </AboutText>
     ) : null}
     {golf ? (
       <AboutText>
-        Members of the Icelandic Golf Union can book tee times at www.golf.is
+        {English
+          ? `Members of the Icelandic Golf Union can book tee times at www.golf.is`
+          : `Hægt er að panta teig á www.golf.is`}
       </AboutText>
     ) : null}
-    <ContactInfo />
+    <ContactInfo English={English}/>
     {horseInformation || golf ? null : (
       <Button
         toPath="https://property.godo.is/booking.php?propid=12862"
@@ -48,11 +58,12 @@ const Information = ({
         BackgroundColor={Colors.BLACK}
         background={true}
       >
-        Check Availability
+        {English ? "Check Availability" : "Bóka "}
       </Button>
     )}
   </Container>
-);
+  )
+};
 export default Information;
 const Container = styled.div`
   display: flex;

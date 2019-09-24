@@ -3,14 +3,25 @@ import styled from "styled-components";
 
 // Assets
 import { Colors, Media, MediaHeight } from "../../../Assets/Variables/";
-
-const ContactInfo = () => (
+const ContactInfo = ({ English }) => (
   <Container>
-    <h1> Contact Info </h1>
-    <h5> Úthlíð Travel Service </h5>
-    <h5> Úthlíð, 801 Selfoss, Iceland </h5>
-    <h5> Email: uthlid@uthlid.is</h5>
-    <h5> Phone +354 699 5500</h5>
+    {English ? (
+      <>
+        <h1> Contact Info </h1>
+        <h5> Úthlíð Travel Service </h5>
+        <h5> Úthlíð, 801 Selfoss, Iceland </h5>
+        <h5> Email: uthlid@uthlid.is</h5>
+        <h5> Phone +354 699 5500</h5>
+      </>
+    ) : (
+      <>
+        <h1> Upplýsingar </h1>
+        <h5> Úthlíð Travel Service </h5>
+        <h5> Úthlíð, 801 Selfoss, Iceland </h5>
+        <h5> Netfang: uthlid@uthlid.is</h5>
+        <h5> Sími +354 699 5500</h5>
+      </>
+    )}
   </Container>
 );
 

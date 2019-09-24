@@ -1,23 +1,43 @@
 self.__precacheManifest = [
   {
-    "revision": "abdd423bdd0f500c04d6",
-    "url": "/static/js/main.abdd423b.chunk.js"
+    "revision": "c1bafe767d657e6a9790",
+    "url": "/static/js/main.c1bafe76.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "bd861ed5fb60d6434c14",
-    "url": "/static/css/2.724f5615.chunk.css"
-  },
-  {
-    "revision": "bd861ed5fb60d6434c14",
-    "url": "/static/js/2.bd861ed5.chunk.js"
+    "revision": "4c69de84b976c75a36b1",
+    "url": "/static/js/2.4c69de84.chunk.js"
   },
   {
     "revision": "7ec4f63cb60466ad5a6abd1c8a6c68eb",
     "url": "/static/media/005-tee.7ec4f63c.svg"
+  },
+  {
+    "revision": "2ece06d60547a1eb9471dbfd0d0ac892",
+    "url": "/static/media/Bruararskord.2ece06d6.jpg"
+  },
+  {
+    "revision": "2f846a4779aaed605e7c00afc49d56cd",
+    "url": "/static/media/Bruarfoss.2f846a47.jpg"
+  },
+  {
+    "revision": "ba5308cf587538c24983aa7fb08c7b7a",
+    "url": "/static/media/hestaleiga_uthlid.ba5308cf.jpg"
+  },
+  {
+    "revision": "c162b533a0b1ace579db08a0e1df0b2d",
+    "url": "/static/media/Kolgrimsholl.c162b533.jpg"
+  },
+  {
+    "revision": "4a059d757266e11648de66910444decf",
+    "url": "/static/media/001-golf.4a059d75.svg"
+  },
+  {
+    "revision": "7cdd6f3de82c8b09b51410ac1801bd32",
+    "url": "/static/media/004-open.7cdd6f3d.svg"
   },
   {
     "revision": "24f2b8be1da4c90f653b2b0d55e2c78f",
@@ -128,32 +148,8 @@ self.__precacheManifest = [
     "url": "/static/media/personsBlack.6e348e12.svg"
   },
   {
-    "revision": "2ece06d60547a1eb9471dbfd0d0ac892",
-    "url": "/static/media/Bruararskord.2ece06d6.jpg"
-  },
-  {
-    "revision": "2f846a4779aaed605e7c00afc49d56cd",
-    "url": "/static/media/Bruarfoss.2f846a47.jpg"
-  },
-  {
-    "revision": "ba5308cf587538c24983aa7fb08c7b7a",
-    "url": "/static/media/hestaleiga_uthlid.ba5308cf.jpg"
-  },
-  {
-    "revision": "c162b533a0b1ace579db08a0e1df0b2d",
-    "url": "/static/media/Kolgrimsholl.c162b533.jpg"
-  },
-  {
     "revision": "31a378ce69b4786f04aa25eb5f50c5e3",
     "url": "/static/media/img_4335.31a378ce.jpg"
-  },
-  {
-    "revision": "4a059d757266e11648de66910444decf",
-    "url": "/static/media/001-golf.4a059d75.svg"
-  },
-  {
-    "revision": "7cdd6f3de82c8b09b51410ac1801bd32",
-    "url": "/static/media/004-open.7cdd6f3d.svg"
   },
   {
     "revision": "0bbb09753b104c3a01065dc748c48465",
@@ -220,7 +216,7 @@ self.__precacheManifest = [
     "url": "/static/media/img_2546.df8af123.jpg"
   },
   {
-    "revision": "44cbf97e8189bf6563181a5f0dddcf35",
+    "revision": "cde131b9af2fa41602bed913371fadcd",
     "url": "/index.html"
   }
 ];

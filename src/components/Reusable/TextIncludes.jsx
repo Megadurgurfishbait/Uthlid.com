@@ -38,7 +38,7 @@ const StayToGether = styled.div`
   display: flex;
   flex-wrap: wrap;
   height: 30px;
-  width: 150px;
+  width: 250px;
   align-items: center;
 `;
 

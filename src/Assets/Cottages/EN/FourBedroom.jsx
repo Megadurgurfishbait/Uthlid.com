@@ -1,10 +1,10 @@
-import IconPackage from "./SVG";
+import IconPackage from "../SVG";
 
 const Title = `FOUR BEDROOM COTTAGES`;
 const Price = `282`;
 const CoverPhoto = IconPackage.fourBedroom;
 const CoverPhoto_small = IconPackage.fourBedroom_Small;
-const URL = `Fourbedroom`;
+const URL = `fourbedroom`;
 
 
 const InformationBoxPrice = `Prices From`;
@@ -55,5 +55,6 @@ const Info = {
   URL,
   InformationBoxPrice,
   CoverPhoto_small
+
 };
 export default Info;

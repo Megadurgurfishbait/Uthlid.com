@@ -16,9 +16,22 @@ const SidebarInfo = [
   { Title: `Restaurant`, Path: `/Restaurant`, Icon: `${SVG.DinnerIcon}` }
 ];
 
+const SidebarInfo_IS = [
+
+  { Title: `Sumarbústaðir`, Path: `/Cottages`, Icon: `${SVG.CottagesIcon}` },
+  {
+    Title: `Hestaleiga`,
+    Path: `/Horserental`,
+    Icon: `${SVG.HorseRentalIcon}`
+  },
+  { Title: `Golf`, Path: `/Golf`, Icon: `${SVG.GolfIcon}` },
+  { Title: `Tjaldsvæði`, Path: `/Camping`, Icon: `${SVG.CampingIcon}` },
+  { Title: `Veitingastaður`, Path: `/Restaurant`, Icon: `${SVG.DinnerIcon}` }
+];
+
 const RightSidebarInfo = [
     SVG.FacebookIcon,
     SVG.LocationIcon,
     SVG.InfoIcon
 ]
-export { Small, Smaller, Regular, SidebarInfo, SVG, RightSidebarInfo };
+export { Small, Smaller, Regular, SidebarInfo, SidebarInfo_IS, SVG, RightSidebarInfo };

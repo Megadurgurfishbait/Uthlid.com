@@ -1,10 +1,10 @@
-import IconPackage from "./SVG";
+import IconPackage from "../SVG";
 
 const CoverPhoto_small = IconPackage.twoBedroom_Small;
 const CoverPhoto = IconPackage.twoBedroom;
 const Title = `TWO BEDROOM COTTAGES`;
 const Price = `164`;
-const URL = `TwoBedroom`;
+const URL = `twobedroom`;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `50`, IconBlack: `${IconPackage.m2Black}` },
   { Icon: `${IconPackage.personIcon}`, Text: `5-6`, IconBlack: `${IconPackage.personsBlack}` },
@@ -51,7 +51,8 @@ const Info = {
   Includes,
   SmallIcons,
   URL,
-  CoverPhoto_small,
-  InformationBoxPrice
+  InformationBoxPrice,
+  CoverPhoto_small
+
 };
 export default Info;

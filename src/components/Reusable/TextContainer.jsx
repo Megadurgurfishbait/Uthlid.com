@@ -4,28 +4,36 @@ import styled from "styled-components";
 // Assets
 import { Media } from "../../Assets/Variables/";
 import TextIncludes from "./TextIncludes";
+import LanguageContext from "../../Context/Language";
 /*
   Text Container er lýsing á sumarbústaði. 
   Ef að sumarbústaðurinn er með upplýsingar um Inlcudes þá sýnir hann þær líka. 
   Ef ekkert Includes er til staðar render'ar hann það ekki.
 */
 
-const TextContainer = ({ TextInformation, Includes }) => (
+const TextContainer = ({ TextInformation, Upplysingar, Includes, Camping }) => {
+  const {English} = React.useContext(LanguageContext);
+  return (
   <Container>
-    <Textbox>
-      {TextInformation.map(values => {
-        return (
-          <Text>
-            <TextTitle>{values.Title}</TextTitle>
-            <TextParagraph>{values.Text}</TextParagraph>
-          </Text>
-        );
-      })}
-      {Includes ? <TextIncludes Includes={Includes} /> : null}
+    <Textbox Camping={Camping ? true : false}>
+      {English
+        ? TextInformation.map(values => (
+            <Text>
+              <TextTitle>{values.Title}</TextTitle>
+              <TextParagraph>{values.Text}</TextParagraph>
+            </Text>
+          ))
+        : Upplysingar.map(values => (
+            <Text>
+              <TextTitle>{values.Title}</TextTitle>
+              <TextParagraph>{values.Text}</TextParagraph>
+            </Text>
+          ))}
+          {Includes ? <TextIncludes Includes={Includes} /> : null}
     </Textbox>
-    <FakeContainer />
+    <FakeContainer Camping={Camping ? true : false} />
   </Container>
-);
+)};
 
 export default TextContainer;
 
@@ -39,7 +47,7 @@ const Container = styled.div`
 
 const Textbox = styled.div`
   display: flex;
-  width: 60%;
+  width: ${props => props.Camping ? "100%" : "60%"};
   height: 100%;
   flex-direction: column;
   margin-left: 20px;
@@ -49,7 +57,7 @@ const Textbox = styled.div`
 `;
 
 const FakeContainer = styled.div`
-  display: flex;
+  display: ${props => props.Camping ? "none" : "flex"};
   width: 40%;
   height: 100%;
 
@@ -78,6 +86,7 @@ const TextTitle = styled.h3`
 `;
 
 const TextParagraph = styled.p`
+  white-space: pre-line;
   ${Media.phone`
       width:95%;
       font-size: 14px;

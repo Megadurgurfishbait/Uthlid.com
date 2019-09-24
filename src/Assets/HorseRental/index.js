@@ -14,6 +14,11 @@ const Price = [
   { Title: `2  hours`, Price: `100` }
 ];
 
+const Verd = [
+  { Title: `Hálftími`, Price: `50` },
+  { Title: `1  tími`, Price: `60` },
+  { Title: `2  tími`, Price: `100` }
+];
 
 const HorseRentInformation = [
   {
@@ -48,8 +53,42 @@ const HorseRentInformation = [
   }
 ];
 
+const HestaleigaInformation = [
+  {
+    Title: `Kolgrímshóll`,
+    Price: `120`,
+    Info: `Skemmtilegur reiðtúr í átt til fjalla sem endar við fallegan hól sem stendur upp úr hrauninu og er kallaður Kolgrímshóll. 
+    Þar er áð um stund og gengið upp á hólinn til að njóta útsýnis.`,
+    BackgroundImg: `${KolgrimshollImg}`
+  },
+  {
+    Title: `Miðfellshringur`,
+    Price: `120`,
+    Info: `Liðlega þriggja tíma reiðtúr frá Réttinni og inn að Miðfelli. Þar er áð og svo er ferðinni haldið áfram hringinn í kringum fellið – riðnar Miðfellsflatirnar og svo heim. `,
+  BackgroundImg: `${HestaleigaImg}`
+  },
+  {
+    Title: `Brúarárskörð`,
+    Price: `170`,
+    Info: `Dagferð með nesti og nýja skó. 
+    Riðið er sem leið liggur inn Úthlíðarhraun í átt að hinum mögnuðu Brúarárskörðum. Áð er á leiðinni við Kolgímshól. 
+    Þegar komið er inn í Skörð eru hestar bundnir og gengið inn í skörðin.`,
+  BackgroundImg: `${BruararskordImg}`
+  },
+  {
+    Title: `Brúarfoss`,
+    Price: `120`,
+    Info: `Tveggja tíma reiðtúr um Kóngsveg að þessum magnaða fossi.`,
+  BackgroundImg: `${BruarfossImg}`
+  }
+];
+
+
+
 export {
   Price,
   HorseBackground,
-  HorseRentInformation
+  HorseRentInformation,
+  HestaleigaInformation,
+  Verd
 }

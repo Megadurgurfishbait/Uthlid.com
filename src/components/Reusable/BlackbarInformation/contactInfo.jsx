@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const ContactInfo = () => (
+const ContactInfo = ({ English }) => (
   <EmailColumn>
     <EmailContainer>
-      <EmailText>Email</EmailText>
+      <EmailText>{English ? "Email" : "Netfang"}</EmailText>
       <EmailText fat>uthlid@uthlid.is</EmailText>
     </EmailContainer>
     <EmailContainer>
-      <EmailText>Phone</EmailText>
+      <EmailText>{English ? "Phone" : "Sími"} </EmailText>
       <EmailText fat>+354 699 5500</EmailText>
     </EmailContainer>
   </EmailColumn>

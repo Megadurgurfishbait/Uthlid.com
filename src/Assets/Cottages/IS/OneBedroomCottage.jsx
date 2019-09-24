@@ -1,7 +1,7 @@
-import IconPackage from "./SVG";
+import IconPackage from "../SVG";
 
 
-const Title = `ONE BEDROOM COTTAGE`;
+const Title = `Ástarbunga`;
 const Price = `164`;
 const CoverPhoto_small = IconPackage.oneBedroom_Small;
 const CoverPhoto = IconPackage.oneBedroom;
@@ -18,30 +18,28 @@ const BlackbarInfo = [
 const TextInformation = [
   {
     Title: `Description`,
-    Text: `Set in a very romantic spot. The Cottage is ideal for the big wedding night or special anniversaries. It
-    houses two people and includes a bedroom equipped with a TV, pillows and comforters. In the Middle of the cottage is a 
-    cozy living room. The Kitchen is well equipped with tableware for four persons and a coal barbecue grill is located on the patio.
-    Enjoy a nice romantic evening in the inhouse hot tub with a beautiful view over South Iceland including Mt. Hekla and the 
-    famous Eyjafjallajokull.
+    Text: `Rómantískur og fallegur bústaður fyrir pör sem vilja gera sér dagamun, eða eru í brúðkaupsferð.
+    Húsið er með einu svefnherbergi með tvíbreiðu rúmi, notalegri stofu, borðstofu og litlu eldhúsi sem er búið eldavél, kæliskáp, örbylgjuofni, kaffikönnu, hraðsuðukatli og borðbúnaði fyrir 4. Á pallinum er gasgrill og yfirbyggður heitur pottur.
+    Njótið þess að dvelja í þessum litla og fallega bústað með útsýn yfir sveitir Suðurlands, bæði til Heklu og Eyjafjallajökuls.    
     `
   }
 ];
 
 const Includes = [
   `WiFi`,
-  `Coal Barbecue Grill`,
-  `Fully Equipped Kitchen`,
-  `Stereo`,
-  `TV`,
-  `Hot Tub`
+  `Gasgrill`,
+  `Vel búið eldhús`,
+  `Útvarp`,
+  `Sjónvarp`,
+  `Heitur pottur`
 ];
 
 const SmallIcons = [
   { icon: `${IconPackage.wifiIcon}`, toolTip: `WiFi` },
-  { icon: `${IconPackage.stereoIcon}`, toolTip: `Stereo` },
-  { icon: `${IconPackage.grillIcon}`, toolTip: `Barbecue/Grill` },
-  { icon: `${IconPackage.tvIcon}`, toolTip: `Television` },
-  { icon: `${IconPackage.hottubIcon}`, toolTip: `Hot Tub` }
+  { icon: `${IconPackage.stereoIcon}`, toolTip: `Útvarp` },
+  { icon: `${IconPackage.grillIcon}`, toolTip: `Gasgrill` },
+  { icon: `${IconPackage.tvIcon}`, toolTip: `Sjónvarp` },
+  { icon: `${IconPackage.hottubIcon}`, toolTip: `Heitur pottur` }
 ];
 
 
@@ -57,5 +55,6 @@ const Info = {
   URL,
   InformationBoxPrice,
   CoverPhoto_small
+
 };
 export default Info;
