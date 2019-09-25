@@ -7,16 +7,19 @@ import { Header, BlackbarInformation, Layout } from "../Reusable";
 import { Values_Object_EN, Values_Object_IS } from "../../Assets/Cottages/";
 import Media from "../../Assets/Variables/media";
 import LanguageContext from "../../Context/Language";
+import useContentful from '../../Hooks/useContentful';
+
+
 // CottageInfoOjbect inniheldur upplýsingar um alla sumarbústaðina.
 // Síðan fyrir hvern og einn sumarbúsað.
 function SinglePageCottage({ match }) {
   const { English } = React.useContext(LanguageContext);
+  const Hello = useContentful(match.params.id.toLowerCase());
   const [Information, setInformation] = useState(
     English
       ? Values_Object_EN[match.params.id.toLowerCase()]
       : Values_Object_IS[match.params.id.toLowerCase()]
   );
-
 
   React.useEffect(() => {
     if (English) {
@@ -34,6 +37,7 @@ function SinglePageCottage({ match }) {
         horseInformation={false}
         {...Information}
         Cottages={true}
+        ProductPrice={Hello}
       />
 
       <Container>

@@ -9,24 +9,24 @@ import LanguageContext from "../../../Context/Language";
 // Assets
 import { Colors, Media, MediaHeight } from "../../../Assets/Variables/";
 const RightSidebar = ({ ShowRightBar }) => {
-  
-  const {English} = React.useContext(LanguageContext);
-  
+  const { English } = React.useContext(LanguageContext);
+
   return (
     <Container ShowRightBar={ShowRightBar}>
-    <Row smaller>
-      <Facebook English={English} />
-    </Row>
-    <Break />
-    <Row smaller>
-      <ContactInfo English={English} />
-    </Row>
-    <Break />
-    <Row>
-      <Map />
-    </Row>
-  </Container>
-  )
+      <Row smaller>
+        <Facebook English={English} />
+      </Row>
+
+      <Break />
+      <Row>
+        <Map />
+      </Row>
+      <Break />
+      <Row smaller>
+        <ContactInfo English={English} />
+      </Row>
+    </Container>
+  );
 };
 
 export default RightSidebar;

@@ -25,7 +25,7 @@ const BlackbarInformation = Data => {
   return (
   <Container>
     <Blackbar {...Data} English={English} />
-    <Information {...Data} English={English} />
+    <Information {...Data} English={English}  />
   </Container>
 )};
 

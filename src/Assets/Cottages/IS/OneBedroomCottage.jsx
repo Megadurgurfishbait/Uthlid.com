@@ -17,7 +17,7 @@ const BlackbarInfo = [
 
 const TextInformation = [
   {
-    Title: `Description`,
+    Title: `Lýsing`,
     Text: `Rómantískur og fallegur bústaður fyrir pör sem vilja gera sér dagamun, eða eru í brúðkaupsferð.
     Húsið er með einu svefnherbergi með tvíbreiðu rúmi, notalegri stofu, borðstofu og litlu eldhúsi sem er búið eldavél, kæliskáp, örbylgjuofni, kaffikönnu, hraðsuðukatli og borðbúnaði fyrir 4. Á pallinum er gasgrill og yfirbyggður heitur pottur.
     Njótið þess að dvelja í þessum litla og fallega bústað með útsýn yfir sveitir Suðurlands, bæði til Heklu og Eyjafjallajökuls.    
