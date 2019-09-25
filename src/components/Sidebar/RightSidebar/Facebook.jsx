@@ -22,6 +22,7 @@ const Container = styled.div`
   width: 100%;
   flex-direction: column;
   background-color: inherit;
+  text-decoration: none;
   & > a {
     color: ${Colors.GOLD};
     ${Media.tablet`font-size: 17px;`}

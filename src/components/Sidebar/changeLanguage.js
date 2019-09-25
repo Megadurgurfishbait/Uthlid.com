@@ -65,10 +65,10 @@ const Container = styled.div`
   transform-origin: 00% 100%;
   ${props => console.log(props.turn)};
   transform: ${props => (props.turn ? "rotateY(-90deg)" : "rotateY(0)")};
-
 `;
 
 const LanguageButton = styled(Link)`
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;

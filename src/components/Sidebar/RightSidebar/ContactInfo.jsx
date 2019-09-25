@@ -36,6 +36,13 @@ const Container = styled.div`
   justify-content: center;
   color: ${Colors.GOLD};
   background-color: inherit;
+  box-sizing: border-box;
+  text-align: center !important;
+  padding: 20px 5px;
+
+  & > * {
+    margin: 10px auto;
+  }
 
   & > h1 {
     ${Media.tablet`font-size: 17px;`}

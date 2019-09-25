@@ -156,6 +156,7 @@ const ContainerRight = styled(Container)`
 const TextTitle = styled(Link)`
   box-sizing: border-box;
   width: 150px;
+  text-decoration: none;
   background-color: ${Colors.GOLD};
   display: flex;
   justify-content: center;

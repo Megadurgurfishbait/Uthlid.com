@@ -1,6 +1,6 @@
 import IconPackage from "../SVG";
 
-const Title = `Fjögurra herbergja hús – lúxus gisting`;
+const Title = `Fjögurra herbergja hús`;
 const Price = `282`;
 const CoverPhoto = IconPackage.fourBedroom;
 const CoverPhoto_small = IconPackage.fourBedroom_Small;

@@ -52,6 +52,7 @@ const Button = styled(Link)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
     text-decoration: none;
@@ -72,6 +73,7 @@ const ButtonAnchor = styled.a`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
     text-decoration: none;

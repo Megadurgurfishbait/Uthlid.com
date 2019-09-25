@@ -66,6 +66,7 @@ const Clickable = styled(Link)`
   width: 100%;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 `;
 
 const SingleIcon = styled.img`

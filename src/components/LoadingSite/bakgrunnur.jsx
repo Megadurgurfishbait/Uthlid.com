@@ -28,9 +28,11 @@ function Bakgrunnur() {
              Golden Circle, close to Geysir, Gullfoss and Thingvellir.  
              One hour from Reykjavík.
              `
-              : `Ferðaþjónusta við hálendislínuna –Þingvellir, 
-              Skálholt, Geysir og Gullfoss í næsta nágrenni – 
-              klukkustundar akstur frá Reykjavík`}
+              : `
+              Ferðaþjónusta við hálendislínuna. Þingvellir,
+              Skálholt, Geysir og Gullfoss í næsta nágrenni
+              klukkustundar akstur frá Reykjavík
+              `}
           </Paragraph>
         </Row>
         <Column>
@@ -40,7 +42,7 @@ function Bakgrunnur() {
             BackgroundColor={Colors.BLACK}
             background={true}
           >
-            {English ? `Book Now` : "Bóka núna" }
+            {English ? `Book Now` : "Bóka núna"}
           </Button>
         </Column>
       </TextContainer>

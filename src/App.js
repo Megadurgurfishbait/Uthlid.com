@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 import { TimelineLite, Power3 } from "gsap/TweenMax";
 import styled, { createGlobalStyle } from "styled-components";
-import "./boot.css";
+
 // Components
 import {
   CardContainer,
