@@ -1,12 +1,14 @@
-import CardContainer from "./Cottage/CardContainer";
-import SinglePageCottage from "./SinglePageCottage/SinglePageCottage";
-import HorseRentalContainer from "./HorseRental/HorseRentalContainer";
-import Golf from "./Golf/Golf";
+import React from 'react';
+
 import Container from "./LoadingSite/Container";
 import Sidebar from "./Sidebar/Container";
-import Camping from "./Camping/CampingContainer";
-import Restaurant from "./Restaurant/RestaurantContainer";
+import SinglePageCottage from './SinglePageCottage/SinglePageCottage';
 
+const CardContainer = React.lazy(() => import('./Cottage/CardContainer'));
+const HorseRentalContainer = React.lazy(() => import('./HorseRental/HorseRentalContainer'));
+const Golf = React.lazy(() => import('./Golf/Golf'));
+const Camping = React.lazy(() => import('./Camping/CampingContainer'));
+const Restaurant = React.lazy(() => import('./Restaurant/RestaurantContainer'));
 
 
 export {

@@ -63,7 +63,6 @@ const Container = styled.div`
   transform-style: preserve-3d;
   transition: all 0.5s ease-out;
   transform-origin: 00% 100%;
-  ${props => console.log(props.turn)};
   transform: ${props => (props.turn ? "rotateY(-90deg)" : "rotateY(0)")};
   z-index: 5001 !important;
 `;

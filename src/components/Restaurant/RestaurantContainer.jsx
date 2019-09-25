@@ -6,7 +6,6 @@ import Menu from "./Menu/Menu";
 
 // Import Assets
 import Info from "../../Assets/Restaurant/index";
-console.log(Info);
 const RestaurantContainer = () => (
   <Layout>
     <Header CoverPhoto={Info.CoverPhoto} />

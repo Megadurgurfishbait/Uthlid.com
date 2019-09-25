@@ -8,7 +8,6 @@ const Boxes = ({ Icon, Path, myFunc, truers, altText }) => (
   <>
     {Path ? (
       <Container>
-        {console.log(altText)}
         <Clickable to={`${Path}`}>
           <SingleIcon alt={`${altText}`} src={Icon} />
         </Clickable>

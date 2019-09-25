@@ -4,14 +4,8 @@ import styled from "styled-components";
 
 /* Ef að Price er Array, sem er tilvikið fyrir HorseRental þá loopum við yfir það. */
 /* Ef að Price er stök tala setjum við það beint inn. Sem er tilvikið fyrir Cottages*/
-const NumberSymbol = ( { Price, Verd, golf, English, ProductPrice }) => {
-
-  
-
-
-  return (
+const NumberSymbol = ( { Price, Verd, golf, English, ProductPrice }) =>  (
   <Container>
-    {console.log(ProductPrice)}
     <TextContainer>
       {English ? (
         Array.isArray(Price) ? (
@@ -46,7 +40,7 @@ const NumberSymbol = ( { Price, Verd, golf, English, ProductPrice }) => {
       )}
     </TextContainer>
   </Container>
-)};
+);
 
 export default NumberSymbol;
 

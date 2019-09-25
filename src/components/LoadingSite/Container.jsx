@@ -5,9 +5,10 @@ import { Layout } from "../Reusable/";
 import Card from "./Card";
 import Bakgrunnur from "./bakgrunnur";
 
+
+
 // Sækja myndir úr Assets fyrir hverja röð.
 import RowInformation from "../../Assets/LoadingSite/";
-
 const LoadingSiteContainer = () => (
   <>
     <Bakgrunnur />
