@@ -15,7 +15,7 @@ function Bakgrunnur() {
   const { English } = React.useContext(LanguageContext);
   return (
     <Container>
-      <BackgroundImage />
+      <BackgroundImage role="img" aria-label="Picture of Uthlid"/>
       <TextContainer>
         <Column end>
           <TitleText> Úthlíð </TitleText>

@@ -16,7 +16,7 @@ const Card = ( { CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => {
 
   return (
   <Container>
-    <Image src={CoverPhoto_small} />
+    <Image alt="Cover photos of cottages" src={CoverPhoto_small} />
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />

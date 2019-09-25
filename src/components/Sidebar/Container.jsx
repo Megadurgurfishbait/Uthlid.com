@@ -40,13 +40,13 @@ function Sidebar({ Position, mahAnimation }) {
                 ? SidebarInfo.map(value => (
                     <Row>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
-                      <Boxes Icon={value.Icon} Path={value.Path} />
+                      <Boxes altText={value.altText} Icon={value.Icon} Path={value.Path} />
                     </Row>
                   ))
                 : SidebarInfo_IS.map(value => (
                     <Row>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
-                      <Boxes Icon={value.Icon} Path={value.Path} />
+                      <Boxes altText={value.altText} Icon={value.Icon} Path={value.Path} />
                     </Row>
                   ))}
             </MainIcons>

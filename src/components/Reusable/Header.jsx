@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Header = ({ CoverPhoto }) => <Container img={CoverPhoto} />;
+const Header = ({ CoverPhoto }) => <Container role="img" aria-label="Picture of related product" img={CoverPhoto} />;
 
 export default Header;
 

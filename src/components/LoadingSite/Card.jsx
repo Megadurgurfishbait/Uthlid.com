@@ -16,7 +16,6 @@ const Card = ({ Backgroundcolor, Title, Title_IS, Paragraph, Paragraph_IS, Image
   
   return (<Container background={Backgroundcolor}>
 
-  {console.log(drasl.width)}
     <TextSide background={Backgroundcolor}>
       <TitleText>{English ? Title : Title_IS}</TitleText>
       <Description>{English ? Paragraph : Paragraph_IS }</Description>
@@ -24,7 +23,7 @@ const Card = ({ Backgroundcolor, Title, Title_IS, Paragraph, Paragraph_IS, Image
         {English ? `Read More` : `Skoða nánar` }
       </Button>
     </TextSide>
-    <ImageSide src={drasl.width > 700 ? Image : Image_Mobile} />
+    <ImageSide alt="Images related to the text" src={drasl.width > 700 ? Image : Image_Mobile} />
   </Container>
   )
   };

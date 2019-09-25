@@ -4,17 +4,18 @@ import { Link } from "react-router-dom";
 // Assets
 import { Colors, Media, MediaHeight } from "../../Assets/Variables/";
 
-const Boxes = ({ Icon, Path, myFunc, truers }) => (
+const Boxes = ({ Icon, Path, myFunc, truers, altText }) => (
   <>
     {Path ? (
       <Container>
+        {console.log(altText)}
         <Clickable to={`${Path}`}>
-          <SingleIcon src={Icon} />
+          <SingleIcon alt={`${altText}`} src={Icon} />
         </Clickable>
       </Container>
     ) : (
       <Container onClick={() => myFunc()} expand={truers}>
-        <SingleIcon src={Icon} />
+        <SingleIcon alt="informationIcon" src={Icon} />
       </Container>
     )}
   </>

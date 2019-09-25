@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "dafeec4156651d2970ea",
+    "revision": "df63a9bb1936bc594228",
     "url": "/static/css/main.770d05a4.chunk.css"
   },
   {
-    "revision": "dafeec4156651d2970ea",
-    "url": "/static/js/main.dafeec41.chunk.js"
+    "revision": "df63a9bb1936bc594228",
+    "url": "/static/js/main.df63a9bb.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -157,27 +157,27 @@ self.__precacheManifest = [
   },
   {
     "revision": "0bbb09753b104c3a01065dc748c48465",
-    "url": "/static/media/001-black-head-horse-side-view-with-horsehair.0bbb0975.svg"
+    "url": "/static/media/horseHead.0bbb0975.svg"
   },
   {
     "revision": "68f06d27cfc887ff49fbfc0827c0edd4",
-    "url": "/static/media/002-cottage.68f06d27.svg"
+    "url": "/static/media/Cottage.68f06d27.svg"
   },
   {
     "revision": "797856f42d44f6e2841a6606d3bbab04",
-    "url": "/static/media/003-golf-player-hitting-the-ball.797856f4.svg"
+    "url": "/static/media/GolfPlayer.797856f4.svg"
   },
   {
     "revision": "882948ef47b423af54bddba766fc7711",
-    "url": "/static/media/camping-tent.882948ef.svg"
+    "url": "/static/media/CampingTent.882948ef.svg"
   },
   {
     "revision": "174b1c52ca6752b70ff25aa4388674cf",
-    "url": "/static/media/facebook-logo-button.174b1c52.svg"
+    "url": "/static/media/FacebookLogo.174b1c52.svg"
   },
   {
     "revision": "d3008146a981c5e09823657deab28c22",
-    "url": "/static/media/maps-and-flags.d3008146.svg"
+    "url": "/static/media/Map.d3008146.svg"
   },
   {
     "revision": "4bcdcbcea17f839fe2927f90cef4fc22",
@@ -240,7 +240,7 @@ self.__precacheManifest = [
     "url": "/static/media/img_2546.df8af123.jpg"
   },
   {
-    "revision": "42c5a0afcf348ca1a242b9e91276ff66",
+    "revision": "dca0fb66eed6b7c903c4682b475f6941",
     "url": "/index.html"
   }
 ];
