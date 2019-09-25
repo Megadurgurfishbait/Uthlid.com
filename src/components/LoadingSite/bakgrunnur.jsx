@@ -71,7 +71,7 @@ const BackgroundImage = styled.div`
   background-position: bottom;
   z-index: 1;
   top: 0;
-  filter: opacity(55%);
+  filter: opacity(45%);
   left: 0;
 
   ${Media.large`background-image: url(${Small});`}
@@ -121,6 +121,8 @@ const Paragraph = styled.h4`
   line-height: 2;
   white-space: pre;
   text-align: center;
+  font-size: 20px;
+  
   ${Media.large`
     width: 90%;
     font-size: 18px;
