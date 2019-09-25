@@ -7,13 +7,16 @@ import {Button} from "../Reusable/";
 //Assets
 import {Colors, Media} from "../../Assets/Variables/";
 import LanguageContext from "../../Context/Language";
+import getWindowDimensions from '../../Hooks/useWindowDimensions';
 
 
-const Card = ({ Backgroundcolor, Title, Title_IS, Paragraph, Paragraph_IS, Image, Path }) => {
+const Card = ({ Backgroundcolor, Title, Title_IS, Paragraph, Paragraph_IS, Image, Image_Mobile, Path }) => {
   const {English} = React.useContext(LanguageContext);
-  
+  const [drasl] = React.useState(getWindowDimensions());
   
   return (<Container background={Backgroundcolor}>
+
+  {console.log(drasl.width)}
     <TextSide background={Backgroundcolor}>
       <TitleText>{English ? Title : Title_IS}</TitleText>
       <Description>{English ? Paragraph : Paragraph_IS }</Description>
@@ -21,7 +24,7 @@ const Card = ({ Backgroundcolor, Title, Title_IS, Paragraph, Paragraph_IS, Image
         {English ? `Read More` : `Skoða nánar` }
       </Button>
     </TextSide>
-    <ImageSide src={Image} />
+    <ImageSide src={drasl.width > 700 ? Image : Image_Mobile} />
   </Container>
   )
   };

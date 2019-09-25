@@ -3,6 +3,11 @@ import GolfImage from "../Golf/img_4335_small.jpg";
 import HorseRentalImage from "../HorseRental/k3_9089_small.jpg";
 import CampingImage from "../Camping/orginal_front.jpg";
 import RestaurantImage from "../Restaurant/img_2546_small.jpg";
+import CottagesImage_Mobile from "./Mobile/img_0021_mobile.jpg";
+import GolfImage_Mobile from "./Mobile/img_4335_mobile.jpg";
+import HorseRentalImage_Mobile from "./Mobile/k3_9089_mobile.jpg";
+import CampingImage_Mobile from "./Mobile/orginal_front_mobile.jpg";
+import RestaurantImage_Mobile from "./Mobile/img_2546_mobile.jpg";
 
 const RowInformation = [
   {
@@ -11,6 +16,7 @@ const RowInformation = [
     Paragraph: `From this place is possible to visit the most popular tourist attractions in South and West Iceland within a day.`,
     Paragraph_IS: `Við bjóðum gestum fjölbreyttar tegundir orlofshúsa sem henta ólíkum þörfum ferðamanna.`,
     Image: `${CottagesImage}`,
+    Image_Mobile: `${CottagesImage_Mobile}`,
     Path: `/Cottages`
   },
   {
@@ -19,6 +25,7 @@ const RowInformation = [
     Paragraph: `Skúmur, Svali, Blesi, Loki and the other horses in Úthlíð welcome all tourist to our Horse rental`,
     Paragraph_IS: `Skúmur, Svali, Blesi, Loki og allir hinir skemmtilegu hestarnir bjóða gesti velkomna í góðan útreiðartúr um nágrenni Úthlíðar.`,
     Image: `${HorseRentalImage}`,
+    Image_Mobile: `${HorseRentalImage_Mobile}`,
     Path: `/Horserental`
   },
   {
@@ -27,6 +34,7 @@ const RowInformation = [
     Paragraph: `In Uthlid is a nine hole golf course open in the summer time usually from the end of May to the beginning of October.  The course is par 35,  2470 meters on yellow tees and 2118 on red tees.`,
     Paragraph_IS: `Úthliðarvöllur er 9 holu golfvöllur sem er opinn frá maí til október (ef veður leyfir ). Völlurinn er PAR 35, 2470 metrar á gulum teigum og 2118 á rauðum. `,
     Image: `${GolfImage}`,
+    Image_Mobile: `${GolfImage_Mobile}`,
     Path: `/Golf`
   },
   {
@@ -35,6 +43,7 @@ const RowInformation = [
     Paragraph: `The camping site in Uthlid is well located close to the main road and in walking distance from the restaurant, swimming pool and golf course.`,
     Paragraph_IS: `Tjaldstæðið í Úthlíð er opið allan ársins hring, sturta og heitur pottur er við þjónustumiðstöð ásamt aðstöðu til að vaska upp og þvo þvott. Þjónustumiðstöðin er við veitingastaðinn Réttina.`,
     Image: `${CampingImage}`,
+    Image_Mobile: `${CampingImage_Mobile}`,
     Path: `/Camping`
   },
   {
@@ -44,6 +53,7 @@ const RowInformation = [
     Paragraph_IS: `Veitingastaðurinn er opin kl. 16.-20 allan ársins hring, en á sumrin og á laugardögum er annar afgreiðslutími. 
     Á matseðli eru góðir grillréttir á hagstæðu verði ásamt drykkjum. Hægt er að borða í Réttinni eða taka með sér. `,
     Image: `${RestaurantImage}`,
+    Image_Mobile: `${RestaurantImage_Mobile}`,
     Path: `/Restaurant`
   }
 ];

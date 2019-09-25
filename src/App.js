@@ -97,7 +97,7 @@ const BigScreen = styled.div`
   height: 0vh;
   top: 0;
   left: -2000px;
-  z-index: 50 !important;
+  z-index: 5000 !important;
   background: linear-gradient(
     to right,
     rgba(55, 55, 55, 1) -30%,

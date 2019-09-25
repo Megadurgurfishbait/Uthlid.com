@@ -35,7 +35,7 @@ const ChangeLanguage = ({ mahAnimation }) => {
       <LanguageButton
         onClick={() => (clickable ? onButtonClick() : setClickable(false))}
       >
-        {setClickable ? "EN" : "IS"}
+        {language ? "EN" : "IS"}
       </LanguageButton>
       <LanguageButton
         right
@@ -65,6 +65,7 @@ const Container = styled.div`
   transform-origin: 00% 100%;
   ${props => console.log(props.turn)};
   transform: ${props => (props.turn ? "rotateY(-90deg)" : "rotateY(0)")};
+  z-index: 5001 !important;
 `;
 
 const LanguageButton = styled(Link)`
