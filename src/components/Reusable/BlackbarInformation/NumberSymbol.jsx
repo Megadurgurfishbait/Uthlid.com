@@ -53,14 +53,14 @@ const Container = styled.div`
 `;
 
 const Number = styled.h3`
-  font-size: ${props => (props.small ? "20" : "60")}px;
+  font-size: ${props => (props.small ? "20" : "30")}px;
   font-weight: 900;
 `;
 
 const Symbol = styled(Number)`
   font-weight: 100;
   margin: 10px;
-  font-size: ${props => (props.small ? "20" : "40")}px;
+  font-size: ${props => (props.small ? "20" : "30")}px;
 `;
 
 const TextContainer = styled.div`
