@@ -9,8 +9,8 @@ const NumberSymbol = ( { Price, Verd, golf, English, ProductPrice }) =>  (
     <TextContainer>
       {English ? (
         Array.isArray(Price) ? (
-          Price.map(values => (
-            <Row>
+          Price.map((values, index) => (
+            <Row key={`${index}-PriceRow`}>
               <h5> {values.Title} </h5>
               <Number small>
                 {values.Price} {golf ? "" : "€"}
@@ -24,8 +24,8 @@ const NumberSymbol = ( { Price, Verd, golf, English, ProductPrice }) =>  (
           </Row>
         )
       ) : Array.isArray(Verd) ? (
-        Verd.map(values => (
-          <Row>
+        Verd.map((values, index) => (
+          <Row key={`${index}-VerðRöð`}>
             <h5> {values.Title} </h5>
             <Number small>
               {values.Price} {golf ? "" : "€"}
@@ -73,4 +73,9 @@ const Row = styled.div`
   display: flex;
   width: 100%;
   justify-content: ${props => (props.center ? "center" : "space-around")};
+  align-items: center;
+  height: 40px;
+  & > h5 {
+    font-size: 16px;
+  }
 `;

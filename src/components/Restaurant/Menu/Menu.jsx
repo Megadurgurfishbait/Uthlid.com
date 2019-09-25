@@ -13,12 +13,12 @@ function Menu() {
   return (
     <Layout>
       <Container>
-        {Object.entries(MenuInfo).map(values => {
+        {Object.entries(MenuInfo).map((values, index) => {
           return (
-            <FoodType>
+            <FoodType key={`${index}FoodType`}>
               <TitleText>{values[0]}</TitleText>
-              {values[1].map(v => {
-                return <MenuCard {...v} />;
+              {values[1].map((v,i) => {
+                return <MenuCard {...v} key={`${i}FoodItems`}/>;
               })}
             </FoodType>
           );

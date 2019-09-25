@@ -29,6 +29,8 @@ export default function useContentful(match) {
         return English
           ? productArray.fourbedroom
           : productArray.fjgurraHerbergja;
+      default: 
+        return "Error in Pricing";
     }
   };
   // Náum í verð Upplýsingar í Contentful.

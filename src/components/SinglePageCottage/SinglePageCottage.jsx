@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 // Component
-import { Header, BlackbarInformation, Layout } from "../Reusable";
+import { Header, BlackbarInformation, Layout, TextIncludes } from "../Reusable";
 // Assets
 import { Values_Object_EN, Values_Object_IS } from "../../Assets/Cottages/";
 import Media from "../../Assets/Variables/media";
 import LanguageContext from "../../Context/Language";
-import useContentful from '../../Hooks/useContentful';
-
+import useContentful from "../../Hooks/useContentful";
 
 // CottageInfoOjbect inniheldur upplýsingar um alla sumarbústaðina.
 // Síðan fyrir hvern og einn sumarbúsað.
@@ -42,14 +41,15 @@ function SinglePageCottage({ match }) {
 
       <Container>
         <Textbox>
-          {Information.TextInformation.map(values => (
-            <Text>
+          {Information.TextInformation.map((values, index) => (
+            <Text key={`${index}informationTextboxes`}>
               <TextTitle>{values.Title}</TextTitle>
               <TextParagraph>{values.Text}</TextParagraph>
             </Text>
           ))}
         </Textbox>
       </Container>
+      <TextIncludes Includes={Information.Includes} />
     </Layout>
   );
 }
@@ -71,7 +71,7 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  margin-top: 80px;
+  margin: 80px auto;
 `;
 
 const Text = styled.div`

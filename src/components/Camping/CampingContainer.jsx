@@ -20,17 +20,17 @@ const CampingContainer = () => {
         <FAQTitle>FAQ</FAQTitle>
         <FAQContent>
           {English
-            ? Info.FAQ.map(value => (
-                <>
+            ? Info.FAQ.map((value, index) => (
+                <div key={`${index}InfoFAQ`}>
                   <FAQQuestion> {value.Question}</FAQQuestion>
                   <FAQAnswer>{value.Answer}</FAQAnswer>
-                </>
+                </div>
               ))
-            : Info.FAQ_is.map(value => (
-                <>
+            : Info.FAQ_is.map((value, index) => (
+              <div key={`${index}UpplysingarFAQ`}>
                   <FAQQuestion> {value.Question}</FAQQuestion>
                   <FAQAnswer>{value.Answer}</FAQAnswer>
-                </>
+                </div>
               ))}
         </FAQContent>
       </FAQ>

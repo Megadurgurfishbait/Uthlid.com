@@ -33,11 +33,11 @@ return (
         <HorseInformation>
           {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
           {English
-            ? HorseRentInformation.map(values => (
-                <HorseRentalCard {...values} />
+            ? HorseRentInformation.map((values, index) => (
+                <HorseRentalCard {...values} key={`${index}HorseRentalContainer`}/>
               ))
-            : HestaleigaInformation.map(values => (
-                <HorseRentalCard {...values} />
+            : HestaleigaInformation.map((values, index) => (
+                <HorseRentalCard {...values} key={`${index}Hestaleiga`}/>
               ))}
         </HorseInformation>
       </Row>

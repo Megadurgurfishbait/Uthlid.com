@@ -23,8 +23,8 @@ const Card = ( { CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => {
     <SmallIcon IconArray={SmallIcons} />
     <Button
       toPath={`/cottages/${URL}`}
-      background={true}
-      BackgroundColor={`${Colors.BLACK}`}
+      background={"true"}
+      backgroundcolor={`${Colors.BLACK}`}
     >
       {English ? `See More ` : `Skoða nánar`}
     </Button>

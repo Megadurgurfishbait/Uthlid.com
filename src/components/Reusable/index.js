@@ -4,6 +4,7 @@ import TextContainer from './TextContainer';
 import Layout from './Layout';
 import Blackbar from './BlackbarInformation/Blackbar';
 import BlackbarInformation from './BlackbarInformation/BlackbarInformation';
+import TextIncludes from './TextIncludes';
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     TextContainer,
     Layout,
     Blackbar,
+    TextIncludes,
     BlackbarInformation
 }

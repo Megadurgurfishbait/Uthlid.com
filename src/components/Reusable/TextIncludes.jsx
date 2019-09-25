@@ -6,24 +6,26 @@ import Add from "../../Assets/Cottages/SVG/add.svg";
 import { Media } from "../../Assets/Variables/";
 const TextIncludes = ({ Includes }) => (
   <Container>
-    {Includes.map(values => {
-      return (
-        <StayToGether>
+    {
+      Includes === undefined || Includes < 1 ? null : 
+    
+    Includes.map((values, index) => (
+        <StayToGether key={`${index}Included`}>
           <Icon src={Add} />
           <IncludesTextBox>{values}</IncludesTextBox>
         </StayToGether>
-      );
-    })}
+      )
+    )}
   </Container>
 );
 
 export default TextIncludes;
 
-const Container = styled.h5`
+const Container = styled.div`
   display: flex;
-  margin: 30px auto;
+  margin: -30px auto 30px auto;
   font-size: 14px;
-  width: 70%;
+  width: 80%;
   flex-wrap: wrap;
   justify-content: space-between;
   ${Media.desktop`width: 70%;`};

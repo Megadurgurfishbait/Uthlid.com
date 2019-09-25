@@ -106,6 +106,7 @@ const H1 = styled.h1`
   display: flex;
   font-weight: 900;
   text-transform: uppercase;
+  text-align: center;
 `;
 
 const Text = styled.h3`
@@ -119,7 +120,11 @@ const Text = styled.h3`
 
 const AboutText = styled.h5`
   width: 80%;
+  font-size: 20px;
+  text-align: center;
   font-weight: 300;
   margin: 0px;
   padding: 0px;
+
+  ${Media.phone`font-size: 16px;`};
 `;

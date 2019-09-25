@@ -12,7 +12,7 @@ const ButtonReusable = ({
   toPath,
   background,
   children,
-  BackgroundColor,
+  backgroundcolor,
   isExternal
 }) => (
   <>
@@ -20,7 +20,7 @@ const ButtonReusable = ({
       <ButtonAnchor
         background={background}
         href={toPath}
-        backgroundColor={BackgroundColor}
+        backgroundcolor={backgroundcolor}
       >
         {children}
         <Span>&nbsp; &nbsp; &#x2192;</Span>
@@ -29,7 +29,7 @@ const ButtonReusable = ({
       <Button
         background={background}
         to={toPath}
-        backgroundColor={BackgroundColor}
+        backgroundcolor={backgroundcolor}
       >
         {children}
         <Span>&nbsp; &nbsp; &#x2192;</Span>
@@ -40,7 +40,7 @@ const ButtonReusable = ({
 export default ButtonReusable;
 
 const Button = styled(Link)`
-  background-color: ${props => props.backgroundColor || "transparent"};
+  background-color: ${props => props.backgroundcolor || "transparent"};
   border: 2px solid
     ${props => (props.background ? `${Colors.GOLD}` : `${Colors.BLACK}`)};
   width: 200px;
@@ -61,7 +61,7 @@ const Button = styled(Link)`
 `;
 
 const ButtonAnchor = styled.a`
-  background-color: ${props => props.backgroundColor || "transparent"};
+  background-color: ${props => props.backgroundcolor || "transparent"};
   border: 2px solid
     ${props => (props.background ? `${Colors.GOLD}` : `${Colors.BLACK}`)};
   width: 200px;

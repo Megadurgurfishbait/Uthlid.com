@@ -16,7 +16,7 @@ const Upplysingar = [
   {
     Title: `Um Réttina`,
     Text: `Veitingastaðurinn Réttin er opinn kl.16 – 20pm alla virka daga ársins. Einnig er hádegishlaðborð kl. 12 – 13 alla virka daga sem samanstendur af hefðbundnum íslenskum heimilismat og svo er opið alla laugardaga.
-    Á kvöldin er matseðill Réttarinnar með hamborgurum og pizzum á sanngjörnu verði ásamt salötum, samlokum og fleiri réttum. Einnig er hægt að fá sér drykki og fara á netið í fríu WiFi. eika sér þar inni í Billjarð og tefla skák.
+    Á kvöldin er matseðill Réttarinnar með hamborgurum og pizzum á sanngjörnu verði ásamt salötum, samlokum og fleiri réttum. Einnig er hægt að fá sér drykki og fara á netið í fríu WiFi. Leika sér þar inni í Billjarð og tefla skák.
     Gestir geta valið um að borða á staðnum eða taka matinn með sér í bústaðina.
     Réttin er einnig móttakan fyrir bústaðina og upplýsingamiðstöð fyrir ferðamenn.
     Þess má geta að maturinn sem við bjóðum í Úthlíð er að eins miklu leyti og kostur er fenginn beint frá bónda.
@@ -29,6 +29,5 @@ const Info = {
   TextInformation,
   Upplysingar
 };
-
 
 export default Info;

@@ -20,8 +20,8 @@ const CardContainer = () => {
       <H1> Cottages </H1>
       <MapCardContainer>
         {English
-          ? CottageInfoArray[0].map(values => <Card {...values }  />)
-          : CottageInfoArray[1].map(values => <Card {...values }  />)}
+          ? CottageInfoArray[0].map((values, i) => <Card {...values } key={`${i}Cottages`}  />)
+          : CottageInfoArray[1].map((values, i) => <Card {...values } key={`${i}Bustadir`}   />)}
       </MapCardContainer>
     </Layout>
   );

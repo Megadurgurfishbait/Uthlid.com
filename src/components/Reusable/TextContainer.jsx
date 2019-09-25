@@ -11,29 +11,42 @@ import LanguageContext from "../../Context/Language";
   Ef ekkert Includes er til staðar render'ar hann það ekki.
 */
 
-const TextContainer = ({ TextInformation, Upplysingar, Includes, Camping }) => {
-  const {English} = React.useContext(LanguageContext);
+const TextContainer = ({
+  TextInformation,
+  Upplysingar,
+  Includes,
+  Camping,
+  Leiga
+}) => {
+  const { English } = React.useContext(LanguageContext);
   return (
-  <Container>
-    <Textbox Camping={Camping ? true : false}>
-      {English
-        ? TextInformation.map(values => (
-            <Text>
-              <TextTitle>{values.Title}</TextTitle>
-              <TextParagraph>{values.Text}</TextParagraph>
-            </Text>
-          ))
-        : Upplysingar.map(values => (
-            <Text>
-              <TextTitle>{values.Title}</TextTitle>
-              <TextParagraph>{values.Text}</TextParagraph>
-            </Text>
-          ))}
-          {Includes ? <TextIncludes Includes={Includes} /> : null}
-    </Textbox>
-    <FakeContainer Camping={Camping ? true : false} />
-  </Container>
-)};
+    <Container>
+
+      <Textbox Camping={Camping ? true : false}>
+        {English
+          ? TextInformation.map((values, index) => (
+              <Text key={`${index}TextContainer`}>
+                <TextTitle>{values.Title}</TextTitle>
+                <TextParagraph>{values.Text}</TextParagraph>
+              </Text>
+            ))
+          : Upplysingar.map((values, index) => (
+            <Text key={`${index}TextaBox`}>
+                <TextTitle>{values.Title}</TextTitle>
+                <TextParagraph>{values.Text}</TextParagraph>
+              </Text>
+            ))}
+
+        {!English ? (
+          <TextIncludes Includes={Leiga} />
+        ) : Includes ? (
+          <TextIncludes Includes={Includes} />
+        ) : null}
+      </Textbox>
+      <FakeContainer Camping={Camping ? true : false} />
+    </Container>
+  );
+};
 
 export default TextContainer;
 
@@ -47,7 +60,7 @@ const Container = styled.div`
 
 const Textbox = styled.div`
   display: flex;
-  width: ${props => props.Camping ? "100%" : "60%"};
+  width: ${props => (props.Camping ? "100%" : "60%")};
   height: 100%;
   flex-direction: column;
   margin-left: 20px;
@@ -57,7 +70,7 @@ const Textbox = styled.div`
 `;
 
 const FakeContainer = styled.div`
-  display: ${props => props.Camping ? "none" : "flex"};
+  display: ${props => (props.Camping ? "none" : "flex")};
   width: 40%;
   height: 100%;
 
@@ -66,7 +79,7 @@ const FakeContainer = styled.div`
 
 const Text = styled.div`
   margin: 1px auto;
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -87,6 +100,7 @@ const TextTitle = styled.h3`
 
 const TextParagraph = styled.p`
   white-space: pre-line;
+  line-height: 1.5;
   ${Media.phone`
       width:95%;
       font-size: 14px;

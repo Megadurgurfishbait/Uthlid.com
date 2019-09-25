@@ -19,14 +19,14 @@ const Blackbar = ({
   <Container horseInformation={horseInformation}>
     {!horseInformation
       ? English || Cottages
-        ? BlackbarInfo.map(values => (
-            <Row>
+        ? BlackbarInfo.map((values, index) => (
+            <Row key={`${index}blackbarInformation`}>
               <Icon src={values.Icon} />
               <Text>{values.Text}</Text>
             </Row>
           ))
-        : Svartastika.map(values => (
-            <Row>
+        : Svartastika.map((values, index)  => (
+          <Row key={`${index}blackbarInformation`}>
               <Icon src={values.Icon} />
               <Text>{values.Text}</Text>
             </Row>

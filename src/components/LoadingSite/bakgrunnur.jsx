@@ -120,7 +120,7 @@ const Paragraph = styled.h4`
   font-weight: 800;
   line-height: 2;
   white-space: pre;
-
+  text-align: center;
   ${Media.large`
     width: 90%;
     font-size: 18px;

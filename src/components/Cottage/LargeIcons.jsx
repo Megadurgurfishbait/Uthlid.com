@@ -2,18 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 // Assets
-import {Colors, Media} from "../../Assets/Variables/";
+import { Colors, Media } from "../../Assets/Variables/";
 
 const LargeIcons = ({ IconArray }) => (
   <Container>
-    {IconArray.map(values => {
-      return (
-        <IconRow>
-          <Icon src={values.IconBlack} />
-          <IconText>{values.Text}</IconText>
-        </IconRow>
-      );
-    })}
+    {IconArray.map((values, i) => (
+      <IconRow key={`${i}IconRow`}>
+        <Icon src={values.IconBlack} />
+        <IconText>{values.Text}</IconText>
+      </IconRow>
+    ))}
   </Container>
 );
 

@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const SmallIcon = ({ IconArray }) => (
   <Container>
-    {IconArray.map(values => {
-      return <Icon title={`${values.toolTip}`} src={values.icon} />;
-    })}
+    {IconArray.map((values, i) => (
+      <Icon
+        title={`${values.toolTip}`}
+        src={values.icon}
+        key={`${i}SmallIcons`}
+      />
+    ))}
   </Container>
 );
 

@@ -37,14 +37,14 @@ function Sidebar({ Position, mahAnimation }) {
             <Boxes Path="/" Icon={SVG.LeftIcon} />
             <MainIcons>
               {English
-                ? SidebarInfo.map(value => (
-                    <Row>
+                ? SidebarInfo.map((value, index) => (
+                    <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes altText={value.altText} Icon={value.Icon} Path={value.Path} />
                     </Row>
                   ))
-                : SidebarInfo_IS.map(value => (
-                    <Row>
+                : SidebarInfo_IS.map((value, index) => (
+                  <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes altText={value.altText} Icon={value.Icon} Path={value.Path} />
                     </Row>
@@ -57,9 +57,10 @@ function Sidebar({ Position, mahAnimation }) {
         /* HÆGRI SIDEBAR */
         <ContainerRight Position={Position}>
           <HalfHeight center>
-            {RightSidebarInfo.map(values => {
+            {RightSidebarInfo.map((values, index) => {
               return (
                 <Boxes
+                  key={`${index}Boxes`}
                   truers={ShowRightBar}
                   myFunc={ShowMyRightMenuBar}
                   Icon={values}
