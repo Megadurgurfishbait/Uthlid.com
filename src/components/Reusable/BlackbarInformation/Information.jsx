@@ -26,8 +26,8 @@ const Information = ({
 }) => {
   return (
     <Container>
-      {console.log(ProductPrice)}
-      <H1>{Title || English ? `Bookings` : "Bókanir"}</H1>
+      {console.log(Title)}
+      <H1>{Title ? Title : English ? `Bookings` : "Bókanir"}</H1>
       {InformationBoxPrice ? (
         <Text>{English ? InformationBoxPrice : "Daggjöld"}</Text>
       ) : (
