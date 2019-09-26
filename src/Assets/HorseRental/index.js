@@ -3,6 +3,7 @@ import BruarfossImg from "./Bruarfoss.jpg";
 import HestaleigaImg from "./hestaleiga_uthlid.jpg";
 import KolgrimshollImg from "./Kolgrimsholl.jpg";
 import HorseBackground from "./k3_9089.jpg";
+import HorseBackground_Mobile from './k3_9089_mobile.jpg';
 /*
 
   Allar upplýsingar sem að við ætlum að nota í HorseRental fara hingað inn. Myndir ásamt texta.
@@ -88,6 +89,7 @@ const HestaleigaInformation = [
 export {
   Price,
   HorseBackground,
+  HorseBackground_Mobile,
   HorseRentInformation,
   HestaleigaInformation,
   Verd

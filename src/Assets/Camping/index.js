@@ -1,4 +1,5 @@
 import CoverPhoto from "./camping.jpg";
+import CoverPhoto_Mobile from './camping_mobile.jpg';
 
 const TextInformation = [
   {
@@ -94,7 +95,8 @@ const Info = {
   TextInformation,
   Upplysingar,
   FAQ,
-  FAQ_is
+  FAQ_is,
+  CoverPhoto_Mobile
 };
 
 export default Info;

@@ -11,21 +11,24 @@ import {
   Price,
   Verd,
   HorseBackground,
+  HorseBackground_Mobile,
   HorseRentInformation,
   HestaleigaInformation
 } from "../../Assets/HorseRental";
 
 import LanguageContext from "../../Context/Language";
+import getWindowDimensions from "../../Hooks/useWindowDimensions";
 /*
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
 */
 
+
 const HorseRentalContainer = () => {
   const {English} = React.useContext(LanguageContext);
-
+  const [drasl] = React.useState(getWindowDimensions());
 return (
   <Layout>
-    <Header CoverPhoto={HorseBackground} />
+    <Header CoverPhoto={drasl.width > 700 ? HorseBackground : HorseBackground_Mobile} />
     <BlackbarInformation horseInformation={true} Price={Price} Verd={Verd} />
     <CardContainer>
       <Row>

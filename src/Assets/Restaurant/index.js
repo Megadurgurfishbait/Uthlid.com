@@ -1,4 +1,5 @@
 import CoverPhoto from "./img_2546.jpg";
+import CoverPhoto_Mobile from './img_2546_mobile.jpg';
 
 const TextInformation = [
   {
@@ -27,7 +28,8 @@ const Upplysingar = [
 const Info = {
   CoverPhoto,
   TextInformation,
-  Upplysingar
+  Upplysingar,
+  CoverPhoto_Mobile
 };
 
 export default Info;

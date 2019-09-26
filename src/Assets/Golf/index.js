@@ -1,4 +1,5 @@
 import CoverPhoto from "./img_4335.jpg";
+import CoverPhoto_Mobile from './img_4335_mobile.jpg';
 
 // SVG IMPORT
 import golf from "./svg/001-golf.svg";
@@ -83,7 +84,8 @@ const Info = {
   Verd,
   Upplysingar,
   Leiga,
-  Svartastika
+  Svartastika,
+  CoverPhoto_Mobile
 };
 
 export default Info;

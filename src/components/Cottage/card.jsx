@@ -13,7 +13,6 @@ import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
 const Card = ( { CoverPhoto_small, CoverPhoto_mobile, Title, BlackbarInfo, SmallIcons, URL }) => {
   const {English} = React.useContext(LanguageContext);
-
   const [drasl] = React.useState(getWindowDimensions());
 
   return (

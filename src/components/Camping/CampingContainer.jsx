@@ -5,14 +5,15 @@ import { Header, Layout, TextContainer } from "../Reusable/";
 import Info from "../../Assets/Camping/index";
 import {Media, Colors} from "../../Assets/Variables/";
 import LanguageContext from "../../Context/Language";
-
+import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
 
 const CampingContainer = () => {
+  const [drasl] = React.useState(getWindowDimensions());
   const {English} = React.useContext(LanguageContext);
   return (
   <Layout>
-    <Header CoverPhoto={Info.CoverPhoto} />
+    <Header CoverPhoto={ drasl.width > 700 ? Info.CoverPhoto : Info.CoverPhoto_Mobile} />
     <MainDiv>
       <TextContainer {...Info} Camping={true} />
       <FAQ>
