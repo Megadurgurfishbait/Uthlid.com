@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "6d1593c6bebe7d79dc0e",
-    "url": "/static/js/main.6d1593c6.chunk.js"
+    "revision": "d0c2770a7eefe77f83c2",
+    "url": "/static/js/main.d0c2770a.chunk.js"
   },
   {
-    "revision": "1ecbd19e7445003c9990",
-    "url": "/static/js/runtime~main.1ecbd19e.js"
+    "revision": "a91d3dc28438aa6986b6",
+    "url": "/static/js/runtime~main.a91d3dc2.js"
   },
   {
     "revision": "59f56692e8644bd84560",
     "url": "/static/js/2.59f56692.chunk.js"
   },
   {
-    "revision": "354d9376c3ba8e50d4d9",
-    "url": "/static/js/3.354d9376.chunk.js"
+    "revision": "fcc79f53250a102d08ee",
+    "url": "/static/js/3.fcc79f53.chunk.js"
   },
   {
-    "revision": "908c88269e6e918f4e46",
-    "url": "/static/js/4.908c8826.chunk.js"
+    "revision": "6ab5d870c4b9bf97738e",
+    "url": "/static/js/4.6ab5d870.chunk.js"
   },
   {
     "revision": "9e3a7f11793117e4a394",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/static/js/6.571d86e0.chunk.js"
   },
   {
-    "revision": "55a2b65782fd09467dd4",
-    "url": "/static/js/7.55a2b657.chunk.js"
+    "revision": "db7d938c5f74c6e6ef8f",
+    "url": "/static/js/7.db7d938c.chunk.js"
   },
   {
     "revision": "bb580024b43786b422a283922c2fb035",
@@ -88,8 +88,8 @@ self.__precacheManifest = [
     "url": "/static/media/img_0021_middle.41de90af.jpg"
   },
   {
-    "revision": "6267c31479ef36a2beb0d72f7d1ba200",
-    "url": "/static/media/img_4335_small.6267c314.jpg"
+    "revision": "bae811d0f12ad3a5a4bbba9baa98ec8f",
+    "url": "/static/media/img_4335_small.bae811d0.jpg"
   },
   {
     "revision": "148e85c83a7d804f98a7b33415c26626",
@@ -128,32 +128,32 @@ self.__precacheManifest = [
     "url": "/static/media/img_0028.131284e4.jpg"
   },
   {
-    "revision": "279395a428b2c9be4c927806dcf7a18a",
-    "url": "/static/media/img_0028_small.279395a4.jpg"
+    "revision": "4e8aae980e17027d8e760074d7613b53",
+    "url": "/static/media/img_0028_small.4e8aae98.jpg"
   },
   {
-    "revision": "c6fb868d8b59fb6ffa428e3270f7fbc0",
-    "url": "/static/media/img_0021.c6fb868d.jpg"
+    "revision": "f85f77137d0ddc8ff1e74fbb88b4b696",
+    "url": "/static/media/img_0021.f85f7713.jpg"
   },
   {
-    "revision": "f9bf67b3d43f73ae6df7a2dfb9c5f1c9",
-    "url": "/static/media/img_0021_small.f9bf67b3.jpg"
+    "revision": "02c50291bc4b8f3f31e0f3721885951a",
+    "url": "/static/media/img_0021_small.02c50291.jpg"
   },
   {
     "revision": "6b3a479d1b21ef6983c872ac75c9e90d",
     "url": "/static/media/img_0011n.6b3a479d.jpg"
   },
   {
-    "revision": "c809e61b963fb58e54be540f405bb533",
-    "url": "/static/media/img_0011n_small.c809e61b.jpg"
+    "revision": "f888f0106d9cbc99c3029fc4ec9a7c44",
+    "url": "/static/media/img_0011n_small.f888f010.jpg"
   },
   {
     "revision": "9ab47fb1cd24d3f2ff5725586599a566",
     "url": "/static/media/img_8064.9ab47fb1.jpg"
   },
   {
-    "revision": "de39345758cc150b052e211917fac15a",
-    "url": "/static/media/img_8064_small.de393457.jpg"
+    "revision": "5052e99be9886c7055ba5784d10f913c",
+    "url": "/static/media/img_8064_small.5052e99b.jpg"
   },
   {
     "revision": "ae3cd49d9a222d4905477a5498014d37",
@@ -216,20 +216,20 @@ self.__precacheManifest = [
     "url": "/static/media/k3_9089.24f2b8be.jpg"
   },
   {
-    "revision": "2ece06d60547a1eb9471dbfd0d0ac892",
-    "url": "/static/media/Bruararskord.2ece06d6.jpg"
+    "revision": "4dd49d6281a689f96e34e3d8bb5cf743",
+    "url": "/static/media/Bruararskord.4dd49d62.jpg"
   },
   {
     "revision": "2f846a4779aaed605e7c00afc49d56cd",
     "url": "/static/media/Bruarfoss.2f846a47.jpg"
   },
   {
-    "revision": "ba5308cf587538c24983aa7fb08c7b7a",
-    "url": "/static/media/hestaleiga_uthlid.ba5308cf.jpg"
+    "revision": "de55a54ec8937f00d15b103e34a18ad0",
+    "url": "/static/media/hestaleiga_uthlid.de55a54e.jpg"
   },
   {
-    "revision": "c162b533a0b1ace579db08a0e1df0b2d",
-    "url": "/static/media/Kolgrimsholl.c162b533.jpg"
+    "revision": "e09e0d5b0483aac786599d230c5ef8f6",
+    "url": "/static/media/Kolgrimsholl.e09e0d5b.jpg"
   },
   {
     "revision": "31a378ce69b4786f04aa25eb5f50c5e3",
@@ -256,7 +256,7 @@ self.__precacheManifest = [
     "url": "/static/media/img_2546.df8af123.jpg"
   },
   {
-    "revision": "8157f08092841f9435c5b07edcb70bec",
+    "revision": "43f83b2f237b0ad7812722689d7d4a89",
     "url": "/index.html"
   }
 ];

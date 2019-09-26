@@ -8,10 +8,10 @@ const CoverPhoto = IconPackage.economyImage;
 const URL = `economy`;
 const InformationBoxPrice = `Prices From`;
 const BlackbarInfo = [
-  { Icon: `${IconPackage.sqIcon}`, Text: `34`, IconBlack: `${IconPackage.m2Black}` },
-  { Icon: `${IconPackage.personIcon}`, Text: `4-6`, IconBlack: `${IconPackage.personsBlack}` },
-  { Icon: `${IconPackage.discIcon}`, Text: `6`, IconBlack: `${IconPackage.disksBlack}` },
-  { Icon: `${IconPackage.bedIcon}`, Text: `2`, IconBlack: `${IconPackage.bedBlack}` }
+  { Icon: `${IconPackage.sqIcon}`, Text: `34`, IconBlack: `${IconPackage.m2Black}`, ToolTip: `Square Meter` },
+  { Icon: `${IconPackage.personIcon}`, Text: `4-6`, IconBlack: `${IconPackage.personsBlack}`, ToolTip: `How many persons` },
+  { Icon: `${IconPackage.discIcon}`, Text: `6`, IconBlack: `${IconPackage.disksBlack}`, ToolTip: `Dinner plates` },
+  { Icon: `${IconPackage.bedIcon}`, Text: `2`, IconBlack: `${IconPackage.bedBlack}`, ToolTip: `How many beds` }
 ];
 
 const TextInformation = [

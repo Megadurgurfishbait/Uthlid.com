@@ -27,7 +27,6 @@ const Information = ({
   return (
     <Container>
       <H1>{Title ? Title : English ? `Bookings` : "Bókanir"}</H1>
-      {console.log(InformationBoxPrice)}
       {InformationBoxPrice ? (
         <Text>{English ? InformationBoxPrice : "Verð"}</Text>
       ) : (

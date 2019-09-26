@@ -5,6 +5,7 @@ const SmallIcon = ({ IconArray }) => (
   <Container>
     {IconArray.map((values, i) => (
       <Icon
+        alt={`${values.toolTip}`}
         title={`${values.toolTip}`}
         src={values.icon}
         key={`${i}SmallIcons`}

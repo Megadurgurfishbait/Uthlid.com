@@ -11,7 +11,7 @@ const TextIncludes = ({ Includes }) => (
     
     Includes.map((values, index) => (
         <StayToGether key={`${index}Included`}>
-          <Icon src={Add} />
+          <Icon alt="Options" src={Add} />
           <IncludesTextBox>{values}</IncludesTextBox>
         </StayToGether>
       )

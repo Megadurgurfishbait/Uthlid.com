@@ -6,17 +6,17 @@ import Tees from "./svg/005-tee.svg";
 import open from "./svg/004-open.svg";
 
 const BlackbarInfo = [
-  { Icon: `${golf}`, Text: `Par 35` },
-  { Icon: `${Tees}`, Text: `2470m` },
-  { Icon: `${Tees}`, Text: `2118m` },
-  { Icon: `${open}`, Text: `June Sept` }
+  { Icon: `${golf}`, Text: `Par 35`, ToolTip: `Golf Course` },
+  { Icon: `${Tees}`, Text: `2470m`, ToolTip: `Yellow tee` },
+  { Icon: `${Tees}`, Text: `2118m`, ToolTip: `Red tee` },
+  { Icon: `${open}`, Text: `June Sept`, ToolTip: `Opening hours` }
 ];
 
 const Svartastika = [
-  { Icon: `${golf}`, Text: `Par 35` },
-  { Icon: `${Tees}`, Text: `2470m` },
-  { Icon: `${Tees}`, Text: `2118m` },
-  { Icon: `${open}`, Text: `Júní Sept` }
+  { Icon: `${golf}`, Text: `Par 35`, ToolTip: `Golfvöllur` },
+  { Icon: `${Tees}`, Text: `2470m`, ToolTip: `Lengd gula teigs` },
+  { Icon: `${Tees}`, Text: `2118m`, ToolTip: `Lengd rauða teigs` },
+  { Icon: `${open}`, Text: `Júní Sept` , ToolTip: `Opnunartími` }
 ]
 
 const InformationBoxPrice = `Day Fees`;

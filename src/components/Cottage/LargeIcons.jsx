@@ -6,9 +6,10 @@ import { Colors, Media } from "../../Assets/Variables/";
 
 const LargeIcons = ({ IconArray }) => (
   <Container>
+    {console.log(IconArray)}
     {IconArray.map((values, i) => (
       <IconRow key={`${i}IconRow`}>
-        <Icon src={values.IconBlack} />
+        <Icon alt={`${values.ToolTip}`}  src={values.IconBlack} />
         <IconText>{values.Text}</IconText>
       </IconRow>
     ))}

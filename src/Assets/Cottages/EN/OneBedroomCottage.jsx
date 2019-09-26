@@ -9,10 +9,10 @@ const URL = `onebedroom`;
 
 const InformationBoxPrice = `Prices From`;
 const BlackbarInfo = [
-  { Icon: `${IconPackage.sqIcon}`, Text: `38`, IconBlack: `${IconPackage.m2Black}` },
-  { Icon: `${IconPackage.personIcon}`, Text: `2`, IconBlack: `${IconPackage.personsBlack}` },
-  { Icon: `${IconPackage.discIcon}`, Text: `4`, IconBlack: `${IconPackage.disksBlack}` },
-  { Icon: `${IconPackage.bedIcon}`, Text: `1`, IconBlack: `${IconPackage.bedBlack}` }
+  { Icon: `${IconPackage.sqIcon}`, Text: `38`, IconBlack: `${IconPackage.m2Black}`, ToolTip: `Square Meter` },
+  { Icon: `${IconPackage.personIcon}`, Text: `2`, IconBlack: `${IconPackage.personsBlack}`, ToolTip: `How many persons` },
+  { Icon: `${IconPackage.discIcon}`, Text: `4`, IconBlack: `${IconPackage.disksBlack}`, ToolTip: `Dinner plates` },
+  { Icon: `${IconPackage.bedIcon}`, Text: `1`, IconBlack: `${IconPackage.bedBlack}`, ToolTip: `How many beds` }
 ];
 
 const TextInformation = [
