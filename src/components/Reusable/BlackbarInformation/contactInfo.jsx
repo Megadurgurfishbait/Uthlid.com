@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Media } from "../../../Assets/Variables";
 
 const ContactInfo = ({ English }) => (
   <EmailColumn>
@@ -31,6 +32,10 @@ const EmailText = styled.h3`
   text-transform: none;
   font-weight: ${props => (props.fat ? `900` : `100`)};
   white-space: nowrap;
+
+  ${Media.phone`
+    font-size: 16px;
+  `}
 `;
 
 const EmailContainer = styled.div`

@@ -55,12 +55,19 @@ const Container = styled.div`
 const Number = styled.h3`
   font-size: ${props => (props.small ? "20" : "30")}px;
   font-weight: 900;
+  ${Media.phone`
+    font-size: 14px;
+  `}
+
 `;
 
 const Symbol = styled(Number)`
   font-weight: 100;
   margin: 10px;
   font-size: ${props => (props.small ? "20" : "30")}px;
+  ${Media.phone`
+    font-size: 14px;
+  `}
 `;
 
 const TextContainer = styled.div`
@@ -79,8 +86,5 @@ const Row = styled.div`
     font-size: 16px;
   }
 
-  ${Media.phone`
-    font-size: 12px;
-  
-  `}
+
 `;

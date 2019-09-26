@@ -1,9 +1,8 @@
-import React, {Suspense} from "react";
+import React, { Suspense } from "react";
 import { Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 import { TimelineLite, Power3 } from "gsap/TweenMax";
 import styled, { createGlobalStyle } from "styled-components";
-
 
 // Components
 import {
@@ -17,8 +16,6 @@ import {
   Restaurant
 } from "./components";
 
-
-
 import { Colors } from "./Assets/Variables";
 import LanguageContext from "./Context/Language.js";
 import useLocalStorage from "./Hooks/useLocalStorage";
@@ -31,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     position: relative;
     overflow-x: hidden;
+
   }
 `;
 
@@ -74,11 +72,21 @@ const App = () => {
             mapStyles={mapStyles}
           >
             <Route path="/cottages/:id" component={SinglePageCottage} />
-            <Route exact={true} path="/cottages" component={WaitingComponent(CardContainer)} />
-            <Route path="/horserental" component={WaitingComponent(HorseRentalContainer)} />
+            <Route
+              exact={true}
+              path="/cottages"
+              component={WaitingComponent(CardContainer)}
+            />
+            <Route
+              path="/horserental"
+              component={WaitingComponent(HorseRentalContainer)}
+            />
             <Route path="/golf" component={WaitingComponent(Golf)} />
             <Route path="/camping" component={WaitingComponent(Camping)} />
-            <Route path="/restaurant" component={WaitingComponent(Restaurant)} />
+            <Route
+              path="/restaurant"
+              component={WaitingComponent(Restaurant)}
+            />
             <Route exact={true} path="/" component={Container} />
           </Animate>
           <BigScreen

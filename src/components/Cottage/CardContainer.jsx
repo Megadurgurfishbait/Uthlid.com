@@ -39,4 +39,5 @@ const MapCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  ${Media.phone` width: 100%;`}
 `;

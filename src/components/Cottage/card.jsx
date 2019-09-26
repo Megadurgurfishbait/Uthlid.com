@@ -47,7 +47,11 @@ const Container = styled.div`
   padding-bottom: 10px;
 
   ${Media.tablet`width:400px;`}
-  ${Media.phone`width: 95%;`}
+  ${Media.phone`width: 95%;
+    margin: 0px;
+  
+  `}
+
 `;
 
 const Image = styled.img`
