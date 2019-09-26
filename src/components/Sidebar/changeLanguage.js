@@ -43,7 +43,6 @@ const ChangeLanguage = ({ mahAnimation }) => {
 export default ChangeLanguage;
 
 const Container = styled.div`
-  background-color: ${Colors.GOLD};
   max-width: 50px;
   max-height: 50px;
   min-height: 50px;
@@ -52,18 +51,22 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0px;
-  margin:  5px auto;
+  margin: 5px auto;
   position: relative;
   border: 2px solid transparent;
   transform-style: preserve-3d;
   transition: all 0.5s ease-out;
-  border-radius: 50%;
+
   transform: ${props => (props.turn ? "scale(1)" : "scale(0)")};
   transform-origin: 50% 50%;
   z-index: 5001 !important;
 
   ${Media.phone`
   margin: auto 5px;
+  max-width: 35px;
+  max-height: 35px;
+  min-height: 35px;
+  min-width: 35px;
   `};
 `;
 
@@ -72,7 +75,7 @@ const LanguageButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: ${Colors.GOLD};
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -85,7 +88,8 @@ const LanguageButton = styled.button`
   letter-spacing: 1.5px;
   transform: rotateY(0deg);
   border: 2px solid transparent;
-  
+  border-radius: 50%;
+
   &:hover,
   &:focus {
     color: ${Colors.BLACK};
@@ -94,5 +98,9 @@ const LanguageButton = styled.button`
     outline: none;
   }
 
-  ${Media.phone`bottom: 5px;`};
+  ${Media.phone`
+  bottom: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  `};
 `;

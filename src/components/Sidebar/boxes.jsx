@@ -44,6 +44,11 @@ const Container = styled.button`
     width: 50px;
   `}
 
+  ${Media.phone`
+  max-height: 30px;
+    width:30px;
+  `}
+
   ${MediaHeight.phone`
     margin: 0px auto;
   `};

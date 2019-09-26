@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Components
 import Boxes from "./boxes";
 import RightSidebar from "./RightSidebar/RightSidebar";
-import ChangeLanguage from './changeLanguage';
+import ChangeLanguage from "./changeLanguage";
 
 // Asset
 import { Colors, Media, MediaHeight } from "../../Assets/Variables/";
@@ -25,9 +25,7 @@ function Sidebar({ Position, mahAnimation }) {
     return setRightBar(ShowRightBar => !ShowRightBar);
   };
 
-
-  const {English} = React.useContext(LanguageContext);
-
+  const { English } = React.useContext(LanguageContext);
   return (
     <Try>
       {Position === `left` ? (
@@ -40,18 +38,26 @@ function Sidebar({ Position, mahAnimation }) {
                 ? SidebarInfo.map((value, index) => (
                     <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
-                      <Boxes altText={value.altText} Icon={value.Icon} Path={value.Path} />
+                      <Boxes
+                        altText={value.altText}
+                        Icon={value.Icon}
+                        Path={value.Path}
+                      />
                     </Row>
                   ))
                 : SidebarInfo_IS.map((value, index) => (
-                  <Row key={`${index}Row`}>
+                    <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
-                      <Boxes altText={value.altText} Icon={value.Icon} Path={value.Path} />
+                      <Boxes
+                        altText={value.altText}
+                        Icon={value.Icon}
+                        Path={value.Path}
+                      />
                     </Row>
                   ))}
             </MainIcons>
           </HalfHeight>
-          <ChangeLanguage mahAnimation={mahAnimation}/>
+          <ChangeLanguage mahAnimation={mahAnimation} />
         </Container>
       ) : (
         /* HÆGRI SIDEBAR */

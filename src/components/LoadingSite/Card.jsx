@@ -2,31 +2,42 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-import {Button} from "../Reusable/";
+import { Button } from "../Reusable/";
 
 //Assets
-import {Colors, Media} from "../../Assets/Variables/";
+import { Colors, Media } from "../../Assets/Variables/";
 import LanguageContext from "../../Context/Language";
-import getWindowDimensions from '../../Hooks/useWindowDimensions';
+import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
-
-const Card = ({ Backgroundcolor, Title, Title_IS, Paragraph, Paragraph_IS, Image, Image_Mobile, Path }) => {
-  const {English} = React.useContext(LanguageContext);
+const Card = ({
+  backgroundcolor,
+  Title,
+  Title_IS,
+  Paragraph,
+  Paragraph_IS,
+  Image,
+  Image_Mobile,
+  Path
+}) => {
+  const { English } = React.useContext(LanguageContext);
   const [drasl] = React.useState(getWindowDimensions());
-  
-  return (<Container background={Backgroundcolor}>
 
-    <TextSide background={Backgroundcolor}>
-      <TitleText>{English ? Title : Title_IS}</TitleText>
-      <Description>{English ? Paragraph : Paragraph_IS }</Description>
-      <Button background={Backgroundcolor} toPath={`${Path}`}>
-        {English ? `Read More` : `Skoða nánar` }
-      </Button>
-    </TextSide>
-    <ImageSide alt="Images related to the text" src={drasl.width > 700 ? Image : Image_Mobile} />
-  </Container>
-  )
-  };
+  return (
+    <Container background={backgroundcolor}>
+      <TextSide background={backgroundcolor}>
+        <TitleText>{English ? Title : Title_IS}</TitleText>
+        <Description>{English ? Paragraph : Paragraph_IS}</Description>
+        <Button background={backgroundcolor} toPath={`${Path}`}>
+          {English ? `Read More` : `Skoða nánar`}
+        </Button>
+      </TextSide>
+      <ImageSide
+        alt="Images related to the text"
+        src={drasl.width > 700 ? Image : Image_Mobile}
+      />
+    </Container>
+  );
+};
 
 export default Card;
 
@@ -65,14 +76,19 @@ const TextSide = styled.div`
   color: ${props => (props.background ? Colors.GOLD : Colors.BLACK)};
   width: 50%;
   ${Media.tablet`
-    width: 100%;
+    width: 90%;
     height: 50%;
+  `}
+
+  ${Media.tablet`
+  font-size: 12px;  
   `}
 `;
 
 const TitleText = styled.h1`
   text-transform: uppercase;
   ${Media.tablet`font-size: 30px;`}
+  ${Media.tablet`font-size: 20px;`}
 `;
 const Description = styled.p`
   line-height: 2;
@@ -81,5 +97,10 @@ const Description = styled.p`
   ${Media.desktop`
     width: 90%;
     line-height: 1.2;
+  `}
+
+  ${Media.phone`
+
+  line-height: 1.5;
   `}
 `;

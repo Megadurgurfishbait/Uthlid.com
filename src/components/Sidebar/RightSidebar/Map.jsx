@@ -26,4 +26,8 @@ const Try = styled(LeafletMap)`
   height: 80%;
   overflow: hidden;
   ${Media.tablet`height: 90%;`}
+  ${Media.phone`height: 100%!important;
+  overflow: hidden;
+  width: 90%;
+  margin: 5px 0px;`}
 `;

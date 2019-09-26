@@ -39,9 +39,21 @@ const Container = styled.div`
   box-sizing: border-box;
   text-align: center !important;
   padding: 20px 5px;
+  ${Media.phone`
+  padding: 5px 5px;
+  height: 50%;
+
+  `}
+
+
 
   & > * {
     margin: 10px auto;
+    ${Media.phone`
+  margin: 5px 0px;
+
+  `}
+    
   }
 
   & > h1 {

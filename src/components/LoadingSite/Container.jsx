@@ -16,7 +16,7 @@ const LoadingSiteContainer = () => (
       {/* Ef að röð er slétt tala kemur svartur bakgrunnur, ef að það er oddatala verður hann hvítur. */}
       {RowInformation.map((values, index) => {
         if (index % 2 === 0) {
-          return <Card {...values} Backgroundcolor />;
+          return <Card {...values} backgroundcolor />;
         } else {
           return <Card {...values} />;
         }

@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { Media } from "../../Assets/Variables/";
 import TextIncludes from "./TextIncludes";
 import LanguageContext from "../../Context/Language";
+
+
 /*
   Text Container er lýsing á sumarbústaði. 
   Ef að sumarbústaðurinn er með upplýsingar um Inlcudes þá sýnir hann þær líka. 

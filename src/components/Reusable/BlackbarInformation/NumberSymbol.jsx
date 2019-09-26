@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Media } from "../../../Assets/Variables";
 
 /* Ef að Price er Array, sem er tilvikið fyrir HorseRental þá loopum við yfir það. */
 /* Ef að Price er stök tala setjum við það beint inn. Sem er tilvikið fyrir Cottages*/
-const NumberSymbol = ( { Price, Verd, golf, English, ProductPrice }) =>  (
+const NumberSymbol = ({ Price, Verd, golf, English, ProductPrice }) => (
   <Container>
     <TextContainer>
       {English ? (
-        Array.isArray(Price) ? (
+        Array.isArray(Price) ? ( 
           Price.map((values, index) => (
             <Row key={`${index}-PriceRow`}>
               <h5> {values.Title} </h5>
@@ -78,4 +78,9 @@ const Row = styled.div`
   & > h5 {
     font-size: 16px;
   }
+
+  ${Media.phone`
+    font-size: 12px;
+  
+  `}
 `;

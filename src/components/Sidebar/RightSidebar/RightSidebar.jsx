@@ -18,11 +18,11 @@ const RightSidebar = ({ ShowRightBar }) => {
       </Row>
 
       <Break />
-      <Row>
+      <Row >
         <Map />
       </Row>
       <Break />
-      <Row smaller>
+      <Row >
         <ContactInfo English={English} />
       </Row>
     </Container>
@@ -56,6 +56,7 @@ const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
     width: 100vw!important;
+    justify-content: space-between;
   `}
 `;
 
@@ -68,13 +69,22 @@ const Row = styled.div`
   align-items: center;
 
   ${Media.tablet`
-    max-height: ${props => (props.smaller ? "20%" : "50%")};
+    max-height: 30%;
     overflow: none;
     margin: 8px auto;
   `}
   ${MediaHeight.phone`max-height: ${props =>
-    props.smaller ? "20%" : "50%"};`};
-  ${Media.phone` margin: 0px auto;`}
+    props.smaller ? "20%" : "40%"};`};
+
+
+${Media.phone`
+    margin: 10px auto;
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  `}
+
 `;
 
 const Break = styled.div`
