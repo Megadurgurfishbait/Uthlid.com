@@ -16,7 +16,7 @@ const CardContainer = () => {
   const { English } = React.useContext(LanguageContext);
   return (
     <Layout>
-      <H1> Cottages </H1>
+      <H1> {English ? "Cottages" : "Sumarbústaðir" }  </H1>
       <MapCardContainer>
         {English
           ? CottageInfoArray[0].map((values, i) => <Card {...values } key={`${i}Cottages`}  />)

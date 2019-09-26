@@ -60,8 +60,7 @@ const TextInformation = [
 const Upplysingar = [
   {
     Title: `Upplýsingar`,
-    Text: `Úthlíðarvöllur er 9 holu golfvöllur sem er opinn allt sumarið og fyrir klúbbfélaga utan þess tíma. 
-    Völlurinn er par 35, 2470 metrar af gulum teigum og 2118 af rauðum.`
+    Text: `Úthlíðarvöllur er 9 holu golfvöllur sem er opinn allt sumarið og fyrir klúbbfélaga utan þess tíma. Völlurinn er par 35, 2470 metrar af gulum teigum og 2118 af rauðum.`
   },
   {
     Title: `Um völlinn`,

@@ -9,7 +9,7 @@ import Info from "../../Assets/Restaurant/index";
 const RestaurantContainer = () => (
   <Layout>
     <Header CoverPhoto={Info.CoverPhoto} />
-    <TextContainer {...Info} />
+    <TextContainer  Camping={true} {...Info} />
     <Menu />
   </Layout>
 );
