@@ -16,7 +16,6 @@ const RightSidebar = ({ ShowRightBar }) => {
       <Row smaller>
         <Facebook English={English} />
       </Row>
-
       <Break />
       <Row >
         <Map />

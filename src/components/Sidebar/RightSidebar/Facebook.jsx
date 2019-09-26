@@ -3,8 +3,7 @@ import styled from "styled-components";
 // Components
 // Assets
 import { Colors, Media } from "../../../Assets/Variables/";
-import Image from "../../../Assets/Sidebar/facebook-background.jpg";
-import ImageIcon from "../../../Assets/Sidebar/Icon.jpg";
+import { Icon, FBIcon } from "../../../Assets/Sidebar/";
 
 const Facebook = ({ English }) => (
   <Container>
@@ -46,7 +45,7 @@ const Anchor = () => {
 };
 
 const RoundedItem = styled.div`
-  background: url(${ImageIcon});
+  background: url(${Icon});
   height: 90%;
   width: 90%;
   overflow: hidden;
@@ -124,7 +123,7 @@ const FacebookContainer = styled.div`
   flex-direction: column;
   width: 300px;
   height: 100px;
-  background: url(${Image});
+  background: url(${FBIcon});
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: inset 0px 0px 5px 0px rgba(255, 255, 255, 0.25);

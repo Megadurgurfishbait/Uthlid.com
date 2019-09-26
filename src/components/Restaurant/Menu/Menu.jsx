@@ -9,8 +9,7 @@ import { Layout } from "../../Reusable/";
 import MenuInfo from "../../../Assets/Restaurant/MenuInfo";
 import { Colors, Media } from "../../../Assets/Variables/";
 
-function Menu() {
-  return (
+const Menu = () => (
     <Layout>
       <Container>
         {Object.entries(MenuInfo).map((values, index) => {
@@ -26,7 +25,7 @@ function Menu() {
       </Container>
     </Layout>
   );
-}
+
 export default Menu;
 
 const Container = styled.div`

@@ -14,7 +14,6 @@ import LanguageContext from "../../Context/Language";
 
 const CardContainer = () => {
   const { English } = React.useContext(LanguageContext);
-
   return (
     <Layout>
       <H1> Cottages </H1>

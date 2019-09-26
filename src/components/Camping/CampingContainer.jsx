@@ -13,7 +13,6 @@ const CampingContainer = () => {
   return (
   <Layout>
     <Header CoverPhoto={Info.CoverPhoto} />
-
     <MainDiv>
       <TextContainer {...Info} Camping={true} />
       <FAQ>
@@ -36,7 +35,6 @@ const CampingContainer = () => {
       </FAQ>
     </MainDiv>
   </Layout>
-
   );
 };
 

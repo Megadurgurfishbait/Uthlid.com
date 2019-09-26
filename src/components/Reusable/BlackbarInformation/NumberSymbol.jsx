@@ -8,7 +8,7 @@ const NumberSymbol = ({ Price, Verd, golf, English, ProductPrice }) => (
   <Container>
     <TextContainer>
       {English ? (
-        Array.isArray(Price) ? ( 
+        Array.isArray(Price) ? (
           Price.map((values, index) => (
             <Row key={`${index}-PriceRow`}>
               <h5> {values.Title} </h5>
@@ -58,7 +58,6 @@ const Number = styled.h3`
   ${Media.phone`
     font-size: 14px;
   `}
-
 `;
 
 const Symbol = styled(Number)`
@@ -85,6 +84,4 @@ const Row = styled.div`
   & > h5 {
     font-size: 16px;
   }
-
-
 `;

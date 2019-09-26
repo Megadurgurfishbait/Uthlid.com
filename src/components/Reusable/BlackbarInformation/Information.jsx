@@ -23,51 +23,49 @@ const Information = ({
   Verd,
   English,
   ProductPrice
-}) => {
-  return (
-    <Container>
-      <H1>{Title ? Title : English ? `Bookings` : "Bókanir"}</H1>
-      {InformationBoxPrice ? (
-        <Text>{English ? InformationBoxPrice : "Verð"}</Text>
-      ) : (
-        <Text>{English ? "Pricelist" : "Verð"}</Text>
-      )}
-      <NumberSymbol
-        ProductPrice={ProductPrice}
-        Price={Price}
-        golf={golf}
-        Verd={Verd}
-        English={English}
-      />
-      {horseInformation ? (
-        <AboutText>
-          {English
-            ? `All trips are great riding tours around the unspoiled and beautiful
+}) => (
+  <Container>
+    <H1>{Title ? Title : English ? `Bookings` : "Bókanir"}</H1>
+    {InformationBoxPrice ? (
+      <Text>{English ? InformationBoxPrice : "Verð"}</Text>
+    ) : (
+      <Text>{English ? "Pricelist" : "Verð"}</Text>
+    )}
+    <NumberSymbol
+      ProductPrice={ProductPrice}
+      Price={Price}
+      golf={golf}
+      Verd={Verd}
+      English={English}
+    />
+    {horseInformation ? (
+      <AboutText>
+        {English
+          ? `All trips are great riding tours around the unspoiled and beautiful
         landscape of Úthlíð.`
-            : `Riðið er um næsta rágrenni Úthlíðar og gefst vel kostur á að skoða fallega náttúru á hestbaki.`}
-        </AboutText>
-      ) : null}
-      {golf ? (
-        <AboutText>
-          {English
-            ? `Members of the Icelandic Golf Union can book tee times at www.golf.is`
-            : `Hægt er að panta teig á www.golf.is`}
-        </AboutText>
-      ) : null}
-      <ContactInfo English={English} />
-      {horseInformation || golf ? null : (
-        <Button
-          toPath="https://property.godo.is/booking.php?propid=12862"
-          isExternal
-          BackgroundColor={Colors.BLACK}
-          background={true}
-        >
-          {English ? "Check Availability" : "Bóka "}
-        </Button>
-      )}
-    </Container>
-  );
-};
+          : `Riðið er um næsta rágrenni Úthlíðar og gefst vel kostur á að skoða fallega náttúru á hestbaki.`}
+      </AboutText>
+    ) : null}
+    {golf ? (
+      <AboutText>
+        {English
+          ? `Members of the Icelandic Golf Union can book tee times at www.golf.is`
+          : `Hægt er að panta teig á www.golf.is`}
+      </AboutText>
+    ) : null}
+    <ContactInfo English={English} />
+    {horseInformation || golf ? null : (
+      <Button
+        toPath="https://property.godo.is/booking.php?propid=12862"
+        isExternal
+        BackgroundColor={Colors.BLACK}
+        background={true}
+      >
+        {English ? "Check Availability" : "Bóka "}
+      </Button>
+    )}
+  </Container>
+);
 export default Information;
 const Container = styled.div`
   display: flex;
