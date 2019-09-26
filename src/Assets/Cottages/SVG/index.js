@@ -8,12 +8,16 @@
 
 import economyImage from "./img_0028.jpg";
 import economyImage_Small from './img_0028_small.jpg';
+import economyImage_Mobile from './img_0028_mobile.jpg';
 import oneBedroom from "./img_0021.jpg";
 import oneBedroom_Small from './img_0021_small.jpg';
+import oneBedroom_Mobile from './img_0021_mobile.jpg';
 import twoBedroom from "./img_0011n.jpg";
 import twoBedroom_Small from './img_0011n_small.jpg';
+import twoBedroom_Mobile from './img_0011n_mobile.jpg';
 import fourBedroom from "./img_8064.jpg";
 import fourBedroom_Small from "./img_8064_small.jpg";
+import fourBedroom_Mobile from './img_8064_mobile.jpg';
 import sqIcon from "./m2.svg";
 import personIcon from "./persons.svg";
 import bedIcon from "./bed.svg";
@@ -31,7 +35,12 @@ import personsBlack from "./personsBlack.svg";
 
 
 
+
 const IconPackage = {
+  economyImage_Mobile,
+  oneBedroom_Mobile,
+  twoBedroom_Mobile,
+  fourBedroom_Mobile,
   economyImage,
   economyImage_Small,
   oneBedroom,

@@ -3,6 +3,7 @@ import IconPackage from "../SVG";
 
 const Title = `Ástarbunga`;
 const Price = `164`;
+const CoverPhoto_mobile = IconPackage.oneBedroom_Mobile;
 const CoverPhoto_small = IconPackage.oneBedroom_Small;
 const CoverPhoto = IconPackage.oneBedroom;
 const URL = `OneBedroom`;
@@ -54,7 +55,8 @@ const Info = {
   SmallIcons,
   URL,
   InformationBoxPrice,
-  CoverPhoto_small
+  CoverPhoto_small,
+  CoverPhoto_mobile
 
 };
 export default Info;

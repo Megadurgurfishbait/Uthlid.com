@@ -9,14 +9,16 @@ import { Button } from "../Reusable/";
 // Assets
 import { Colors, Media } from "../../Assets/Variables/";
 import LanguageContext from '../../Context/Language';
+import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
-
-const Card = ( { CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => {
+const Card = ( { CoverPhoto_small, CoverPhoto_mobile, Title, BlackbarInfo, SmallIcons, URL }) => {
   const {English} = React.useContext(LanguageContext);
+
+  const [drasl] = React.useState(getWindowDimensions());
 
   return (
   <Container>
-    <Image alt="Cover photos of cottages" src={CoverPhoto_small} />
+    <Image alt="Cover photos of cottages" src={drasl.width > 700 ? CoverPhoto_small : CoverPhoto_mobile} />
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />

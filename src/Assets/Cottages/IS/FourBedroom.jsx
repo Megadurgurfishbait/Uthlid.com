@@ -4,6 +4,7 @@ const Title = `Fjögurra herbergja hús`;
 const Price = `282`;
 const CoverPhoto = IconPackage.fourBedroom;
 const CoverPhoto_small = IconPackage.fourBedroom_Small;
+const CoverPhoto_mobile = IconPackage.fourBedroom_Mobile;
 const URL = `Fourbedroom`;
 
 
@@ -52,7 +53,8 @@ const Info = {
   SmallIcons,
   URL,
   InformationBoxPrice,
-  CoverPhoto_small
+  CoverPhoto_small,
+  CoverPhoto_mobile
 
 };
 export default Info;

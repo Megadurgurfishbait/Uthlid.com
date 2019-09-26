@@ -1,5 +1,6 @@
 import IconPackage from "../SVG";
 
+const CoverPhoto_mobile = IconPackage.twoBedroom_Mobile;
 const CoverPhoto_small = IconPackage.twoBedroom_Small;
 const CoverPhoto = IconPackage.twoBedroom;
 const Title = `TWO BEDROOM COTTAGES`;
@@ -52,7 +53,8 @@ const Info = {
   SmallIcons,
   URL,
   InformationBoxPrice,
-  CoverPhoto_small
+  CoverPhoto_small,
+  CoverPhoto_mobile
 
 };
 export default Info;
