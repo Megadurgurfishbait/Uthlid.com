@@ -1,35 +1,35 @@
 self.__precacheManifest = [
   {
-    "revision": "b29a64c907df67734dd9",
-    "url": "/static/js/main.b29a64c9.chunk.js"
+    "revision": "62afa4640146ac18dc7c",
+    "url": "/static/js/main.62afa464.chunk.js"
   },
   {
-    "revision": "4b3c5d1a4c6cd65284fe",
-    "url": "/static/js/runtime~main.4b3c5d1a.js"
+    "revision": "37a2522a0af4381a98bf",
+    "url": "/static/js/runtime~main.37a2522a.js"
   },
   {
-    "revision": "7e1bb0cd921726dfa37b",
-    "url": "/static/js/2.7e1bb0cd.chunk.js"
+    "revision": "335169bd4c8c61edef35",
+    "url": "/static/js/2.335169bd.chunk.js"
   },
   {
-    "revision": "b85de691ca2a8f4c9855",
-    "url": "/static/js/3.b85de691.chunk.js"
+    "revision": "e7bb7bd2e180345abdc0",
+    "url": "/static/js/3.e7bb7bd2.chunk.js"
   },
   {
-    "revision": "ced6dacfeb45b179f359",
-    "url": "/static/js/4.ced6dacf.chunk.js"
+    "revision": "60274468f11ca15bd86a",
+    "url": "/static/js/4.60274468.chunk.js"
   },
   {
-    "revision": "c46008d42e580171bf04",
-    "url": "/static/js/5.c46008d4.chunk.js"
+    "revision": "3ffe33680cd349150116",
+    "url": "/static/js/5.3ffe3368.chunk.js"
   },
   {
-    "revision": "21dbf74c895f1419e006",
-    "url": "/static/js/6.21dbf74c.chunk.js"
+    "revision": "d8063ed0afa7f20f46fe",
+    "url": "/static/js/6.d8063ed0.chunk.js"
   },
   {
-    "revision": "54fa9bbe7a26a6a7a1bf",
-    "url": "/static/js/7.54fa9bbe.chunk.js"
+    "revision": "a0b6a76e3295353510c3",
+    "url": "/static/js/7.a0b6a76e.chunk.js"
   },
   {
     "revision": "bb580024b43786b422a283922c2fb035",
@@ -236,20 +236,20 @@ self.__precacheManifest = [
     "url": "/static/media/k3_9089_mobile.e268f89d.jpg"
   },
   {
-    "revision": "e07d9b513c9fab0393b99f77a1defb24",
-    "url": "/static/media/Bruararskord.e07d9b51.jpg"
+    "revision": "35014c1a034e8362c0f0b06f8e5fa3de",
+    "url": "/static/media/Bruararskord.35014c1a.jpg"
   },
   {
-    "revision": "d66d282a5c067410ab6f76ef19c96ef3",
-    "url": "/static/media/Bruarfoss.d66d282a.jpg"
+    "revision": "8386e8b12f7a8caa2f06bf0b0183da55",
+    "url": "/static/media/Bruarfoss.8386e8b1.jpg"
   },
   {
-    "revision": "eb85606d4ef2aea7e32225dd21669007",
-    "url": "/static/media/hestaleiga_uthlid.eb85606d.jpg"
+    "revision": "25e9dcf0ed2e3910af62619543e3747e",
+    "url": "/static/media/hestaleiga_uthlid.25e9dcf0.jpg"
   },
   {
-    "revision": "3f81a95ccf4f34c717345024e94eb6d1",
-    "url": "/static/media/Kolgrimsholl.3f81a95c.jpg"
+    "revision": "4a8ca27d844c6e11ba257bed8884184a",
+    "url": "/static/media/Kolgrimsholl.4a8ca27d.jpg"
   },
   {
     "revision": "66a7933992ffafc5e9cf68b2abe85f37",
@@ -288,7 +288,7 @@ self.__precacheManifest = [
     "url": "/static/media/img_2546_mobile.b303e472.jpg"
   },
   {
-    "revision": "623ae7bfd2e2ebb13734ae921768644b",
+    "revision": "3cbbfc75dcd3da8e6d0d1afa3278e43e",
     "url": "/index.html"
   }
 ];

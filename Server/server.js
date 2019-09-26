@@ -25,39 +25,24 @@ app.get("/", function(req, res) {
   });
 });
 
-app.get('/Cottages', (req, res) => {
+app.get(
+  [
+    "/Horserental",
+    "/Golf",
+    "/Camping",
+    "/Restaurant",
+    "/Cottages",
+    "/Cottages/*"
+  ],
+  (req, res) => {
     res.sendFile(path.join(__dirname, "../build", "index.html"), {
-    maxAge: "360d"
-  });
-});
+      maxAge: "360d"
+    });
+  }
+);
 
-app.get('/Horserental', (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"), {
-    maxAge: "360d"
-  });
-});
-
-app.get('/Golf', (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"), {
-    maxAge: "360d"
-  });
-});
-
-app.get('/Camping', (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"), {
-    maxAge: "360d"
-  });
-});
-
-app.get('/Restaurant', (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"), {
-    maxAge: "360d"
-  });
-});
-
-
-app.get('/*', (req, res) => {
-  res.redirect('/');
+app.get("/*", (req, res) => {
+  res.redirect("/");
 });
 
 app.listen(port);

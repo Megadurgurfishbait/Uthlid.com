@@ -8,7 +8,7 @@ import { Values_Object_EN, Values_Object_IS } from "../../Assets/Cottages/";
 import Media from "../../Assets/Variables/media";
 import LanguageContext from "../../Context/Language";
 import useContentful from "../../Hooks/useContentful";
-
+import getWindowDimensions from "../../Hooks/useWindowDimensions";
 // CottageInfoOjbect inniheldur upplýsingar um alla sumarbústaðina.
 // Síðan fyrir hvern og einn sumarbúsað.
 function SinglePageCottage({ match }) {
@@ -27,10 +27,13 @@ function SinglePageCottage({ match }) {
       setInformation(Values_Object_IS[match.params.id.toLowerCase()]);
     }
   }, [English]);
-
+  const [drasl] = React.useState(getWindowDimensions());
   return (
     <Layout>
-      <Header {...Information} />
+      {console.log(Information)}
+      <Header         CoverPhoto={
+          drasl.width > 700 ? Information.CoverPhoto : Information.CoverPhoto_mobile
+        }/>
       {/* Sendi niður upplýsingarnar í gegnum props. */}
       <BlackbarInformation
         horseInformation={false}
