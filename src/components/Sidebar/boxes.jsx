@@ -3,22 +3,28 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Assets
 import { Colors, Media, MediaHeight } from "../../Assets/Variables/";
+import {Sprite, Sprite_Small} from '../../Assets/MainSite/';
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
-const Boxes = ({ Icon, Path, myFunc, truers, altText }) => (
+const Boxes = ({ IconLocation, Path, myFunc, truers, altText, Arrow }) => {
+  
+    const { width } = useWindowDimensions();
+  
+  return (
   <>
     {Path ? (
       <Container>
         <Clickable to={`${Path}`}>
-          <SingleIcon alt={`${altText}`} src={Icon} />
+          <SingleIcon alt={`${altText}`} backgroundpos={IconLocation} iconSize={ width > 700 ? "40px" : "25px"} drasl={Arrow ? Arrow : ( width > 700 ? Sprite : Sprite_Small )} />
         </Clickable>
       </Container>
     ) : (
       <Container onClick={() => myFunc()} expand={truers}>
-        <SingleIcon alt="informationIcon" src={Icon} />
+        <SingleIcon alt="informationIcon" backgroundpos={IconLocation} drasl={ width > 700 ? Sprite : Sprite_Small}  iconSize={ width > 700 ? "40px" : "25px"} />
       </Container>
     )}
   </>
-);
+)};
 
 export default Boxes;
 
@@ -74,12 +80,15 @@ const Clickable = styled(Link)`
   text-decoration: none;
 `;
 
-const SingleIcon = styled.img`
-  height: 25px;
-  width: 25px;
+const SingleIcon = styled.div`
+  height: ${props => props.iconSize};
+  width: ${props => props.iconSize};
   margin: 0px;
-  background-image: url(${props => props.src});
-  background-size: cover;
+  background-image: url(${props => props.drasl});
+  background-repeat: no-repeat;
+  background-position-x: 0px;
+  background-position-y: ${props => props.backgroundpos};
+  overflow: hidden;
 
   ${Container}:hover & {
     filter: invert(50%) sepia(0%) saturate(80%) hue-rotate(143deg)

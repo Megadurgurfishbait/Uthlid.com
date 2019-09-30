@@ -13,12 +13,12 @@ import { Colors, Media, MediaHeight } from "../../Assets/Variables/";
 import {
   SidebarInfo,
   SidebarInfo_IS,
-  SVG,
   RightSidebarInfo
 } from "../../Assets/MainSite/index";
 
 import LanguageContext from "../../Context/Language";
-
+import {Sprite} from '../../Assets/MainSite/'
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 
 function Sidebar({ Position, mahAnimation }) {
@@ -27,6 +27,7 @@ function Sidebar({ Position, mahAnimation }) {
   const ShowMyRightMenuBar = () => {
     return setRightBar(ShowRightBar => !ShowRightBar);
   };
+  const { width } = useWindowDimensions();
 
   const { English } = React.useContext(LanguageContext);
   return (
@@ -35,7 +36,7 @@ function Sidebar({ Position, mahAnimation }) {
         /* Vinstra SIDEBAR */
         <Container Position={Position}>
           <HalfHeight>
-            <Boxes Path="/" Icon={SVG.LeftIcon} />
+            <Boxes Path="/" Arrow={Sprite} IconLocation={"-320px"} />
             <MainIcons>
               {English
                 ? SidebarInfo.map((value, index) => (
@@ -43,7 +44,7 @@ function Sidebar({ Position, mahAnimation }) {
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes
                         altText={value.altText}
-                        Icon={value.Icon}
+                        IconLocation={width > 700 ? value.Icon : value.Icon_25}
                         Path={value.Path}
                       />
                     </Row>
@@ -53,7 +54,7 @@ function Sidebar({ Position, mahAnimation }) {
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes
                         altText={value.altText}
-                        Icon={value.Icon}
+                        IconLocation={width > 700 ? value.Icon : value.Icon_25}
                         Path={value.Path}
                       />
                     </Row>
@@ -67,12 +68,13 @@ function Sidebar({ Position, mahAnimation }) {
         <ContainerRight Position={Position}>
           <HalfHeight center>
             {RightSidebarInfo.map((values, index) => {
+              console.log(values);
               return (
                 <Boxes
                   key={`${index}Boxes`}
                   truers={ShowRightBar}
                   myFunc={ShowMyRightMenuBar}
-                  Icon={values}
+                  IconLocation={width > 700 ? values.large : values.small}
                 />
               );
             })}
