@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 // Components
 import Boxes from "./boxes";
-import RightSidebar from "./RightSidebar/RightSidebar";
+//import RightSidebar from "./RightSidebar/RightSidebar";
 import ChangeLanguage from "./changeLanguage";
 
 // Asset
@@ -17,8 +17,9 @@ import {
   RightSidebarInfo
 } from "../../Assets/MainSite/index";
 
-
 import LanguageContext from "../../Context/Language";
+
+const RightSidebar = React.lazy(() => import("./RightSidebar/RightSidebar"));
 
 function Sidebar({ Position, mahAnimation }) {
   /* State sem sér um hægri Sidebar */
@@ -76,7 +77,11 @@ function Sidebar({ Position, mahAnimation }) {
               );
             })}
           </HalfHeight>
-          <RightSidebar ShowRightBar={ShowRightBar} />
+          {ShowRightBar &&
+          <Suspense fallback={<div>Loading...</div>}>
+            <RightSidebar ShowRightBar={ShowRightBar} />
+          </Suspense>
+          }
         </ContainerRight>
       )}
     </Try>

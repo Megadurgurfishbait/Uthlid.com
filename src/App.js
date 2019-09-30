@@ -62,15 +62,16 @@ const App = () => {
       <GlobalStyles />
       <AppContainer>
         <LanguageContext.Provider value={{ English, setEnglish }}>
-          <Sidebar mahAnimation={toggleTimeline} Position={`left`} />
-          <Sidebar Position={`right`} />
           <Animate
             atEnter={{ opacity: 0 }}
             atLeave={{ opacity: 0 }}
             atActive={{ opacity: 1 }}
             mapStyles={mapStyles}
           >
-            <Route path="/cottages/:id" component={SinglePageCottage} />
+            <Route
+              path="/cottages/:id"
+              component={WaitingComponent(SinglePageCottage)}
+            />
             <Route
               exact={true}
               path="/cottages"
@@ -93,6 +94,11 @@ const App = () => {
               imgRef = element;
             }}
           />
+
+          <Suspense fallback={<div>Loading...</div>}>
+            <Sidebar mahAnimation={toggleTimeline} Position={`left`} />
+            <Sidebar Position={`right`} />
+          </Suspense>
         </LanguageContext.Provider>
       </AppContainer>
     </>

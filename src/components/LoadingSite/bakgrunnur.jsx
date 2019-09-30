@@ -6,16 +6,16 @@ import { Button } from "../Reusable/";
 
 // Assets
 import { Regular, Small, Smaller } from "../../Assets/MainSite/";
-import { Colors, Media } from "../../Assets/Variables/";
+import { Colors, Media, MediaHeight } from "../../Assets/Variables/";
 import LanguageContext from "../../Context/Language";
-
-// Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha í hvert skipti sem að þú prufar eh.
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 function Bakgrunnur() {
   const { English } = React.useContext(LanguageContext);
+  const { width } = useWindowDimensions();
   return (
     <Container>
-      <BackgroundImage role="img" aria-label="Picture of Uthlid"/>
+      <BackgroundImage backgroundfilter={ width > 700 ? true : false } role="img" aria-label="Picture of Uthlid"/>
       <TextContainer>
         <Column end>
           <TitleText> Úthlíð </TitleText>
@@ -71,7 +71,7 @@ const BackgroundImage = styled.div`
   background-position: bottom;
   z-index: 1;
   top: 0;
-  filter: opacity(45%);
+  filter: ${props => props.backgroundfilter ?   "opacity(35%)" : "opacity(15%)" };
   left: 0;
 
   ${Media.large`background-image: url(${Small});`}
@@ -114,6 +114,10 @@ const TitleText = styled.h1`
   letter-spacing: 15px;
   text-transform: uppercase;
   ${Media.desktop`font-size: 40px;`}
+  ${MediaHeight.phone`
+  font-size: 25px;
+  letter-spacing: 5px;  
+  `}
 `;
 const Paragraph = styled.h4`
   color: inherit;
@@ -130,4 +134,9 @@ const Paragraph = styled.h4`
   ${Media.tablet`
     font-size: 15px;
     white-space: normal;`}
+
+    ${MediaHeight.phone`
+  font-size: 12px;
+  line-height: 1.2;
+  `}
 `;
