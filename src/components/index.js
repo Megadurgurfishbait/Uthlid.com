@@ -2,6 +2,7 @@ import React from 'react';
 
 import Container from "./LoadingSite/Container";
 import Sidebar from './Sidebar/Container';
+
 const SinglePageCottage = React.lazy(() => import('./SinglePageCottage/SinglePageCottage'));
 const CardContainer = React.lazy(() => import('./Cottage/CardContainer'));
 const HorseRentalContainer = React.lazy(() => import('./HorseRental/HorseRentalContainer'));
