@@ -95,10 +95,8 @@ const App = () => {
             }}
           />
 
-          <Suspense fallback={<div>Loading...</div>}>
-            <Sidebar mahAnimation={toggleTimeline} Position={`left`} />
-            <Sidebar Position={`right`} />
-          </Suspense>
+          <Sidebar mahAnimation={toggleTimeline} Position={`left`} />
+          <Sidebar Position={`right`} />
         </LanguageContext.Provider>
       </AppContainer>
     </>
