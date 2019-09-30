@@ -17,7 +17,7 @@ import {
 } from "../../Assets/MainSite/index";
 
 import LanguageContext from "../../Context/Language";
-import {Sprite} from '../../Assets/MainSite/'
+import {Sprite, Sprite_Small} from '../../Assets/MainSite/'
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 
@@ -36,7 +36,7 @@ function Sidebar({ Position, mahAnimation }) {
         /* Vinstra SIDEBAR */
         <Container Position={Position}>
           <HalfHeight>
-            <Boxes Path="/" Arrow={Sprite} IconLocation={"-320px"} />
+            <Boxes Path="/" Arrow={ width > 700 ? Sprite : Sprite_Small} IconLocation={width > 700 ? "-320px" : "-200px"} />
             <MainIcons>
               {English
                 ? SidebarInfo.map((value, index) => (
