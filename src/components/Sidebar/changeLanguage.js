@@ -4,7 +4,7 @@ import { Colors, Media } from "../../Assets/Variables";
 import useLocalStorage from "../../Hooks/useLocalStorage";
 import LanguageContext from "../../Context/Language";
 
-const ChangeLanguage = ({ mahAnimation }) => {
+const ChangeLanguage = ({ mahAnimation, toggle }) => {
   const [language, setLanguage] = useLocalStorage("EnglishLanguage", true);
   const { setEnglish } = React.useContext(LanguageContext);
   const [clickable, setClickable] = React.useState(true);
@@ -24,7 +24,7 @@ const ChangeLanguage = ({ mahAnimation }) => {
 
   async function onButtonClick() {
     setClickable(false);
-    mahAnimation();
+    mahAnimation(!toggle);
     await asyncCall();
     setLanguage(!language);
   }

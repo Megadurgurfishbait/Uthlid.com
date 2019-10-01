@@ -45,6 +45,7 @@ const App = () => {
     useLocalStorage("EnglishLanguage")[0]
   );
 
+
   async function toggleTimeline() {
     if (toggle) {
       tl.to(imgRef, 0.1, { height: 2500 })

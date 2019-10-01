@@ -21,7 +21,7 @@ import {Sprite, Sprite_Small} from '../../Assets/MainSite/'
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 
-function Sidebar({ Position, mahAnimation }) {
+function Sidebar({ Position, mahAnimation, toggle }) {
   /* State sem sér um hægri Sidebar */
   const [ShowRightBar, setRightBar] = useState(false);
   const ShowMyRightMenuBar = () => {
@@ -63,7 +63,7 @@ function Sidebar({ Position, mahAnimation }) {
                   ))}
             </MainIcons>
           </HalfHeight>
-          <ChangeLanguage mahAnimation={mahAnimation} />
+          <ChangeLanguage mahAnimation={mahAnimation} toggle={toggle}/>
         </Container>
       ) : (
         /* HÆGRI SIDEBAR */
