@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 // Assets
@@ -6,20 +6,9 @@ import { Media } from "../../Assets/Variables/";
 
 // Breidd síðunar svo að hún er jöfn yfir allar undirsíður.
 // UseEffect setur síðuna efst upp í hvert skipti sem að það keyrir.
-function Layout(props) {
-  useEffect(() => {
-    if (!props.stop) {
-      console.log("HER");
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-      });
-    }
-  });
-
-  return <Container myColor={props.myColor}>{props.children}</Container>;
-}
+const Layout = ({myColor, children}) => (
+  <Container myColor={myColor}>{children}</Container>
+);
 
 export default Layout;
 
