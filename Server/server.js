@@ -42,10 +42,6 @@ app.get(
   }
 );
 
-app.get("/*", (req, res) => {
-  res.redirect("/");
-});
-
 app.listen(port);
 
 console.log(`SERVER RUNNING ON ${port}`);
