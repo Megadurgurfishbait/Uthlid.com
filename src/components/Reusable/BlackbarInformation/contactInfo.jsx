@@ -6,7 +6,7 @@ const ContactInfo = ({ English }) => (
   <EmailColumn>
     <EmailContainer>
       <EmailText>{English ? "Email" : "Netfang"}</EmailText>
-      <EmailText fat>uthlid@uthlid.is</EmailText>
+      <EmailText fat>uthlid at uthlid.is</EmailText>
     </EmailContainer>
     <EmailContainer>
       <EmailText>{English ? "Phone" : "Sími"} </EmailText>

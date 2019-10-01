@@ -19,6 +19,7 @@ import {
 import { Colors } from "./Assets/Variables";
 import LanguageContext from "./Context/Language.js";
 import useLocalStorage from "./Hooks/useLocalStorage";
+import {SEO} from './components/Reusable';
 // GlobalStyles er frá Styled-Components, er að nota það til að ákveða font fyrir alla síðuna.
 const GlobalStyles = createGlobalStyle`
   body {
@@ -61,6 +62,11 @@ const App = () => {
     <>
       <GlobalStyles />
       <AppContainer>
+      <SEO
+        title={`Front Page`}
+        keywords={`Cottages, Horse Rental, Golf, Camping, Restaurant`}
+        description={`Úthlíd Cottages has a 9-hole golf course on site. Guided hiking tours and Icelandic horse riding trips can be arranged, as well as day tours to the western and southern part of Iceland.`}
+      />
         <LanguageContext.Provider value={{ English, setEnglish }}>
           <Animate
             atEnter={{ opacity: 0 }}
