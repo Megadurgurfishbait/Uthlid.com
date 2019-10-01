@@ -24,7 +24,8 @@ export default MenuCard;
 
 const Container = styled.div`
   display: flex;
-  min-height: 50px;
+  min-height: 60px;
+  height: 100%;
   width: 100%;
   margin-bottom: 10px;
   background-color: ${Colors.BLACK};
@@ -32,6 +33,14 @@ const Container = styled.div`
   color: ${Colors.GOLD};
   padding-left: 20px;
   overflow: hidden;
+  box-sizing: border-box;
+
+  ${Media.phone`
+  width: 100%;
+  padding-left: 5px;
+  margin: 0px;
+  border-radius: 0px;
+  `}
 `;
 
 const TitleDescription = styled.div`
@@ -58,6 +67,9 @@ const PriceText = styled.div`
   ${Media.phone`
     font-size: 12px;
     min-width: 60px;
+    border-radius: 0px;
+    border:none;
+    padding-right: 15px;
   `}
 `;
 
@@ -78,5 +90,5 @@ const DescriptionText = styled.p`
   margin: 0px;
   text-align: left;
   font-size: 12px;
-  ${Media.phone`font-size: 8px;`}
+  ${Media.phone`font-size: 12px;`}
 `;

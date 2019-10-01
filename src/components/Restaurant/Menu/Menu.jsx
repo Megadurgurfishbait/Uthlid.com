@@ -33,7 +33,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 80%;
   height: 100%;
-  ${Media.phone`width: 90%;`}
+  ${Media.phone`width: 100%;`}
 `;
 
 const FoodType = styled.div`
