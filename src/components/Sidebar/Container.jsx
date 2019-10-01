@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -17,9 +17,8 @@ import {
 } from "../../Assets/MainSite/index";
 
 import LanguageContext from "../../Context/Language";
-import {Sprite, Sprite_Small} from '../../Assets/MainSite/'
+import { Sprite, Sprite_Small } from "../../Assets/MainSite/";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
-
 
 function Sidebar({ Position, mahAnimation, toggle }) {
   /* State sem sér um hægri Sidebar */
@@ -36,14 +35,18 @@ function Sidebar({ Position, mahAnimation, toggle }) {
         /* Vinstra SIDEBAR */
         <Container Position={Position}>
           <HalfHeight>
-            <Boxes Path="/" Arrow={ width > 700 ? Sprite : Sprite_Small} IconLocation={width > 700 ? "-320px" : "-200px"} />
+            <Boxes
+              Path="/"
+              Arrow={width > 700 ? Sprite : Sprite_Small}
+              IconLocation={width > 700 ? "-320px" : "-200px"}
+            />
             <MainIcons>
               {English
                 ? SidebarInfo.map((value, index) => (
                     <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes
-                      role="img"
+                        role="img"
                         aria-label={value.altText}
                         IconLocation={width > 700 ? value.Icon : value.Icon_25}
                         Path={value.Path}
@@ -54,8 +57,8 @@ function Sidebar({ Position, mahAnimation, toggle }) {
                     <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes
-                       role="img"
-                       aria-label={value.altText}
+                        role="img"
+                        aria-label={value.altText}
                         IconLocation={width > 700 ? value.Icon : value.Icon_25}
                         Path={value.Path}
                       />
@@ -63,7 +66,7 @@ function Sidebar({ Position, mahAnimation, toggle }) {
                   ))}
             </MainIcons>
           </HalfHeight>
-          <ChangeLanguage mahAnimation={mahAnimation} toggle={toggle}/>
+          <ChangeLanguage mahAnimation={mahAnimation} toggle={toggle} />
         </Container>
       ) : (
         /* HÆGRI SIDEBAR */
@@ -82,9 +85,7 @@ function Sidebar({ Position, mahAnimation, toggle }) {
               );
             })}
           </HalfHeight>
-          {ShowRightBar &&
-            <RightSidebar ShowRightBar={ShowRightBar} />
-          }
+          {ShowRightBar && <RightSidebar ShowRightBar={ShowRightBar} />}
         </ContainerRight>
       )}
     </Try>

@@ -4,13 +4,32 @@ const CoverPhoto_mobile = IconPackage.twoBedroom_Mobile;
 const CoverPhoto_small = IconPackage.twoBedroom_Small;
 const CoverPhoto = IconPackage.twoBedroom;
 const Title = `TWO BEDROOM COTTAGES`;
-const Price = `164`;
 const URL = `twobedroom`;
 const BlackbarInfo = [
-  { Icon: `${IconPackage.sqIcon}`, Text: `50`, IconBlack: `${IconPackage.m2Black}`, ToolTip: `Square Meter` },
-  { Icon: `${IconPackage.personIcon}`, Text: `5-6`, IconBlack: `${IconPackage.personsBlack}`, ToolTip: `How many persons` },
-  { Icon: `${IconPackage.discIcon}`, Text: `6`, IconBlack: `${IconPackage.disksBlack}`, ToolTip: `Dinner plates` },
-  { Icon: `${IconPackage.bedIcon}`, Text: `1`, IconBlack: `${IconPackage.bedBlack}`, ToolTip: `How many beds` }
+  {
+    Icon: `${IconPackage.sqIcon}`,
+    Text: `50`,
+    IconBlack: `${IconPackage.m2Black}`,
+    ToolTip: `Square Meter`
+  },
+  {
+    Icon: `${IconPackage.personIcon}`,
+    Text: `5-6`,
+    IconBlack: `${IconPackage.personsBlack}`,
+    ToolTip: `How many persons`
+  },
+  {
+    Icon: `${IconPackage.discIcon}`,
+    Text: `6`,
+    IconBlack: `${IconPackage.disksBlack}`,
+    ToolTip: `Dinner plates`
+  },
+  {
+    Icon: `${IconPackage.bedIcon}`,
+    Text: `1`,
+    IconBlack: `${IconPackage.bedBlack}`,
+    ToolTip: `How many beds`
+  }
 ];
 
 const TextInformation = [
@@ -45,7 +64,6 @@ const SmallIcons = [
 // Allt info fyrir þennan Cottage er export'að hér. Engin þörf að kalla annað til að fá upplýsingar eða icon um hann.
 const Info = {
   Title,
-  Price,
   CoverPhoto,
   BlackbarInfo,
   TextInformation,
@@ -55,6 +73,5 @@ const Info = {
   InformationBoxPrice,
   CoverPhoto_small,
   CoverPhoto_mobile
-
 };
 export default Info;

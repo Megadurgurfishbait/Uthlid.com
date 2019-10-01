@@ -2,12 +2,10 @@ import IconPackage from "../SVG"; // Fæ öll icon og myndir héðan.
 
 
 const Title = `Minnibungur 1-5`;
-const Price = ``;
 const CoverPhoto_mobile = IconPackage.economyImage_Mobile;
 const CoverPhoto_small = IconPackage.economyImage_Small;
 const CoverPhoto = IconPackage.economyImage;
 const URL = `Economy`;
-const InformationBoxPrice = ``;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `34`, IconBlack: `${IconPackage.m2Black}`, ToolTip: `Fermetrar` },
   { Icon: `${IconPackage.personIcon}`, Text: `4-6`, IconBlack: `${IconPackage.personsBlack}`, ToolTip:`Fjöldi einstaklinga` },
@@ -42,14 +40,12 @@ const SmallIcons = [
 // Allt info fyrir þennan Cottage er export'að hér. Engin þörf að kalla annað til að fá upplýsingar eða icon um hann.
 const Info = {
     Title,
-    Price,
     CoverPhoto,
     BlackbarInfo,
     TextInformation,
     Includes,
     SmallIcons,
     URL,
-    InformationBoxPrice,
     CoverPhoto_small,
     CoverPhoto_mobile
 

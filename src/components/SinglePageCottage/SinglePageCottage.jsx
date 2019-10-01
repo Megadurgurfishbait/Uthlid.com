@@ -36,8 +36,8 @@ function SinglePageCottage({ match }) {
       ? setInformation(Values_Object_EN[match.params.id.toLowerCase()])
       : setInformation(Values_Object_IS[match.params.id.toLowerCase()]);
   }, [English]);
-  const { width } = React.useState(getWindowDimensions());
-  console.log(width);
+  const [ size ] = React.useState(getWindowDimensions());
+  console.log(size.width);
   return (
     <Layout stop="true">
       <SEO
@@ -47,7 +47,7 @@ function SinglePageCottage({ match }) {
       />
       <Header
         CoverPhoto={
-          width > 700 ? Information.CoverPhoto : Information.CoverPhoto_mobile
+          size.width > 700 ? Information.CoverPhoto : Information.CoverPhoto_mobile
         }
       />
       {/* Sendi niður upplýsingarnar í gegnum props. */}

@@ -8,6 +8,8 @@ import { Layout, SEO } from "../Reusable/";
 // Assets
 import { Media } from "../../Assets/Variables/";
 import { CottageInfoArray } from "../../Assets/Cottages/";
+
+// Context
 import LanguageContext from "../../Context/Language";
 
 const CardContainer = () => {

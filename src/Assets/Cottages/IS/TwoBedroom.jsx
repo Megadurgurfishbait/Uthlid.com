@@ -5,7 +5,6 @@ const CoverPhoto_mobile = IconPackage.twoBedroom_Mobile;
 const CoverPhoto_small = IconPackage.twoBedroom_Small;
 const CoverPhoto = IconPackage.twoBedroom;
 const Title = `Tveggja herbergja hús`;
-const Price = `164`;
 const URL = `TwoBedroom`;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `50`, IconBlack: `${IconPackage.m2Black}`, ToolTip: `Fermetrar` },
@@ -42,7 +41,6 @@ const SmallIcons = [
 // Allt info fyrir þennan Cottage er export'að hér. Engin þörf að kalla annað til að fá upplýsingar eða icon um hann.
 const Info = {
   Title,
-  Price,
   CoverPhoto,
   BlackbarInfo,
   TextInformation,

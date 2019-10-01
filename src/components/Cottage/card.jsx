@@ -9,6 +9,8 @@ import { Button } from "../Reusable/";
 // Assets
 import { Colors, Media } from "../../Assets/Variables/";
 import LanguageContext from '../../Context/Language';
+
+// Hooks
 import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
 const Card = ( { CoverPhoto_small, CoverPhoto_mobile, Title, BlackbarInfo, SmallIcons, URL }) => {

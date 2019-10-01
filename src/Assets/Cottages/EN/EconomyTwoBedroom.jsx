@@ -2,7 +2,6 @@ import IconPackage from "../SVG"; // Fæ öll icon og myndir héðan.
 
 
 const Title = `ECONOMY TWO BEDROOM`;
-const Price = `138`;
 const CoverPhoto_mobile = IconPackage.economyImage_Mobile;
 const CoverPhoto_small = IconPackage.economyImage_Small;
 const CoverPhoto = IconPackage.economyImage;
@@ -39,7 +38,6 @@ const SmallIcons = [
 // Allt info fyrir þennan Cottage er export'að hér. Engin þörf að kalla annað til að fá upplýsingar eða icon um hann.
 const Info = {
     Title,
-    Price,
     CoverPhoto,
     BlackbarInfo,
     TextInformation,
@@ -49,6 +47,5 @@ const Info = {
     InformationBoxPrice,
     CoverPhoto_small,
     CoverPhoto_mobile
-
 };
 export default Info;

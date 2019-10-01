@@ -1,26 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-
+// Components
 import { Layout, Button } from "../Reusable/";
+// Assets
 import { Colors, Media } from "../../Assets/Variables";
-
+// Hooks
 import LanguageContext from "../../Context/Language";
 
 const NoMatch = () => {
-
-    const {English } = React.useContext(LanguageContext);
+  const { English } = React.useContext(LanguageContext);
   return (
     <Layout>
       <Container>
         <Text>
           <H1>{English ? "Ooops!" : "Úpsa deisý!"}</H1>
-          <H4> {English ? "We didn't find this site!" : "Við fundum ekki síðuna!"}</H4>
+          <H4>
+            {" "}
+            {English ? "We didn't find this site!" : "Við fundum ekki síðuna!"}
+          </H4>
           <Span style={{ color: `${Colors.GOLD}` }}>&#9785;</Span>
           <Button toPath="/" backgroundcolor={`${Colors.GOLD}`}>
             {English ? "To Home Page" : "Á Upphafssíðu"}
-        </Button>
+          </Button>
         </Text>
-
       </Container>
     </Layout>
   );

@@ -1,14 +1,10 @@
 import IconPackage from "../SVG";
 
 const Title = `Fjögurra herbergja hús`;
-const Price = `282`;
 const CoverPhoto = IconPackage.fourBedroom;
 const CoverPhoto_small = IconPackage.fourBedroom_Small;
 const CoverPhoto_mobile = IconPackage.fourBedroom_Mobile;
 const URL = `Fourbedroom`;
-
-
-const InformationBoxPrice = `Prices From`;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `130`, IconBlack: `${IconPackage.m2Black}`,  ToolTip: `Fermetrar` },
   { Icon: `${IconPackage.personIcon}`, Text: `8`, IconBlack: `${IconPackage.personsBlack}`, ToolTip:`Fjöldi einstaklinga` },
@@ -45,14 +41,12 @@ const SmallIcons = [
 
 const Info = {
   Title,
-  Price,
   CoverPhoto,
   BlackbarInfo,
   TextInformation,
   Includes,
   SmallIcons,
   URL,
-  InformationBoxPrice,
   CoverPhoto_small,
   CoverPhoto_mobile
 

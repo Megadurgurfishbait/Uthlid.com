@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+
+// Components
 import { Header, Layout, TextContainer, SEO } from "../Reusable/";
 // Import Assets
 import Info from "../../Assets/Camping/index";
 import { Media, Colors } from "../../Assets/Variables/";
+// Hooks
 import LanguageContext from "../../Context/Language";
 import getWindowDimensions from "../../Hooks/useWindowDimensions";
 

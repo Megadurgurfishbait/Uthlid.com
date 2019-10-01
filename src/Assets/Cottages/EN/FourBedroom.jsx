@@ -1,8 +1,6 @@
 import IconPackage from "../SVG";
 
 const Title = `FOUR BEDROOM COTTAGES`;
-const Price = `282`;
-
 const CoverPhoto = IconPackage.fourBedroom;
 const CoverPhoto_small = IconPackage.fourBedroom_Small;
 const CoverPhoto_mobile = IconPackage.fourBedroom_Mobile;
@@ -48,7 +46,6 @@ const SmallIcons = [
 
 const Info = {
   Title,
-  Price,
   CoverPhoto,
   BlackbarInfo,
   TextInformation,
