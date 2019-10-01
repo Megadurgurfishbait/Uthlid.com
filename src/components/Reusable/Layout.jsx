@@ -9,6 +9,7 @@ import { Media } from "../../Assets/Variables/";
 function Layout(props) {
   useEffect(() => {
     if (!props.stop) {
+      console.log("HER");
       window.scrollTo({
         top: 0,
         left: 0,

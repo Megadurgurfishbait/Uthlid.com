@@ -56,7 +56,7 @@ const Number = styled.h3`
   font-size: ${props => (props.small ? "20" : "30")}px;
   font-weight: 900;
   ${Media.phone`
-    font-size: 14px;
+    font-size: 16px;
   `}
 `;
 
@@ -65,7 +65,7 @@ const Symbol = styled(Number)`
   margin: 10px;
   font-size: ${props => (props.small ? "20" : "30")}px;
   ${Media.phone`
-    font-size: 14px;
+    font-size: 16px;
   `}
 `;
 

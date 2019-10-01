@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 // Component
-import { Header, BlackbarInformation, Layout, TextIncludes, SEO } from "../Reusable";
+import {
+  Header,
+  BlackbarInformation,
+  Layout,
+  TextIncludes,
+  SEO
+} from "../Reusable";
 // Assets
 import { Values_Object_EN, Values_Object_IS } from "../../Assets/Cottages/";
 import Media from "../../Assets/Variables/media";
@@ -14,10 +20,10 @@ import NoMatch from "../404";
 // Síðan fyrir hvern og einn sumarbúsað.
 function SinglePageCottage({ match }) {
   const { English } = React.useContext(LanguageContext);
-  const Hello = useContentful(match.params.id.toLowerCase());
+  const contentfulPrice = useContentful(match.params.id.toLowerCase());
   let hello = Values_Object_EN[match.params.id.toLowerCase()];
-  if(hello === undefined) {
-    return <NoMatch />
+  if (hello === undefined) {
+    return <NoMatch />;
   }
   const [Information, setInformation] = useState(
     English
@@ -26,13 +32,12 @@ function SinglePageCottage({ match }) {
   );
 
   React.useEffect(() => {
-    if (English) {
-      setInformation(Values_Object_EN[match.params.id.toLowerCase()]);
-    } else {
-      setInformation(Values_Object_IS[match.params.id.toLowerCase()]);
-    }
+    English
+      ? setInformation(Values_Object_EN[match.params.id.toLowerCase()])
+      : setInformation(Values_Object_IS[match.params.id.toLowerCase()]);
   }, [English]);
-  const [drasl] = React.useState(getWindowDimensions());
+  const { width } = React.useState(getWindowDimensions());
+  console.log(width);
   return (
     <Layout stop="true">
       <SEO
@@ -40,15 +45,17 @@ function SinglePageCottage({ match }) {
         keywords={`${Information.Includes.toString()}`}
         description={`${Information.TextInformation[0].Text}`}
       />
-      <Header         CoverPhoto={
-          drasl.width > 700 ? Information.CoverPhoto : Information.CoverPhoto_mobile
-        }/>
+      <Header
+        CoverPhoto={
+          width > 700 ? Information.CoverPhoto : Information.CoverPhoto_mobile
+        }
+      />
       {/* Sendi niður upplýsingarnar í gegnum props. */}
       <BlackbarInformation
         horseInformation={false}
         {...Information}
         Cottages={true}
-        ProductPrice={Hello}
+        ProductPrice={contentfulPrice}
       />
 
       <Container>
