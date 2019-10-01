@@ -22,7 +22,7 @@ const MenuCard = ({ Title, Ingred, Price }) => (
 
 export default MenuCard;
 
-const Container = styled.div`
+const Container = styled.li`
   display: flex;
   min-height: 60px;
   height: 100%;
