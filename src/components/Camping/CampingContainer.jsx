@@ -32,16 +32,16 @@ const CampingContainer = () => {
           <FAQContent>
             {English
               ? Info.FAQ.map((value, index) => (
-                  <div key={`${index}InfoFAQ`}>
+                  <li key={`${index}InfoFAQ`}>
                     <FAQQuestion> {value.Question}</FAQQuestion>
                     <FAQAnswer>{value.Answer}</FAQAnswer>
-                  </div>
+                  </li>
                 ))
               : Info.FAQ_is.map((value, index) => (
-                  <div key={`${index}UpplysingarFAQ`}>
+                  <li key={`${index}UpplysingarFAQ`}>
                     <FAQQuestion> {value.Question}</FAQQuestion>
                     <FAQAnswer>{value.Answer}</FAQAnswer>
-                  </div>
+                  </li>
                 ))}
           </FAQContent>
         </FAQ>
@@ -80,6 +80,10 @@ const FAQContent = styled.ul`
   text-align: left;
   padding: 0px;
   margin: 0px;
+
+  & > li {
+    list-style: none;
+  }
   ${Media.desktop`
     margin-left: 20px;
   `};
