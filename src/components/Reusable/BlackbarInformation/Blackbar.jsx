@@ -22,12 +22,11 @@ const Blackbar = ({
         ? BlackbarInfo.map((values, index) => (
             <Row key={`${index}blackbarInformation`}>
               <Icon alt={`${values.ToolTip}`} src={values.Icon} />
-              {console.log(values)}
               <Text>{values.Text}</Text>
             </Row>
           ))
-        : Svartastika.map((values, index)  => (
-          <Row key={`${index}blackbarInformation`}>
+        : Svartastika.map((values, index) => (
+            <Row key={`${index}blackbarInformation`}>
               <Icon alt={`${values.ToolTip}`} src={values.Icon} />
               <Text>{values.Text}</Text>
             </Row>

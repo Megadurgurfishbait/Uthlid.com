@@ -17,7 +17,7 @@ function Bakgrunnur() {
     <Container>
       <BackgroundImage backgroundfilter={ width > 700 ? true : false } role="img" aria-label="Picture of Uthlid"/>
       <TextContainer>
-        <Column end>
+        <Column end="true">
           <TitleText> Úthlíð </TitleText>
         </Column>
         <Row>

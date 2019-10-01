@@ -21,8 +21,8 @@ const SidebarInfo = [
   {
     Title: `Golf`,
     Path: `/Golf`,
-    Icon: `-160px`,
-    Icon_25: `-100px`,
+    Icon: `-120px`,
+    Icon_25: `-75px`,
     altText: `Golf Icon`
   },
   {

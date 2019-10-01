@@ -5,7 +5,7 @@ import Layout from './Layout';
 import Blackbar from './BlackbarInformation/Blackbar';
 import BlackbarInformation from './BlackbarInformation/BlackbarInformation';
 import TextIncludes from './TextIncludes';
-
+import SEO from './SEO';
 export {
     Header,
     Button,
@@ -13,5 +13,6 @@ export {
     Layout,
     Blackbar,
     TextIncludes,
-    BlackbarInformation
+    BlackbarInformation,
+    SEO
 }

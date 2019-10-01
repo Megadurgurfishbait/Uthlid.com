@@ -5,7 +5,8 @@ import {
   Layout,
   Header,
   BlackbarInformation,
-  TextContainer
+  TextContainer,
+  SEO
 } from "../Reusable";
 
 // Import Assets
@@ -16,6 +17,13 @@ const Golf = () => {
   const [drasl] = React.useState(getWindowDimensions());
   return (
     <Layout>
+      <SEO
+        title={`Golf Course`}
+        keywords={`Golf, Golf Course, Available for Rent, Nine holes`}
+        description={`
+        In Uthlid is a nine hole golf course open in the summer time usually from the end of May to the beginning of October.
+        The golf course is friendly and easy to play but nevertheless provides a challenge for all level of golfers.`}
+      />
       <Header
         CoverPhoto={
           drasl.width > 700 ? Info.CoverPhoto : Info.CoverPhoto_Mobile

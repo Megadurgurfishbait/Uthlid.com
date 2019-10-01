@@ -8,11 +8,13 @@ import { Media } from "../../Assets/Variables/";
 // UseEffect setur síðuna efst upp í hvert skipti sem að það keyrir.
 function Layout(props) {
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
+    if (!props.stop) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
+    }
   });
 
   return <Container myColor={props.myColor}>{props.children}</Container>;

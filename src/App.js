@@ -13,9 +13,10 @@ import {
   Container,
   Sidebar,
   Camping,
-  Restaurant
+  Restaurant,
+  NoMatch
 } from "./components";
-
+import { SEO } from "./components/Reusable";
 import { Colors } from "./Assets/Variables";
 import LanguageContext from "./Context/Language.js";
 import useLocalStorage from "./Hooks/useLocalStorage";
@@ -60,6 +61,11 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
+      <SEO
+        title={``}
+        keywords={`Cottages, Horse Rental, Golf, Camping, Restaurant`}
+        description={`Úthlíd Cottages has a 9-hole golf course on site. Guided hiking tours and Icelandic horse riding trips can be arranged, as well as day tours to the western and southern part of Iceland. Selfoss town center is 45 minutes’ drive from the property`}
+      />
       <AppContainer>
         <LanguageContext.Provider value={{ English, setEnglish }}>
           <Animate
@@ -88,6 +94,7 @@ const App = () => {
               component={WaitingComponent(Restaurant)}
             />
             <Route exact={true} path="/" component={Container} />
+            <Route path="/*" component={NoMatch} />
           </Animate>
           <BigScreen
             ref={element => {

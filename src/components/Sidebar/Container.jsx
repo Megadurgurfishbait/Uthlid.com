@@ -43,7 +43,8 @@ function Sidebar({ Position, mahAnimation }) {
                     <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes
-                        altText={value.altText}
+                      role="img"
+                        aria-label={value.altText}
                         IconLocation={width > 700 ? value.Icon : value.Icon_25}
                         Path={value.Path}
                       />
@@ -53,7 +54,8 @@ function Sidebar({ Position, mahAnimation }) {
                     <Row key={`${index}Row`}>
                       <TextTitle to={value.Path}> {value.Title} </TextTitle>
                       <Boxes
-                        altText={value.altText}
+                       role="img"
+                       aria-label={value.altText}
                         IconLocation={width > 700 ? value.Icon : value.Icon_25}
                         Path={value.Path}
                       />
@@ -68,12 +70,13 @@ function Sidebar({ Position, mahAnimation }) {
         <ContainerRight Position={Position}>
           <HalfHeight center>
             {RightSidebarInfo.map((values, index) => {
-              console.log(values);
               return (
                 <Boxes
                   key={`${index}Boxes`}
                   truers={ShowRightBar}
                   myFunc={ShowMyRightMenuBar}
+                  role="img"
+                  aria-label={values.altText}
                   IconLocation={width > 700 ? values.large : values.small}
                 />
               );

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Container from "./LoadingSite/Container";
 import Sidebar from './Sidebar/Container';
-
+import NoMatch from './404/index';
 const SinglePageCottage = React.lazy(() => import('./SinglePageCottage/SinglePageCottage'));
 const CardContainer = React.lazy(() => import('./Cottage/CardContainer'));
 const HorseRentalContainer = React.lazy(() => import('./HorseRental/HorseRentalContainer'));
@@ -18,5 +18,6 @@ export {
     Container,
     Sidebar,
     Camping,
-    Restaurant
+    Restaurant,
+    NoMatch
 }

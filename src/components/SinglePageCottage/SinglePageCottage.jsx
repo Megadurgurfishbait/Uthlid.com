@@ -2,18 +2,23 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 // Component
-import { Header, BlackbarInformation, Layout, TextIncludes } from "../Reusable";
+import { Header, BlackbarInformation, Layout, TextIncludes, SEO } from "../Reusable";
 // Assets
 import { Values_Object_EN, Values_Object_IS } from "../../Assets/Cottages/";
 import Media from "../../Assets/Variables/media";
 import LanguageContext from "../../Context/Language";
 import useContentful from "../../Hooks/useContentful";
 import getWindowDimensions from "../../Hooks/useWindowDimensions";
+import NoMatch from "../404";
 // CottageInfoOjbect inniheldur upplýsingar um alla sumarbústaðina.
 // Síðan fyrir hvern og einn sumarbúsað.
 function SinglePageCottage({ match }) {
   const { English } = React.useContext(LanguageContext);
   const Hello = useContentful(match.params.id.toLowerCase());
+  let hello = Values_Object_EN[match.params.id.toLowerCase()];
+  if(hello === undefined) {
+    return <NoMatch />
+  }
   const [Information, setInformation] = useState(
     English
       ? Values_Object_EN[match.params.id.toLowerCase()]
@@ -29,8 +34,12 @@ function SinglePageCottage({ match }) {
   }, [English]);
   const [drasl] = React.useState(getWindowDimensions());
   return (
-    <Layout>
-      {console.log(Information)}
+    <Layout stop="true">
+      <SEO
+        title={`${Information.Title}`}
+        keywords={`${Information.Includes.toString()}`}
+        description={`${Information.TextInformation[0].Text}`}
+      />
       <Header         CoverPhoto={
           drasl.width > 700 ? Information.CoverPhoto : Information.CoverPhoto_mobile
         }/>

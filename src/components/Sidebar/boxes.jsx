@@ -13,14 +13,14 @@ const Boxes = ({ IconLocation, Path, myFunc, truers, altText, Arrow }) => {
   return (
   <>
     {Path ? (
-      <Container>
+      <Container >
         <Clickable to={`${Path}`}>
-          <SingleIcon alt={`${altText}`} backgroundpos={IconLocation} iconSize={ width > 700 ? "40px" : "25px"} drasl={Arrow ? Arrow : ( width > 700 ? Sprite : Sprite_Small )} />
+          <SingleIcon role="img" aria-label={`${altText}`} backgroundpos={IconLocation} iconSize={ width > 700 ? "40px" : "25px"} drasl={Arrow ? Arrow : ( width > 700 ? Sprite : Sprite_Small )} />
         </Clickable>
       </Container>
     ) : (
       <Container onClick={() => myFunc()} expand={truers}>
-        <SingleIcon alt="informationIcon" backgroundpos={IconLocation} drasl={ width > 700 ? Sprite : Sprite_Small}  iconSize={ width > 700 ? "40px" : "25px"} />
+        <SingleIcon role="img" aria-label="informationIcon" backgroundpos={IconLocation} drasl={ width > 700 ? Sprite : Sprite_Small}  iconSize={ width > 700 ? "40px" : "25px"} />
       </Container>
     )}
   </>

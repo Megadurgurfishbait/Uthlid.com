@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // Components
 import HorseRentalCard from "./HorseRentalCard";
-import { Layout, Header, BlackbarInformation } from "../Reusable";
+import { Layout, Header, BlackbarInformation, SEO } from "../Reusable";
 
 // Assets
 import { Colors, Media } from "../../Assets/Variables/";
@@ -22,32 +22,44 @@ import getWindowDimensions from "../../Hooks/useWindowDimensions";
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
 */
 
-
 const HorseRentalContainer = () => {
-  const {English} = React.useContext(LanguageContext);
+  const { English } = React.useContext(LanguageContext);
   const [drasl] = React.useState(getWindowDimensions());
-return (
-  <Layout>
-    <Header CoverPhoto={drasl.width > 700 ? HorseBackground : HorseBackground_Mobile} />
-    <BlackbarInformation horseInformation={true} Price={Price} Verd={Verd} />
-    <CardContainer>
-      <Row>
-        <H1> {English ? "Trips" : "Hestaleiga" } </H1>
-        <HorseInformation>
-          {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
-          {English
-            ? HorseRentInformation.map((values, index) => (
-                <HorseRentalCard {...values} key={`${index}HorseRentalContainer`}/>
-              ))
-            : HestaleigaInformation.map((values, index) => (
-                <HorseRentalCard {...values} key={`${index}Hestaleiga`}/>
-              ))}
-        </HorseInformation>
-      </Row>
-      <FakeContainer />
-    </CardContainer>
-  </Layout>
-)};
+  return (
+    <Layout>
+      <SEO
+        title={`Horse Rental`}
+        keywords={`Horses, Horse Rental, Trips, Riding Tours`}
+        description={`All of our trips are great riding tours around the unspoiled and beautiful landscape of Úthlíð.`}
+      />
+      <Header
+        CoverPhoto={
+          drasl.width > 700 ? HorseBackground : HorseBackground_Mobile
+        }
+      />
+      <BlackbarInformation horseInformation={true} Price={Price} Verd={Verd} />
+      <CardContainer>
+        <Row>
+          <H1> {English ? "Trips" : "Hestaleiga"} </H1>
+          <HorseInformation>
+            {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
+            {English
+              ? HorseRentInformation.map((values, index) => (
+                  <HorseRentalCard
+                    {...values}
+                    key={`${index}HorseRentalContainer`}
+                  />
+                ))
+              : HestaleigaInformation.map((values, index) => (
+                  <HorseRentalCard {...values} key={`${index}Hestaleiga`} />
+                ))}
+          </HorseInformation>
+        </Row>
+        <FakeContainer />
+      </CardContainer>
+    </Layout>
+  );
+};
 
 export default HorseRentalContainer;
 

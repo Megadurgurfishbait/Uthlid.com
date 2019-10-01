@@ -1,41 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-import { Header, Layout, TextContainer } from "../Reusable/";
+import { Header, Layout, TextContainer, SEO } from "../Reusable/";
 // Import Assets
 import Info from "../../Assets/Camping/index";
-import {Media, Colors} from "../../Assets/Variables/";
+import { Media, Colors } from "../../Assets/Variables/";
 import LanguageContext from "../../Context/Language";
 import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
-
 const CampingContainer = () => {
   const [drasl] = React.useState(getWindowDimensions());
-  const {English} = React.useContext(LanguageContext);
+  const { English } = React.useContext(LanguageContext);
   return (
-  <Layout>
-    <Header CoverPhoto={ drasl.width > 700 ? Info.CoverPhoto : Info.CoverPhoto_Mobile} />
-    <MainDiv>
-      <TextContainer {...Info} Camping={true} />
-      <FAQ>
-        <FAQTitle>FAQ</FAQTitle>
-        <FAQContent>
-          {English
-            ? Info.FAQ.map((value, index) => (
-                <div key={`${index}InfoFAQ`}>
-                  <FAQQuestion> {value.Question}</FAQQuestion>
-                  <FAQAnswer>{value.Answer}</FAQAnswer>
-                </div>
-              ))
-            : Info.FAQ_is.map((value, index) => (
-              <div key={`${index}UpplysingarFAQ`}>
-                  <FAQQuestion> {value.Question}</FAQQuestion>
-                  <FAQAnswer>{value.Answer}</FAQAnswer>
-                </div>
-              ))}
-        </FAQContent>
-      </FAQ>
-    </MainDiv>
-  </Layout>
+    <Layout>
+      <SEO
+        title={`Camping`}
+        keywords={`Showers, Hot Tubes, Free Wifi`}
+        description={`
+        Showers and hot tubs are included in the price. Moreover, guests have access to facilities to eat their food and even wash their dishes!
+      Our Restaurant has free WiFi.
+      For a fair price we offer access to an automatic laundry service on site.`}
+      />
+      <Header
+        CoverPhoto={
+          drasl.width > 700 ? Info.CoverPhoto : Info.CoverPhoto_Mobile
+        }
+      />
+      <MainDiv>
+        <TextContainer {...Info} Camping={true} />
+        <FAQ>
+          <FAQTitle>FAQ</FAQTitle>
+          <FAQContent>
+            {English
+              ? Info.FAQ.map((value, index) => (
+                  <div key={`${index}InfoFAQ`}>
+                    <FAQQuestion> {value.Question}</FAQQuestion>
+                    <FAQAnswer>{value.Answer}</FAQAnswer>
+                  </div>
+                ))
+              : Info.FAQ_is.map((value, index) => (
+                  <div key={`${index}UpplysingarFAQ`}>
+                    <FAQQuestion> {value.Question}</FAQQuestion>
+                    <FAQAnswer>{value.Answer}</FAQAnswer>
+                  </div>
+                ))}
+          </FAQContent>
+        </FAQ>
+      </MainDiv>
+    </Layout>
   );
 };
 
@@ -63,7 +74,6 @@ const FAQ = styled.div`
     margin: 1px auto;
     width: 70%;
   `};
-
 `;
 
 const FAQContent = styled.ul`
