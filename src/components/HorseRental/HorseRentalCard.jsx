@@ -62,10 +62,15 @@ const CardPrice = styled.h5`
   font-weight: 800;
 `;
 
-const TextInformation = styled.h5`
-  font-weight: 800;
+const TextInformation = styled.p`
+  font-weight: 500;
   font-size: 18px;
   z-index: 2;
+
+  ${Media.phone`
+  font-size: 14px;
+  
+`}
 `;
 
 const TitleInfo = styled.div`
@@ -84,5 +89,9 @@ const InformationContainer = styled.div`
   ${Container}:hover & {
     margin-top: 0px;
   }
-  ${Media.tablet`margin-top: 0px;`}
+  ${Media.tablet`
+    margin-top: 0px;
+    padding: 0px 10px;
+    justify-content: space-evenly;
+  `}
 `;

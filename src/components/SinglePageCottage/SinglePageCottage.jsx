@@ -18,7 +18,7 @@ import getWindowDimensions from "../../Hooks/useWindowDimensions";
 import NoMatch from "../404";
 // CottageInfoOjbect inniheldur upplýsingar um alla sumarbústaðina.
 // Síðan fyrir hvern og einn sumarbúsað.
-function SinglePageCottage({ match }) {
+const SinglePageCottage = ({ match }) => {
   const { English } = React.useContext(LanguageContext);
   const contentfulPrice = useContentful(match.params.id.toLowerCase());
   let hello = Values_Object_EN[match.params.id.toLowerCase()];
@@ -36,8 +36,7 @@ function SinglePageCottage({ match }) {
       ? setInformation(Values_Object_EN[match.params.id.toLowerCase()])
       : setInformation(Values_Object_IS[match.params.id.toLowerCase()]);
   }, [English]);
-  const [ size ] = React.useState(getWindowDimensions());
-  console.log(size.width);
+  const [size] = React.useState(getWindowDimensions());
   return (
     <Layout stop="true">
       <SEO
@@ -47,7 +46,9 @@ function SinglePageCottage({ match }) {
       />
       <Header
         CoverPhoto={
-          size.width > 700 ? Information.CoverPhoto : Information.CoverPhoto_mobile
+          size.width > 700
+            ? Information.CoverPhoto
+            : Information.CoverPhoto_mobile
         }
       />
       {/* Sendi niður upplýsingarnar í gegnum props. */}
@@ -71,7 +72,7 @@ function SinglePageCottage({ match }) {
       <TextIncludes Includes={Information.Includes} />
     </Layout>
   );
-}
+};
 export default SinglePageCottage;
 
 const Textbox = styled.div`

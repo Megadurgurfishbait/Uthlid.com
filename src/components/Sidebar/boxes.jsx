@@ -3,28 +3,48 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Assets
 import { Colors, Media, MediaHeight } from "../../Assets/Variables/";
-import {Sprite, Sprite_Small} from '../../Assets/MainSite/';
+import { Sprite, Sprite_Small } from "../../Assets/MainSite/";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import SidebarContext from "../../Context/Sidebar";
 
-const Boxes = ({ IconLocation, Path, myFunc, truers, altText, Arrow }) => {
-  
-    const { width } = useWindowDimensions();
-  
+const Boxes = ({ IconLocation, Path, altText, Arrow }) => {
+  const { width } = useWindowDimensions();
+  const { SidebarOpen, setSidebar } = React.useContext(SidebarContext);
+
   return (
-  <>
-    {Path ? (
-      <Container >
-        <Clickable to={`${Path}`}>
-          <SingleIcon role="img" aria-label={`${altText}`} backgroundpos={IconLocation} iconSize={ width > 700 ? "40px" : "25px"} drasl={Arrow ? Arrow : ( width > 700 ? Sprite : Sprite_Small )} />
-        </Clickable>
-      </Container>
-    ) : (
-      <Container onClick={() => myFunc()} expand={truers}>
-        <SingleIcon role="img" aria-label="informationIcon" backgroundpos={IconLocation} drasl={ width > 700 ? Sprite : Sprite_Small}  iconSize={ width > 700 ? "40px" : "25px"} />
-      </Container>
-    )}
-  </>
-)};
+    <>
+      {Path ? (
+        <Container>
+          <Clickable
+            to={`${Path}`}
+            onClick={() => (SidebarOpen ? setSidebar(!SidebarOpen) : null)}
+          >
+            <SingleIcon
+              role="img"
+              aria-label={`${altText}`}
+              backgroundpos={IconLocation}
+              iconSize={width > 700 ? "40px" : "25px"}
+              drasl={Arrow ? Arrow : width > 700 ? Sprite : Sprite_Small}
+            />
+          </Clickable>
+        </Container>
+      ) : (
+        <Container
+          onClick={() => setSidebar(!SidebarOpen)}
+          expand={SidebarOpen}
+        >
+          <SingleIcon
+            role="img"
+            aria-label="informationIcon"
+            backgroundpos={IconLocation}
+            drasl={width > 700 ? Sprite : Sprite_Small}
+            iconSize={width > 700 ? "40px" : "25px"}
+          />
+        </Container>
+      )}
+    </>
+  );
+};
 
 export default Boxes;
 
@@ -51,7 +71,7 @@ const Container = styled.button`
   `}
 
   ${Media.phone`
-  max-height: 30px;
+    max-height: 30px;
     width:30px;
   `}
 
@@ -64,6 +84,7 @@ const Container = styled.button`
     outline: none;
     background-color: ${Colors.GOLD};
     border: 2px solid ${Colors.BLACK};
+    width: 50px;
   }
   &:focus,
   &:active {

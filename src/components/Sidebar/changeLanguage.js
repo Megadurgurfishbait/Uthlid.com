@@ -34,7 +34,7 @@ const ChangeLanguage = ({ mahAnimation, toggle }) => {
       <LanguageButton
         onClick={() => (clickable ? onButtonClick() : setClickable(false))}
       >
-        {language ? "EN" : "IS"}
+        {language ? "IS" : "EN"}
       </LanguageButton>
     </Container>
   );
@@ -56,7 +56,6 @@ const Container = styled.div`
   border: 2px solid transparent;
   transform-style: preserve-3d;
   transition: all 0.5s ease-out;
-
   transform: ${props => (props.turn ? "scale(1)" : "scale(0)")};
   transform-origin: 50% 50%;
   z-index: 5001 !important;
@@ -89,6 +88,12 @@ const LanguageButton = styled.button`
   transform: rotateY(0deg);
   border: 2px solid transparent;
   border-radius: 50%;
+  ${Media.phone`
+  max-width: 35px;
+  max-height: 35px;
+  min-height: 35px;
+  min-width: 35px;
+  `};
 
   &:hover,
   &:focus {

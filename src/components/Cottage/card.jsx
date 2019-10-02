@@ -15,15 +15,15 @@ import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
 const Card = ( { CoverPhoto_small, CoverPhoto_mobile, Title, BlackbarInfo, SmallIcons, URL }) => {
   const {English} = React.useContext(LanguageContext);
-  const [drasl] = React.useState(getWindowDimensions());
+  const [Size] = React.useState(getWindowDimensions());
 
   return (
   <Container>
-    <Image alt="Cover photos of cottages" src={drasl.width > 700 ? CoverPhoto_small : CoverPhoto_mobile} />
+    <Image alt="Cover photos of cottages" src={Size.width > 700 ? CoverPhoto_small : CoverPhoto_mobile} />
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
-    <SmallIcon IconArray={SmallIcons} />
+    {Size > 700 && <SmallIcon IconArray={SmallIcons} /> }
     <Button
       toPath={`/cottages/${URL}`}
       background={"true"}
@@ -52,7 +52,6 @@ const Container = styled.div`
   ${Media.tablet`width:400px;`}
   ${Media.phone`width: 95%;
     margin: 0px;
-  
   `}
 
 `;

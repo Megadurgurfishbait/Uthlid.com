@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -17,78 +17,73 @@ import {
 } from "../../Assets/MainSite/index";
 
 import LanguageContext from "../../Context/Language";
-import { Sprite, Sprite_Small } from "../../Assets/MainSite/";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 function Sidebar({ Position, mahAnimation, toggle }) {
   /* State sem sér um hægri Sidebar */
-  const [ShowRightBar, setRightBar] = useState(false);
-  const ShowMyRightMenuBar = () => {
-    return setRightBar(ShowRightBar => !ShowRightBar);
-  };
+
   const { width } = useWindowDimensions();
 
   const { English } = React.useContext(LanguageContext);
   return (
-    <Try>
-      {Position === `left` ? (
-        /* Vinstra SIDEBAR */
-        <Container Position={Position}>
-          <HalfHeight>
-            <Boxes
-              Path="/"
-              Arrow={width > 700 ? Sprite : Sprite_Small}
-              IconLocation={width > 700 ? "-320px" : "-200px"}
-            />
-            <MainIcons>
-              {English
-                ? SidebarInfo.map((value, index) => (
-                    <Row key={`${index}Row`}>
-                      <TextTitle to={value.Path}> {value.Title} </TextTitle>
-                      <Boxes
-                        role="img"
-                        aria-label={value.altText}
-                        IconLocation={width > 700 ? value.Icon : value.Icon_25}
-                        Path={value.Path}
-                      />
-                    </Row>
-                  ))
-                : SidebarInfo_IS.map((value, index) => (
-                    <Row key={`${index}Row`}>
-                      <TextTitle to={value.Path}> {value.Title} </TextTitle>
-                      <Boxes
-                        role="img"
-                        aria-label={value.altText}
-                        IconLocation={width > 700 ? value.Icon : value.Icon_25}
-                        Path={value.Path}
-                      />
-                    </Row>
-                  ))}
-            </MainIcons>
-          </HalfHeight>
-          <ChangeLanguage mahAnimation={mahAnimation} toggle={toggle} />
-        </Container>
-      ) : (
-        /* HÆGRI SIDEBAR */
-        <ContainerRight Position={Position}>
-          <HalfHeight center>
-            {RightSidebarInfo.map((values, index) => {
-              return (
-                <Boxes
-                  key={`${index}Boxes`}
-                  truers={ShowRightBar}
-                  myFunc={ShowMyRightMenuBar}
-                  role="img"
-                  aria-label={values.altText}
-                  IconLocation={width > 700 ? values.large : values.small}
-                />
-              );
-            })}
-          </HalfHeight>
-          {ShowRightBar && <RightSidebar ShowRightBar={ShowRightBar} />}
-        </ContainerRight>
-      )}
-    </Try>
+ 
+      <Try>
+        {Position === `left` ? (
+          /* Vinstra SIDEBAR */
+          <Container Position={Position}>
+            <HalfHeight>
+              <MainIcons>
+                {English
+                  ? SidebarInfo.map((value, index) => (
+                      <Row key={`${index}Row`}>
+                        <TextTitle to={value.Path}> {value.Title} </TextTitle>
+                        <Boxes
+                          role="img"
+                          aria-label={value.altText}
+                          IconLocation={
+                            width > 700 ? value.Icon : value.Icon_25
+                          }
+                          Path={value.Path}
+                        />
+                      </Row>
+                    ))
+                  : SidebarInfo_IS.map((value, index) => (
+                      <Row key={`${index}Row`}>
+                        <TextTitle to={value.Path}> {value.Title} </TextTitle>
+                        <Boxes
+                          role="img"
+                          aria-label={value.altText}
+                          IconLocation={
+                            width > 700 ? value.Icon : value.Icon_25
+                          }
+                          Path={value.Path}
+                        />
+                      </Row>
+                    ))}
+              </MainIcons>
+            </HalfHeight>
+            <ChangeLanguage mahAnimation={mahAnimation} toggle={toggle} />
+          </Container>
+        ) : (
+          /* HÆGRI SIDEBAR */
+          <ContainerRight Position={Position}>
+            <HalfHeight center>
+              {RightSidebarInfo.map((values, index) => {
+                return (
+                  <Boxes
+                    key={`${index}Boxes`}
+                    role="img"
+                    aria-label={values.altText}
+                    IconLocation={width > 700 ? values.large : values.small}
+                  />
+                );
+              })}
+            </HalfHeight>
+            <RightSidebar />
+          </ContainerRight>
+        )}
+      </Try>
+
   );
 }
 
@@ -134,7 +129,7 @@ const MainIcons = styled.div`
   `}
   ${Media.phone`
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   `}
 `;
 

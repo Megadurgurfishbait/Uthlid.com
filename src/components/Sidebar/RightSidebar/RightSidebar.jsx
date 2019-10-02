@@ -6,13 +6,14 @@ import ContactInfo from "./ContactInfo";
 import Map from "./Map";
 import Facebook from "./Facebook";
 import LanguageContext from "../../../Context/Language";
+import SidebarContext from '../../../Context/Sidebar';
 // Assets
 import { Colors, Media, MediaHeight } from "../../../Assets/Variables/";
-const RightSidebar = ({ ShowRightBar }) => {
+const RightSidebar = () => {
   const { English } = React.useContext(LanguageContext);
-
+  const {SidebarOpen } = React.useContext(SidebarContext);
   return (
-    <Container ShowRightBar={ShowRightBar}>
+    <Container ShowRightBar={SidebarOpen}>
       <Row smaller>
         <Facebook English={English} />
       </Row>

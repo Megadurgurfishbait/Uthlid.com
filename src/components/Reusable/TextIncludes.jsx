@@ -6,16 +6,14 @@ import Add from "../../Assets/Cottages/SVG/add.svg";
 import { Media } from "../../Assets/Variables/";
 const TextIncludes = ({ Includes }) => (
   <Container>
-    {
-      Includes === undefined || Includes < 1 ? null : 
-    
-    Includes.map((values, index) => (
-        <StayToGether key={`${index}Included`}>
-          <Icon alt="Options" src={Add} />
-          <IncludesTextBox>{values}</IncludesTextBox>
-        </StayToGether>
-      )
-    )}
+    {Includes === undefined || Includes < 1
+      ? null
+      : Includes.map((values, index) => (
+          <StayToGether key={`${index}Included`}>
+            <Icon alt="Options" src={Add} />
+            <IncludesTextBox>{values}</IncludesTextBox>
+          </StayToGether>
+        ))}
   </Container>
 );
 
