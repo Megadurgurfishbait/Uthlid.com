@@ -18,11 +18,13 @@ import {
 
 import LanguageContext from "../../Context/Language";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import SidebarContext from '../../Context/Sidebar';
 
 function Sidebar({ Position, mahAnimation, toggle }) {
   /* State sem sér um hægri Sidebar */
 
   const { width } = useWindowDimensions();
+  const {SidebarOpen }= React.useContext(SidebarContext);
 
   const { English } = React.useContext(LanguageContext);
   return (
@@ -79,7 +81,7 @@ function Sidebar({ Position, mahAnimation, toggle }) {
                 );
               })}
             </HalfHeight>
-            <RightSidebar />
+            {SidebarOpen && <RightSidebar /> }
           </ContainerRight>
         )}
       </Try>
