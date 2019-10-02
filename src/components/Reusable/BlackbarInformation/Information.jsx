@@ -58,7 +58,7 @@ const Information = ({
       <Button
         toPath="https://property.godo.is/booking.php?propid=12862"
         isExternal
-        BackgroundColor={Colors.BLACK}
+        backgroundcolor={Colors.BLACK}
         background={true}
       >
         {English ? "Check Availability" : "Bóka "}
