@@ -8,6 +8,7 @@ const SEO = ({ title, description, keywords}) => (
       <meta charSet="utf-8" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords}  />
+      <meta theme ="#373737" />
     </Helmet>
 
 );
