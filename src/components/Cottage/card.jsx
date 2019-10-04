@@ -51,7 +51,8 @@ const Container = styled.div`
 
   ${Media.tablet`width:400px;`}
   ${Media.phone`width: 95%;
-    margin: 0px;
+    margin: 10px auto;
+    padding-bottom: 20px;
   `}
 
 `;

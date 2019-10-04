@@ -1,4 +1,7 @@
 User-Agent: *
 Disallow: 
 
-Sitemap: http://uthlid.biggaferdir.is/sitemap.xml
+Sitemap: http://www.uthlid.is/sitemap.xml
+Sitemap: https://www.uthlid.is/sitemap.xml
+Sitemap: http://www.uthlid.com/sitemap.xml
+Sitemap: https://www.uthlid.com/sitemap.xml
