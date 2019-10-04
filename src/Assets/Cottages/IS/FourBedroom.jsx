@@ -1,5 +1,6 @@
 import IconPackage from "../SVG";
-
+import CottagesFrontPageImage from '../Cottages/img_8064_mobile.jpg';;
+const FrontPageImage = CottagesFrontPageImage;
 const Title = `Fjögurra herbergja hús`;
 const CoverPhoto = IconPackage.fourBedroom;
 const CoverPhoto_small = IconPackage.fourBedroom_Small;
@@ -48,7 +49,8 @@ const Info = {
   SmallIcons,
   URL,
   CoverPhoto_small,
-  CoverPhoto_mobile
+  CoverPhoto_mobile,
+  FrontPageImage
 
 };
 export default Info;

@@ -4,7 +4,6 @@ import styled from "styled-components";
 // Components
 import NumberSymbol from "./NumberSymbol";
 import ContactInfo from "./contactInfo";
-import Button from "../Button";
 // Assets
 import { Colors, Media } from "../../../Assets/Variables/";
 
@@ -22,7 +21,6 @@ const Information = ({
   golf,
   Verd,
   English,
-  ProductPrice
 }) => (
   <Container>
     <H1>{Title ? Title : English ? `Bookings` : "Bókanir"}</H1>
@@ -32,7 +30,6 @@ const Information = ({
       <Text>{English ? "Pricelist" : "Verð"}</Text>
     )}
     <NumberSymbol
-      ProductPrice={ProductPrice}
       Price={Price}
       golf={golf}
       Verd={Verd}
@@ -54,16 +51,6 @@ const Information = ({
       </AboutText>
     ) : null}
     <ContactInfo English={English} />
-    {horseInformation || golf ? null : (
-      <Button
-        toPath="https://property.godo.is/booking.php?propid=12862"
-        isExternal
-        backgroundcolor={Colors.BLACK}
-        background={true}
-      >
-        {English ? "Check Availability" : "Bóka "}
-      </Button>
-    )}
   </Container>
 );
 export default Information;

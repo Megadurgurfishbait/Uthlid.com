@@ -43,13 +43,13 @@ const BackgroundOpacity = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(55, 55, 55, 0.3);
+  background-color: rgba(55, 55, 55, 0.7);
   z-index: 1;
   transition: all 1s ease;
   ${Container}:hover & {
-    background-color: rgba(55, 55, 55, 0.8);
+    background-color: rgba(55, 55, 55, 0.9);
   }
-  ${Media.tablet`background-color: rgba(55, 55, 55, 0.8);`}
+  ${Media.tablet`background-color: rgba(55, 55, 55, 0.9);`}
 `;
 
 const CardTitle = styled.h4`
@@ -66,7 +66,7 @@ const TextInformation = styled.p`
   font-weight: 500;
   font-size: 18px;
   z-index: 2;
-
+  
   ${Media.phone`
   font-size: 14px;
   
@@ -82,10 +82,11 @@ const InformationContainer = styled.div`
   flex-direction: column;
   text-align: left;
   padding: 20px;
-  justify-content: space-between;
+  padding-bottom: 0px;
+  justify-content: space-evenly;
   height: 100%;
   transition: all 1s ease;
-  margin-top: 200px;
+  margin-top: 150px;
   ${Container}:hover & {
     margin-top: 0px;
   }

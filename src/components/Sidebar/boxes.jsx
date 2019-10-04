@@ -51,7 +51,7 @@ export default Boxes;
 const Container = styled.button`
   display: flex;
   min-height: 60px;
-  width: 60px;
+  min-width: 60px;
   margin: 4px;
   background-color: ${Colors.BLACK};
   position: relative;
@@ -60,7 +60,7 @@ const Container = styled.button`
   transition: all 0.4s cubic-bezier(0.23, 0.56, 0.54, 1.01);
   z-index: 5;
   padding: 0px;
-  margin: ${props => (props.expand ? "130px 4px" : "4px")};
+  margin: ${props => (props.expand ? "105px 4px" : "4px")};
   border-left: 2px solid ${Colors.GOLD};
   border: 2px solid transparent;
 

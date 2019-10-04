@@ -9,18 +9,18 @@ import {
   TextIncludes,
   SEO
 } from "../Reusable";
+import {ButtonAnchor} from '../Reusable/Button';
 // Assets
 import { Values_Object_EN, Values_Object_IS } from "../../Assets/Cottages/";
 import Media from "../../Assets/Variables/media";
 import LanguageContext from "../../Context/Language";
-import useContentful from "../../Hooks/useContentful";
 import getWindowDimensions from "../../Hooks/useWindowDimensions";
 import NoMatch from "../404";
+import { Colors } from "../../Assets/Variables";
 // CottageInfoOjbect inniheldur upplýsingar um alla sumarbústaðina.
 // Síðan fyrir hvern og einn sumarbúsað.
 const SinglePageCottage = ({ match }) => {
   const { English } = React.useContext(LanguageContext);
-  const contentfulPrice = useContentful(match.params.id.toLowerCase());
   let hello = Values_Object_EN[match.params.id.toLowerCase()];
   if (hello === undefined) {
     return <NoMatch />;
@@ -45,18 +45,29 @@ const SinglePageCottage = ({ match }) => {
         description={`${Information.TextInformation[0].Text}`}
       />
       <Header
+        Border
         CoverPhoto={
           size.width > 700
             ? Information.CoverPhoto
             : Information.CoverPhoto_mobile
         }
       />
+
+      {size.width < 700 &&
+        <Button
+        href="https://property.godo.is/booking.php?propid=12862"
+        isExternal
+        backgroundcolor={Colors.GOLD}
+        background={false}
+        >{English ? `Book Now` : `Bóka núna`}</Button>
+      }
+
       {/* Sendi niður upplýsingarnar í gegnum props. */}
       <BlackbarInformation
         horseInformation={false}
+        showInformation={true}
         {...Information}
         Cottages={true}
-        ProductPrice={contentfulPrice}
       />
 
       <Container>
@@ -84,6 +95,22 @@ const Textbox = styled.div`
   ${Media.desktop`
     width: 100%;
   `};
+`;
+
+const Button = styled(ButtonAnchor)`
+  height: 60px;
+  min-width: 120px;
+  margin: -32px auto;
+  color: ${Colors.BLACK};
+  border-radius: 50px;
+  box-shadow: 0px 9px 10px -7px rgba(0,0,0,0.35);
+  border: none;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  &:hover {
+    color: ${Colors.GOLD};
+    cursor: pointer;
+  }
 `;
 
 const Container = styled.div`

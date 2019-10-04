@@ -1,5 +1,7 @@
 import IconPackage from "../SVG"; // Fæ öll icon og myndir héðan.
 
+import CottagesFrontPageImage from '../Cottages/img_0028_mobile.jpg';
+const FrontPageImage = CottagesFrontPageImage;
 
 const Title = `Minnibungur 1-5`;
 const CoverPhoto_mobile = IconPackage.economyImage_Mobile;
@@ -47,7 +49,7 @@ const Info = {
     SmallIcons,
     URL,
     CoverPhoto_small,
-    CoverPhoto_mobile
-
+    CoverPhoto_mobile,
+    FrontPageImage
 };
 export default Info;

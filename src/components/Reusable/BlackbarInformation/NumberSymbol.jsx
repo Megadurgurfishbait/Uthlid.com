@@ -32,11 +32,14 @@ const NumberSymbol = ({ Price, Verd, golf, English, ProductPrice }) => (
             </Number>
           </Row>
         ))
-      ) : (
+      ) : ( null
+        /* 
+          Ef að þau vilja fá verið aftur inn.
         <Row center>
           <Number> {ProductPrice} </Number>
           <Symbol>ISK</Symbol>
         </Row>
+        */
       )}
     </TextContainer>
   </Container>

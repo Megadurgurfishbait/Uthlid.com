@@ -13,13 +13,13 @@ import LanguageContext from '../../Context/Language';
 // Hooks
 import getWindowDimensions from "../../Hooks/useWindowDimensions";
 
-const Card = ( { CoverPhoto_small, CoverPhoto_mobile, Title, BlackbarInfo, SmallIcons, URL }) => {
+const Card = ( { CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL, FrontPageImage }) => {
   const {English} = React.useContext(LanguageContext);
   const [Size] = React.useState(getWindowDimensions());
 
   return (
   <Container>
-    <Image alt="Cover photos of cottages" src={Size.width > 700 ? CoverPhoto_small : CoverPhoto_mobile} />
+    <Image alt="Cover photos of cottages" src={Size.width > 700 ? CoverPhoto_small : FrontPageImage} />
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />

@@ -1,4 +1,6 @@
 import IconPackage from "../SVG";
+import CottagesFrontPageImage from '../Cottages/img_0011n_mobile.jpg';
+const FrontPageImage = CottagesFrontPageImage;
 
 const CoverPhoto_mobile = IconPackage.twoBedroom_Mobile;
 const CoverPhoto_small = IconPackage.twoBedroom_Small;
@@ -72,6 +74,7 @@ const Info = {
   URL,
   InformationBoxPrice,
   CoverPhoto_small,
-  CoverPhoto_mobile
+  CoverPhoto_mobile,
+  FrontPageImage
 };
 export default Info;

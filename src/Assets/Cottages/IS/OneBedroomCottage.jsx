@@ -1,5 +1,6 @@
 import IconPackage from "../SVG";
-
+import CottagesFrontPageImage from '../Cottages/img_0021_mobile.jpg';
+const FrontPageImage = CottagesFrontPageImage;
 
 const Title = `Ástarbunga`;
 const CoverPhoto_mobile = IconPackage.oneBedroom_Mobile;
@@ -51,6 +52,7 @@ const Info = {
   SmallIcons,
   URL,
   CoverPhoto_small,
-  CoverPhoto_mobile
+  CoverPhoto_mobile,
+  FrontPageImage
 };
 export default Info;

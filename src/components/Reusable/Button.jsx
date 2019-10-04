@@ -13,17 +13,19 @@ const ButtonReusable = ({
   background,
   children,
   backgroundcolor,
-  isExternal
+  isExternal,
+  noBorder
 }) => (
   <>
     {isExternal ? (
       <ButtonAnchor
         background={background}
+        noBorder={noBorder}
         href={toPath}
         backgroundcolor={backgroundcolor}
       >
         {children}
-        <Span>&nbsp; &nbsp; &#x2192;</Span>
+        <Span external={true}>&nbsp; &nbsp; &#x2192;</Span>
       </ButtonAnchor>
     ) : (
       <Button
@@ -60,12 +62,14 @@ const Button = styled(Link)`
   }
 `;
 
-const ButtonAnchor = styled.a`
+export const ButtonAnchor = styled.a`
   background-color: ${props => props.backgroundcolor || "transparent"};
   border: 2px solid
     ${props => (props.background ? `${Colors.GOLD}` : `${Colors.BLACK}`)};
   width: 200px;
-  height: 50px;
+  min-width: 160px;
+  max-height: 55px;
+  height: 100%;
   color: ${props => (props.background ? `${Colors.GOLD}` : `${Colors.BLACK}`)};
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -74,6 +78,10 @@ const ButtonAnchor = styled.a`
   justify-content: center;
   overflow: hidden;
   text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  white-space: nowrap;
+  ${props => (props.noBorder ? "border: none" : null)}
   &:hover {
     cursor: pointer;
     text-decoration: none;
@@ -84,7 +92,12 @@ const ButtonAnchor = styled.a`
 const Span = styled.span`
   transition: 0.7s all ease-out;
   color: inherit;
+  font-size: 16px;
+  font-weight: 800;
   opacity: 1;
+  ${props =>
+    props.external ? "transform: translateX(-5px) translateY(-3px);" : null};
+  width: ${props => (props.external ? "8px" : "30px")};
 
   ${Button}:hover & {
     transform: translateX(80px);

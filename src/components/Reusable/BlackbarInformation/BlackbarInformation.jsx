@@ -20,14 +20,17 @@ import LanguageContext from "../../../Context/Language";
 */
 
 const BlackbarInformation = Data => {
-  const {English} = React.useContext(LanguageContext);
-  
+  const { English } = React.useContext(LanguageContext);
+
   return (
-  <Container>
-    <Blackbar {...Data} English={English} />
-    <Information {...Data} English={English}  />
-  </Container>
-)};
+    <Container>
+      <Blackbar {...Data} English={English} />
+      {Data.showInformation ? null : (
+        <Information {...Data} English={English} />
+      )}
+    </Container>
+  );
+};
 
 export default BlackbarInformation;
 

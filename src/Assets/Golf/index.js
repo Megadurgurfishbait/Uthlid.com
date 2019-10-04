@@ -10,14 +10,14 @@ const BlackbarInfo = [
   { Icon: `${golf}`, Text: `Par 35`, ToolTip: `Golf Course` },
   { Icon: `${Tees}`, Text: `2470m`, ToolTip: `Yellow tee` },
   { Icon: `${Tees}`, Text: `2118m`, ToolTip: `Red tee` },
-  { Icon: `${open}`, Text: `May Oct`, ToolTip: `Opening hours` }
+  { Icon: `${open}`, Text: `May - Oct`, ToolTip: `Opening hours` }
 ];
 
 const Svartastika = [
   { Icon: `${golf}`, Text: `Par 35`, ToolTip: `Golfvöllur` },
   { Icon: `${Tees}`, Text: `2470m`, ToolTip: `Lengd gula teigs` },
   { Icon: `${Tees}`, Text: `2118m`, ToolTip: `Lengd rauða teigs` },
-  { Icon: `${open}`, Text: `Maí Okt` , ToolTip: `Opnunartími` }
+  { Icon: `${open}`, Text: `Maí - Okt` , ToolTip: `Opnunartími` }
 ]
 
 const InformationBoxPrice = `Day Fees`;

@@ -35,7 +35,6 @@ import personsBlack from "./personsBlack.svg";
 
 
 
-
 const IconPackage = {
   economyImage_Mobile,
   oneBedroom_Mobile,

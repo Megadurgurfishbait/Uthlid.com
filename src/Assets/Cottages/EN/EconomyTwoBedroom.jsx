@@ -1,5 +1,6 @@
 import IconPackage from "../SVG"; // Fæ öll icon og myndir héðan.
-
+import CottagesFrontPageImage from '../Cottages/img_0028_mobile.jpg';
+const FrontPageImage = CottagesFrontPageImage;
 
 const Title = `ECONOMY TWO BEDROOM`;
 const CoverPhoto_mobile = IconPackage.economyImage_Mobile;
@@ -46,6 +47,7 @@ const Info = {
     URL,
     InformationBoxPrice,
     CoverPhoto_small,
-    CoverPhoto_mobile
+    CoverPhoto_mobile,
+    FrontPageImage
 };
 export default Info;

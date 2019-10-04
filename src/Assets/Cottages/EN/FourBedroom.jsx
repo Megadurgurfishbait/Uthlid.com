@@ -1,4 +1,6 @@
 import IconPackage from "../SVG";
+import CottagesFrontPageImage from '../Cottages/img_8064_mobile.jpg';;
+const FrontPageImage = CottagesFrontPageImage;
 
 const Title = `FOUR BEDROOM COTTAGES`;
 const CoverPhoto = IconPackage.fourBedroom;
@@ -54,7 +56,7 @@ const Info = {
   URL,
   InformationBoxPrice,
   CoverPhoto_small,
-  CoverPhoto_mobile
-
+  CoverPhoto_mobile,
+  FrontPageImage
 };
 export default Info;
