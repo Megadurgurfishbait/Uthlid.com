@@ -108,7 +108,7 @@ const Button = styled(ButtonAnchor)`
   font-weight: bolder;
   letter-spacing: 2px;
   &:hover {
-    color: ${Colors.GOLD};
+    color: ${Colors.BLACK};
     cursor: pointer;
   }
 `;
