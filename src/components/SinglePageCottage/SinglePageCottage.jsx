@@ -9,7 +9,7 @@ import {
   TextIncludes,
   SEO
 } from "../Reusable";
-import {ButtonAnchor} from '../Reusable/Button';
+import { ButtonAnchor } from "../Reusable/Button";
 // Assets
 import { Values_Object_EN, Values_Object_IS } from "../../Assets/Cottages/";
 import Media from "../../Assets/Variables/media";
@@ -52,23 +52,27 @@ const SinglePageCottage = ({ match }) => {
             : Information.CoverPhoto_mobile
         }
       />
-
-      {size.width < 700 &&
+ {/* Sýnum Takkann ef að þetta er fyrir tæki sem eru stærri en 700px á breidd */}
+      {size.width < 700 && (
         <Button
-        href="https://property.godo.is/booking.php?propid=12862"
-        isExternal
-        backgroundcolor={Colors.GOLD}
-        background={false}
-        >{English ? `Book Now` : `Bóka núna`}</Button>
-      }
+          href="https://property.godo.is/booking.php?propid=12862"
+          isExternal
+          backgroundcolor={Colors.GOLD}
+          background={false}
+        >
+          {English ? `Book Now` : `Bóka núna`}
+        </Button>
+      )}
 
-      {/* Sendi niður upplýsingarnar í gegnum props. */}
-      <BlackbarInformation
-        horseInformation={false}
-        showInformation={true}
-        {...Information}
-        Cottages={true}
-      />
+      {/* Sýnum blackbar ef að þetta er fyrir tæki sem eru stærri en 700px á breidd */}
+      {size.width > 700 && (
+        <BlackbarInformation
+          horseInformation={false}
+          showInformation={true}
+          {...Information}
+          Cottages={true}
+        />
+      )}
 
       <Container>
         <Textbox>
@@ -103,7 +107,7 @@ const Button = styled(ButtonAnchor)`
   margin: -32px auto;
   color: ${Colors.BLACK};
   border-radius: 50px;
-  box-shadow: 0px 9px 10px -7px rgba(0,0,0,0.35);
+  box-shadow: 0px 9px 10px -7px rgba(0, 0, 0, 0.35);
   border: none;
   font-weight: bolder;
   letter-spacing: 2px;
